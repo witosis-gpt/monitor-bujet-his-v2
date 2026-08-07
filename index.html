@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Keuangan Deputi HIS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand"><span class="brand-mark">H</span><span>HIS Finance</span></div>
+        <nav aria-label="Navigasi utama">
+          <a class="nav-item active" href="#dashboard"><span>▦</span> Dashboard</a>
+          <a class="nav-item disabled" href="#detail" aria-disabled="true"><span>▤</span> Detail Anggaran</a>
+          <a class="nav-item disabled" href="#laporan" aria-disabled="true"><span>▱</span> Laporan</a>
+        </nav>
+        <div class="sidebar-footer"><span>PERIODE AKTIF</span><strong id="sidebarPeriod">Agustus 2026</strong><small id="updatedAt">Terakhir diperbarui: 7 Agustus 2026</small></div>
+      </aside>
+      <main>
+        <header class="page-header">
+          <div><p class="eyebrow">DEPUTI HILIRISASI INVESTASI STRATEGIS</p><h1>Dashboard Keuangan</h1><p class="subtitle">Monitoring realisasi anggaran <span id="activePeriod">• Agustus 2026</span></p></div>
+          <div class="header-actions"><button class="button secondary" id="uploadButton">Update Data SAKTI</button><button class="button primary" id="pptButton">Generate PowerPoint</button></div>
+        </header>
+
+        <section class="filter-bar" aria-label="Filter data"><label for="yearSelect">Tahun<select id="yearSelect"><option>2026</option></select></label><label for="monthSelect">Periode<select id="monthSelect"><option>Agustus</option></select></label><label class="directorate-filter" for="directorateSelect">Direktorat<select id="directorateSelect"></select></label><button class="reset" id="resetButton">↺ Reset Filter</button></section>
+
+        <section class="kpis" id="kpiCards"></section>
+
+        <section class="panel directorate-panel"><div class="section-heading"><div><p class="eyebrow">RINGKASAN ESELON II</p><h2>Kinerja per Direktorat</h2></div><div class="performance-controls"><span class="section-note">Klik baris untuk melihat rincian</span><div class="metric-toggle" role="group" aria-label="Urutkan kinerja direktorat"><button class="active" type="button" data-performance-mode="absorption">% Serapan</button><button type="button" data-performance-mode="remaining">Sisa Pagu</button></div></div></div><div id="directoratePerformance" class="performance-list"></div></section>
+
+        <div class="chart-grid">
+          <section class="panel"><div class="section-heading"><div><p class="eyebrow">TAHUN 2026</p><h2>Progres Serapan Bulanan</h2></div><strong id="progressValue" class="accent-number">47,69%</strong></div><div class="line-chart-wrap"><svg id="lineChart" viewBox="0 0 640 230" role="img" aria-label="Grafik progres serapan bulanan"></svg></div></section>
+          <section class="panel composition-panel"><div class="section-heading"><div><p class="eyebrow">ALOKASI ANGGARAN</p><h2>Komposisi Jenis Belanja</h2></div><div class="composition-controls"><label class="composition-select" for="compositionScope">Ruang lingkup<select id="compositionScope" aria-label="Pilih cakupan komposisi belanja"></select></label><label class="composition-select" for="compositionMetric">Analisis<select id="compositionMetric" aria-label="Pilih metrik komposisi"><option value="pagu">Pagu</option><option value="realization">Realisasi</option><option value="remaining">Sisa Anggaran</option></select></label></div></div><div class="donut-layout"><div id="donutChart" class="donut" aria-label="Pilih irisan untuk melihat detail"><svg id="donutSlices" viewBox="0 0 160 160" role="group" aria-label="Irisan komposisi belanja"></svg><div class="donut-center"><strong id="compositionTotal">Rp2,00 M</strong><span id="compositionMetricLabel">Total Pagu</span></div></div><div id="compositionLegend" class="legend"></div></div><div id="compositionDetail" class="composition-detail" hidden></div></section>
+        </div>
+
+        <div class="insight-grid">
+          <section class="panel"><div class="section-heading"><div><p class="eyebrow">PERIODE BERJALAN</p><h2>Realisasi Bulan Ini <span>– Agustus 2026</span></h2></div></div><div id="currentMonth" class="current-month"></div></section>
+          <section class="panel attention-panel"><div class="section-heading"><div><p class="eyebrow">MONITORING</p><h2>Perlu Perhatian</h2></div><span class="attention-count" id="attentionCount"></span></div><div id="attentionItems" class="attention-items"></div></section>
+        </div>
+
+        <section class="panel accounts-panel"><div class="section-heading"><div><p class="eyebrow">RINCIAN AKUN</p><h2>Detail Sisa Anggaran per Akun</h2></div><button class="button secondary detail-link" id="detailBudgetButton">Lihat Detail Anggaran</button></div><div class="account-controls"><label class="account-search">Cari akun atau uraian<input id="accountSearch" type="search" placeholder="Contoh: 524111 atau perjalanan dinas" /></label><label>Direktorat<select id="accountDirectorate"></select></label><label>Urutkan<select id="accountSort"><option value="remaining-desc">Sisa terbesar</option><option value="remaining-asc">Sisa terkecil</option><option value="absorption-asc">Serapan terendah</option><option value="absorption-desc">Serapan tertinggi</option><option value="pagu-desc">Pagu terbesar</option></select></label><label>Tampilkan<select id="accountPageSize"><option value="10">10 baris</option><option value="20">20 baris</option><option value="50">50 baris</option></select></label></div><div class="table-scroll account-table-scroll"><table><thead><tr><th>Akun</th><th>Uraian</th><th>Direktorat</th><th>RO / Komoditas</th><th>Pagu</th><th>Realisasi</th><th>Sisa</th><th>% Serapan</th></tr></thead><tbody id="accountsTable"></tbody></table></div><div class="table-footer"><span id="accountSummary"></span><div class="pagination"><button id="accountPrevious" type="button">‹</button><span id="accountPage"></span><button id="accountNext" type="button">›</button></div></div></section>
+      </main>
+    </div>
+    <div id="toast" class="toast" role="status"></div>
+    <div class="upload-backdrop" id="uploadModal" hidden><section class="upload-modal" role="dialog" aria-modal="true" aria-labelledby="uploadTitle"><button class="close" id="uploadClose" aria-label="Tutup">×</button><p class="eyebrow">IMPORT DATA LOKAL</p><h2 id="uploadTitle">Update Data SAKTI</h2><p class="upload-intro">Pilih satu laporan realisasi SAKTI. File dibaca dan diproses langsung di browser ini.</p><label class="drop-zone" id="dropZone" for="saktiFile"><input id="saktiFile" type="file" accept=".xlsx,.xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" hidden /><strong>Tarik file Excel ke sini</strong><span>atau pilih file dari komputer</span><em>Format .xlsx atau .xls</em></label><div id="uploadStatus" class="upload-status">Belum ada file dipilih.</div><div id="uploadPreview" class="upload-preview" hidden></div><div class="upload-actions"><button class="button secondary" id="uploadCancel" type="button">Batal</button><button class="button primary" id="applySaktiData" type="button" disabled>Update Dashboard</button></div></section></div>
+    <script src="vendor/xlsx.full.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
