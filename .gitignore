@@ -17,3 +17,4 @@ node_modules/
 *.log
 supabase-config.js
 Tampungan/
+.vercel

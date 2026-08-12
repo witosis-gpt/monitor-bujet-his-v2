@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <section id="authScreen" class="auth-screen"><form id="loginForm" class="auth-card"><p class="eyebrow">AKSES INTERNAL DEPUTI HIS</p><h1>Dashboard Keuangan Deputi HIS</h1><label>Email<input id="loginEmail" type="email" required autocomplete="email" /></label><label>Kata sandi<input id="loginPassword" type="password" required autocomplete="current-password" /></label><p id="loginError" class="login-error" hidden></p><button class="button primary" type="submit">Masuk</button></form></section>
+    <section id="authScreen" class="auth-screen"><form id="loginForm" class="auth-card"><p class="eyebrow">AKSES INTERNAL DEPUTI HIS</p><h1>Dashboard Internal Deputi HIS</h1><p class="auth-organization">Kementerian Investasi dan Hilirisasi / BKPM</p><p class="auth-helper">Akses terbatas untuk pengguna terotorisasi.</p><label>Email<input id="loginEmail" type="email" required autocomplete="email" /></label><label>Kata sandi<input id="loginPassword" type="password" required autocomplete="current-password" /></label><p id="loginError" class="login-error" hidden></p><button class="button primary" type="submit">Masuk</button><div class="auth-disclosure"><p>Autentikasi pengguna menggunakan Supabase Auth.</p><p>Kredensial digunakan hanya untuk autentikasi akses dashboard internal.</p></div></form></section>
     <div class="app-shell" id="appShell" hidden>
       <aside class="sidebar">
         <div class="brand"><span class="brand-mark">H</span><span>HIS Finance</span></div>
@@ -48,7 +48,7 @@
     </div>
     <div id="toast" class="toast" role="status"></div>
     <div class="upload-backdrop" id="uploadModal" hidden><section class="upload-modal" role="dialog" aria-modal="true" aria-labelledby="uploadTitle"><button class="close" id="uploadClose" aria-label="Tutup">×</button><p class="eyebrow">IMPORT DATA LOKAL</p><h2 id="uploadTitle">Update Data SAKTI</h2><p class="upload-intro">Pilih satu laporan realisasi SAKTI. File dibaca dan diproses langsung di browser ini.</p><label class="composition-select" for="sourceType">Jenis Data<select id="sourceType"><option value="sp2d">SP2D / Definitif</option><option value="accrual">Akrual / Dalam Proses</option></select></label><label class="drop-zone" id="dropZone" for="saktiFile"><input id="saktiFile" type="file" accept=".xlsx,.xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" hidden /><strong>Tarik file Excel ke sini</strong><span>atau pilih file dari komputer</span><em>Format .xlsx atau .xls</em></label><div id="uploadStatus" class="upload-status">Belum ada file dipilih.</div><div id="uploadPreview" class="upload-preview" hidden></div><div class="upload-actions"><button class="button secondary" id="uploadCancel" type="button">Batal</button><button class="button primary" id="applySaktiData" type="button" disabled>Update Dashboard</button></div></section></div>
-    <script src="supabase-config.js?v=2"></script>
+    <script src="supabase-public-config.js?v=1"></script>
     <script src="supabase-client.js?v=3"></script>
     <script src="vendor/xlsx.full.min.js"></script>
     <script src="app.js"></script>
