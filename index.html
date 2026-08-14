@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <section id="authScreen" class="auth-screen"><form id="loginForm" class="auth-card"><p class="eyebrow">AKSES INTERNAL DEPUTI HIS</p><h1>Dashboard Internal Deputi HIS</h1><p class="auth-organization">Kementerian Investasi dan Hilirisasi / BKPM</p><p class="auth-helper">Akses terbatas untuk pengguna terotorisasi.</p><label>Email<input id="loginEmail" type="email" required autocomplete="email" /></label><label>Kata sandi<input id="loginPassword" type="password" required autocomplete="current-password" /></label><p id="loginError" class="login-error" hidden></p><button class="button primary" type="submit">Masuk</button><div class="auth-disclosure"><p>Autentikasi pengguna menggunakan Supabase Auth.</p><p>Kredensial digunakan hanya untuk autentikasi akses dashboard internal.</p></div></form></section>
+    <section id="authScreen" class="auth-screen"><form id="loginForm" class="auth-card"><p class="eyebrow">AKSES INTERNAL DEPUTI HIS</p><h1>Dashboard Keuangan Deputi HIS</h1><p class="auth-organization">Kementerian Investasi dan Hilirisasi / BKPM</p><p class="auth-helper">Akses terbatas untuk pengguna terotorisasi.</p><label>Email<input id="loginEmail" type="email" required autocomplete="email" /></label><label>Kata sandi<input id="loginPassword" type="password" required autocomplete="current-password" /></label><p id="loginError" class="login-error" hidden></p><button class="button primary" type="submit">Masuk</button><div class="auth-disclosure"><p>Autentikasi pengguna menggunakan Supabase Auth.</p><p>Kredensial digunakan hanya untuk autentikasi akses dashboard internal.</p></div></form></section>
     <div class="app-shell" id="appShell" hidden>
       <aside class="sidebar">
-        <div class="brand"><span class="brand-mark">H</span><span>HIS Finance</span></div>
+        <div class="brand"><span class="brand-mark">H</span><span>Keuangan Deputi HIS</span></div>
         <nav aria-label="Navigasi utama">
           <a class="nav-item active" href="#dashboard"><span>▦</span> Dashboard</a>
           <a class="nav-item disabled" href="#detail" aria-disabled="true"><span>▤</span> Detail Anggaran</a>
@@ -23,7 +23,7 @@
       </aside>
       <main>
         <header class="page-header">
-          <div><p class="eyebrow">DEPUTI HILIRISASI INVESTASI STRATEGIS</p><h1>Dashboard Keuangan</h1><p class="subtitle">Monitoring realisasi anggaran <span id="activePeriod">• Belum ada data SAKTI</span></p></div>
+          <div><p class="eyebrow">DEPUTI HILIRISASI INVESTASI STRATEGIS</p><h1>Dashboard Keuangan Deputi HIS</h1><p class="subtitle">Monitoring realisasi anggaran <span id="activePeriod">• Belum ada data SAKTI</span></p></div>
           <div class="header-actions"><span id="cloudStatus" class="cloud-status">Memuat data anggaran…</span><button class="button secondary" id="uploadButton">Update Data SAKTI</button><label class="snapshot-source" for="deleteSnapshotSource">Sumber<select id="deleteSnapshotSource"><option value="sp2d">SP2D</option><option value="accrual">Akrual</option></select></label><button class="button secondary snapshot-delete" id="deleteSnapshotButton" type="button">Hapus Snapshot</button><button class="button primary" id="pptButton">Generate PowerPoint</button></div>
         </header>
 
