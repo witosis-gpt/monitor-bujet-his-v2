@@ -249,3 +249,152 @@ setTimeout(() => {
   document.querySelector('#deleteSnapshotButton').addEventListener('click', deleteActiveSnapshot);
   renderSourceInfo();
 }, 0);
+
+/* Module 2: hierarchy view reuses activeSnapshot.pairedRows from Module 1. */
+let module2Expanded = new Set();
+let module2DefaultExpansionApplied = false;
+let module2SortKey = 'label';
+let module2SortDirection = 1;
+const module2Metrics = row => ({ pagu: Number(row.pagu) || 0, sp2d: Number(row.cumulative) || 0, accrual: Number(row.accrualOutstanding) || 0, potential: Number(row.potential ?? row.cumulative) || 0, remaining: (Number(row.pagu) || 0) - (Number(row.cumulative) || 0) });
+const module2EmptyTotals = () => ({ pagu: 0, sp2d: 0, accrual: 0, potential: 0, remaining: 0 });
+function module2AddTotals(target, values) { Object.keys(target).forEach(key => target[key] += values[key] || 0); }
+function module2BuildTree() {
+  const root = { id: 'root', level: 0, label: 'Detail Anggaran', code: '', children: [], totals: module2EmptyTotals(), searchable: '', rows: [], parent: null };
+  const nodeMap = new Map([[root.id, root]]);
+  const rows = (activeSnapshot?.pairedRows || []).filter(row => selectedDirectorate === 'all' || row.directorateCode === selectedDirectorate);
+  rows.forEach((row, index) => {
+    const values = module2Metrics(row);
+    root.rows.push(row);
+    const hierarchy = [
+      ['directorate', row.directorateCode || 'Tanpa Direktorat', row.directorateName || directorateCatalog[row.directorateCode] || 'Tanpa nama'],
+      ['ro', row.roCode || 'Tanpa RO', row.roName || row.commodity || 'Tanpa nama RO'],
+      ['component', row.componentCode || 'Tanpa Komponen', row.componentName || 'Tanpa nama komponen'],
+      ['subcomponent', row.subcomponentCode || 'Tanpa Subkomponen', row.subcomponentName || 'Tanpa nama subkomponen'],
+      ['account', row.accountCode || 'Tanpa Akun', row.accountName || 'Tanpa nama akun'],
+    ];
+    let parent = root;
+    let composite = '';
+    hierarchy.forEach(([type, code, name], level) => {
+      composite += `${composite ? '::' : ''}${code}`;
+      const id = level === 4 ? `${composite}::${index}` : composite;
+      let node = nodeMap.get(id);
+      if (!node) { node = { id, type, level: level + 1, code, label: name, children: [], totals: module2EmptyTotals(), searchable: `${code} ${name}`.toLowerCase(), rows: [], parent: parent.id }; nodeMap.set(id, node); parent.children.push(node); }
+      module2AddTotals(node.totals, values);
+      node.rows.push(row);
+      parent = node;
+    });
+    module2AddTotals(root.totals, values);
+  });
+  root.nodeMap = nodeMap;
+  return root;
+}
+function module2SortNodes(nodes) { return [...nodes].sort((left, right) => { const value = node => module2SortKey === 'label' ? `${node.code} ${node.label}` : module2SortKey === 'absorption' ? (node.totals.pagu ? node.totals.sp2d / node.totals.pagu : 0) : node.totals[module2SortKey]; const a = value(left), b = value(right); return typeof a === 'string' ? a.localeCompare(b, 'id') * module2SortDirection : (a - b) * module2SortDirection; }); }
+function module2NodeMatches(node, query) { return !query || node.searchable.includes(query) || node.children.some(child => module2NodeMatches(child, query)); }
+function module2FormatCells(totals) { const absorption = totals.pagu ? totals.sp2d / totals.pagu * 100 : 0; return `<td>${rupiah.format(totals.pagu)}</td><td>${rupiah.format(totals.sp2d)}</td><td>${rupiah.format(totals.accrual)}</td><td>${rupiah.format(totals.potential)}</td><td>${rupiah.format(totals.remaining)}</td><td><span class="percent-pill">${fmtPct(absorption)}</span></td>`; }
+function ensureModule2VisualLayout() {
+  const summary = document.querySelector('#detailSummary');
+  if (document.querySelector('#detailSummaryVisual')) return;
+  const layout = document.createElement('div');
+  layout.id = 'detailSummaryVisual'; layout.className = 'detail-summary-visual';
+  summary.parentNode.insertBefore(layout, summary);
+  layout.append(summary);
+  const donut = document.createElement('aside');
+  donut.id = 'detailAbsorptionDonut'; donut.className = 'detail-absorption-donut';
+  layout.append(donut);
+}
+function renderModule2Donut(totals) {
+  const node = document.querySelector('#detailAbsorptionDonut');
+  if (!node) return;
+  const pagu = totals.pagu || 0;
+  const sp2dPct = pagu ? Math.min(Math.max(totals.sp2d / pagu * 100, 0), 100) : 0;
+  const remainingPct = 100 - sp2dPct;
+  node.innerHTML = `<div class="absorption-chart" aria-label="Donut serapan SP2D dan sisa anggaran"><div class="absorption-ring" style="--portion:${sp2dPct}%"></div><div class="absorption-center"><strong>${fmtPct(sp2dPct)}</strong><span>Serapan SP2D</span></div></div><div class="absorption-legend"><div><i class="legend-sp2d"></i><p><strong>Realisasi SP2D</strong><span>${fmtPct(sp2dPct)} · ${rupiah.format(totals.sp2d)}</span></p></div><div><i class="legend-remaining"></i><p><strong>Sisa Anggaran</strong><span>${fmtPct(remainingPct)} · ${rupiah.format(totals.remaining)}</span></p></div></div>`;
+}
+let module2SelectedNodeId = null;
+let module2LastRoot = null;
+function ensureModule2AnalyticsLayout() { const tree = document.querySelector('.detail-tree-panel'); if (document.querySelector('#detailExplorerGrid')) return; const grid = document.createElement('div'); grid.id = 'detailExplorerGrid'; grid.className = 'detail-explorer-grid'; tree.parentNode.insertBefore(grid, tree); grid.append(tree); const panel = document.createElement('aside'); panel.id = 'detailAnalysisPanel'; panel.className = 'detail-analysis-panel'; grid.append(panel); }
+function module2PreviousRows(node) { const key = activeSnapshot?.period ? snapshotKey(activeSnapshot.period) : ''; const previousKey = sortedSnapshotKeys(loadSnapshots()).filter(candidate => candidate < key && snapshotDataset(loadSnapshots()[candidate])).at(-1); if (!previousKey || !node.rows?.length) return null; const bucket = loadSnapshots()[previousKey]; const paired = reconcileAccrual(snapshotDataset(bucket), snapshotDataset(bucket, 'accrual')).rows; const sample = node.rows[0]; const fields = ['directorateCode','roCode','componentCode','subcomponentCode','accountCode'].slice(0, node.level); return { key: previousKey, dataset: snapshotDataset(bucket), rows: paired.filter(row => fields.every(field => row[field] === sample[field])) }; }
+function module2TotalsForRows(rows) { return rows.reduce((sum, row) => { module2AddTotals(sum, module2Metrics(row)); return sum; }, module2EmptyTotals()); }
+function module2NodePath(node) { if (!node?.rows?.[0]) return ''; const row = node.rows[0]; const parts = [[row.directorateCode,row.directorateName],[row.roCode,row.roName],[row.componentCode,row.componentName],[row.subcomponentCode,row.subcomponentName],[row.accountCode,row.accountName]].slice(0,node.level); return parts.map(([code,name]) => `${code}${name ? ` ${name}` : ''}`).join(' › '); }
+function renderModule2Analysis(root) { const panel = document.querySelector('#detailAnalysisPanel'); const node = root.nodeMap.get(module2SelectedNodeId); if (!node) { panel.innerHTML = '<div class="analysis-empty">Pilih Direktorat, RO, Komponen, Subkomponen, atau Akun untuk melihat analisis.</div>'; return; } const totals = node.totals, absorption = totals.pagu ? totals.sp2d / totals.pagu * 100 : 0, currentPeriod = node.rows.reduce((sum,row) => sum + (Number(row.currentPeriod) || 0), 0); const previous = module2PreviousRows(node); const previousTotals = previous ? module2TotalsForRows(previous.rows) : null; const previousPct = previousTotals?.pagu ? previousTotals.sp2d / previousTotals.pagu * 100 : 0; const delta = previousTotals ? totals.sp2d - previousTotals.sp2d : 0; const insights = []; if (totals.sp2d === 0) insights.push('Belum terdapat realisasi SP2D.'); if (absorption < 30 && totals.pagu) insights.push('Serapan masih rendah.'); if (totals.pagu && totals.remaining / totals.pagu > .6) insights.push('Sisa anggaran masih tinggi.'); if (totals.accrual > 0) insights.push(`Terdapat akrual berjalan sebesar ${rupiah.format(totals.accrual)}.`); if (totals.pagu && currentPeriod / totals.pagu >= .1) insights.push('Terdapat peningkatan realisasi pada periode berjalan.'); const accountCrossRef = node.level === 5 ? [...new Set((activeSnapshot?.pairedRows || []).filter(row => row.accountCode === node.code).map(row => `${row.directorateCode} / ${row.roCode}`))] : []; panel.innerHTML = `<div class="analysis-heading"><span class="eyebrow">ANALISIS KONTEKS</span><strong>${node.code}</strong><h3>${node.label}</h3><p>${module2NodePath(node)}</p></div><div class="analysis-metrics">${[['Pagu',totals.pagu],['SP2D',totals.sp2d],['Akrual',totals.accrual],['Potensi',totals.potential],['Sisa',totals.remaining],['% SP2D',absorption,true]].map(([label,value,percent])=>`<div><span>${label}</span><strong>${percent?fmtPct(value):rupiah.format(value)}</strong></div>`).join('')}</div><p class="analysis-help">SP2D bersifat definitif. Akrual masih dalam proses; potensi bukan realisasi definitif.</p><div class="analysis-section"><span class="eyebrow">PERIODE BERJALAN</span><strong>Realisasi ${activeSnapshot?.period?.label || ''}: ${rupiah.format(currentPeriod)}</strong></div><div class="analysis-section"><span class="eyebrow">PERBANDINGAN PERIODE</span>${previousTotals ? `<p>${activeSnapshot?.period?.label} vs ${previous.dataset.period.label}</p><strong>${rupiah.format(previousTotals.sp2d)} → ${rupiah.format(totals.sp2d)}</strong><p>${delta >= 0 ? '+' : ''}${rupiah.format(delta)} · ${(absorption - previousPct >= 0 ? '+' : '')}${(absorption-previousPct).toLocaleString('id-ID',{maximumFractionDigits:2})} poin</p>` : '<p>Data periode sebelumnya belum tersedia</p>'}</div>${accountCrossRef.length ? `<div class="analysis-section"><span class="eyebrow">PENGGUNAAN AKUN</span><p>Digunakan pada ${accountCrossRef.length} RO</p><ul>${accountCrossRef.map(path=>`<li>${path}</li>`).join('')}</ul></div>` : ''}<div class="analysis-section"><span class="eyebrow">CATATAN</span><ul>${insights.map(item=>`<li>${item}</li>`).join('') || '<li>Tidak ada catatan tambahan.</li>'}</ul></div><div class="analysis-actions">${node.level >= 2 ? '<button class="button secondary" data-focus-ro>Fokus ke RO ini</button>' : ''}${node.level === 5 ? '<button class="button secondary" data-focus-account>Fokus ke akun ini</button>' : ''}</div>`; panel.querySelector('[data-focus-ro]')?.addEventListener('click',()=>{ document.querySelector('#detailSearch').value = node.rows[0].roCode; renderModule2(); }); panel.querySelector('[data-focus-account]')?.addEventListener('click',()=>{ document.querySelector('#detailSearch').value = node.code; renderModule2(); }); }
+function renderModule2() {
+  const view = document.querySelector('#detailView');
+  if (!view || view.hidden) return;
+  ensureModule2VisualLayout();
+  ensureModule2AnalyticsLayout();
+  const root = module2BuildTree();
+  module2LastRoot = root;
+  const module1Scope = selectedData(); const module1Accrual = aggregateAccrualForScope(activeSnapshot?.pairedRows || [], selectedDirectorate); const tolerance = 1;
+  if (Math.abs(root.totals.pagu - module1Scope.pagu) > tolerance || Math.abs(root.totals.sp2d - module1Scope.realization) > tolerance || Math.abs(root.totals.remaining - module1Scope.remaining) > tolerance || Math.abs(root.totals.accrual - module1Accrual.outstanding) > tolerance || Math.abs(root.totals.potential - module1Accrual.potential) > tolerance) console.error('Module 2 reconciliation mismatch', { module1Scope, module1Accrual, module2: root.totals });
+  const query = document.querySelector('#detailSearch').value.trim().toLowerCase();
+  const periodLabel = yearlyView ? `Tahunan ${yearlyView.year} · s.d. ${yearlyView.latest.label}` : (activeSnapshot?.period?.label || 'Belum ada data');
+  const scope = selectedDirectorate === 'all' ? 'Semua Direktorat' : (directorateCatalog[selectedDirectorate] || selectedDirectorate);
+  document.querySelector('#detailBreadcrumb').textContent = `Detail Anggaran › ${activeSnapshot?.period?.year || '—'} › ${periodLabel} › ${scope}`;
+  document.querySelector('#detailSummary').innerHTML = [['Pagu', root.totals.pagu], ['SP2D', root.totals.sp2d], ['Akrual', root.totals.accrual], ['Potensi', root.totals.potential], ['Sisa', root.totals.remaining], ['% SP2D', root.totals.pagu ? root.totals.sp2d / root.totals.pagu * 100 : 0, true]].map(([label, value, isPercent]) => `<div class="detail-summary-card"><span>${label}</span><strong title="${isPercent ? fmtPct(value) : rupiah.format(value)}">${isPercent ? fmtPct(value) : rupiah.format(value)}</strong></div>`).join('');
+  renderModule2Donut(root.totals);
+  const rows = [];
+  const visit = node => module2SortNodes(node.children).forEach(child => {
+    if (!module2NodeMatches(child, query)) return;
+    const hasChildren = child.children.length > 0;
+    const forcedOpen = Boolean(query) && child.children.some(grandchild => module2NodeMatches(grandchild, query));
+    const expanded = hasChildren && (forcedOpen || module2Expanded.has(child.id));
+    const toggle = hasChildren ? `<button class="tree-toggle" type="button" data-tree-id="${child.id}" aria-expanded="${expanded}">${expanded ? '−' : '+'}</button>` : '<span class="tree-leaf">•</span>';
+    const badges = `${child.totals.sp2d === 0 ? '<em>Belum realisasi</em>' : ''}${child.totals.accrual > 0 ? '<em>Akrual</em>' : ''}${child.totals.pagu && child.totals.sp2d / child.totals.pagu < .3 ? '<em>Serapan rendah</em>' : ''}`;
+    rows.push(`<tr class="tree-row level-${child.level} ${module2SelectedNodeId === child.id ? 'selected' : ''}" data-select-node="${child.id}"><td><div class="tree-label" style="--tree-level:${child.level}">${toggle}<span class="tree-code">${child.code}</span><strong>${child.label}</strong>${badges}</div></td>${module2FormatCells(child.totals)}</tr>`);
+    if (expanded) visit(child);
+  });
+  visit(root);
+  document.querySelector('#detailTreeRows').innerHTML = rows.join('') || '<tr><td colspan="7" class="empty-row">Tidak ada baris yang sesuai dengan filter.</td></tr>';
+  document.querySelector('#detailTreeCount').textContent = `${root.children.length} direktorat · ${activeSnapshot?.pairedRows?.length || 0} baris leaf`;
+  document.querySelectorAll('[data-tree-id]').forEach(button => button.addEventListener('click', event => { event.stopPropagation(); const id = button.dataset.treeId; if (module2Expanded.has(id)) module2Expanded.delete(id); else module2Expanded.add(id); renderModule2(); }));
+  document.querySelectorAll('[data-select-node]').forEach(row => row.addEventListener('click', () => { module2SelectedNodeId = row.dataset.selectNode; renderModule2(); }));
+  renderModule2Analysis(root);
+}
+function syncModule2Filters() {
+  const year = document.querySelector('#yearSelect'), period = document.querySelector('#monthSelect'), directorate = document.querySelector('#directorateSelect');
+  const copy = (from, to) => { to.innerHTML = from.innerHTML; to.value = from.value; };
+  copy(year, document.querySelector('#detailYearSelect')); copy(period, document.querySelector('#detailPeriodSelect')); copy(directorate, document.querySelector('#detailDirectorateSelect'));
+}
+function showModule(module) {
+  const detail = module === 'detail';
+  document.body.classList.toggle('detail-mode', detail);
+  document.querySelector('#detailView').hidden = !detail;
+  document.querySelector('#dashboardNav').classList.toggle('active', !detail);
+  document.querySelector('#detailNav').classList.toggle('active', detail);
+  if (detail) { syncModule2Filters(); if (!module2DefaultExpansionApplied) { module2BuildTree().children.forEach(node => module2Expanded.add(node.id)); module2DefaultExpansionApplied = true; } renderModule2(); }
+}
+function module2SelectYear(year) { const keys = sortedSnapshotKeys(loadSnapshots()).filter(key => key.startsWith(`${year}-`) && snapshotDataset(loadSnapshots()[key])); if (keys.length) selectDashboardPeriod(keys[0]); }
+setTimeout(() => {
+  const detailButton = document.querySelector('#detailBudgetButton');
+  const detailReplacement = detailButton.cloneNode(true); detailButton.replaceWith(detailReplacement); detailReplacement.addEventListener('click', () => { location.hash = 'detail'; showModule('detail'); });
+  document.querySelector('#dashboardNav').addEventListener('click', () => showModule('dashboard'));
+  document.querySelector('#detailNav').addEventListener('click', () => showModule('detail'));
+  document.querySelector('#detailYearSelect').addEventListener('change', event => { module2SelectYear(event.target.value); setTimeout(() => { syncModule2Filters(); renderModule2(); }, 0); });
+  document.querySelector('#detailPeriodSelect').addEventListener('change', event => { selectDashboardPeriod(event.target.value); setTimeout(() => { syncModule2Filters(); renderModule2(); }, 0); });
+  document.querySelector('#detailDirectorateSelect').addEventListener('change', event => { setDirectorate(event.target.value); renderModule2(); });
+  document.querySelector('#detailSearch').addEventListener('input', renderModule2);
+  ['label','pagu','sp2d','accrual','potential','remaining','absorption'].forEach((key, index) => { const header = document.querySelectorAll('.detail-tree-table th')[index]; header.style.cursor = 'pointer'; header.title = 'Klik untuk mengurutkan hierarki pada setiap level'; header.addEventListener('click', () => { module2SortDirection = module2SortKey === key ? module2SortDirection * -1 : 1; module2SortKey = key; renderModule2(); }); });
+  document.querySelector('#expandAllButton').addEventListener('click', () => { const root = module2BuildTree(); const collect = node => node.children.forEach(child => { if (child.children.length) { module2Expanded.add(child.id); collect(child); } }); collect(root); renderModule2(); });
+  document.querySelector('#collapseAllButton').addEventListener('click', () => { module2DefaultExpansionApplied = true; module2Expanded.clear(); renderModule2(); });
+  if (location.hash === '#detail') showModule('detail');
+}, 0);
+function refreshDashboard() {
+  accountPage = 1;
+  selectedCompositionScope = selectedDirectorate === 'all' ? 'deputy' : selectedDirectorate;
+  selectedCompositionCategory = null;
+  document.querySelector('#directorateSelect').value = selectedDirectorate;
+  document.querySelector('#compositionScope').value = selectedCompositionScope;
+  renderKpis(); renderPerformance(); lineChart(); renderComposition(); renderCurrentMonth(); renderAttention(); renderSourceInfo(); renderAccounts();
+  if (!document.querySelector('#detailView')?.hidden) { syncModule2Filters(); renderModule2(); }
+}
+setTimeout(() => {
+  document.querySelector('#directoratePerformance').addEventListener('click', event => { const row = event.target.closest('.performance-row'); if (!row) return; setTimeout(() => { location.hash = 'detail'; showModule('detail'); }, 0); });
+  document.querySelector('#accountsTable').addEventListener('click', event => { const row = event.target.closest('tr'); const code = row?.querySelector('td strong')?.textContent?.trim(); if (!code) return; const source = (activeSnapshot?.rows || []).find(item => item.accountCode === code); if (source) setDirectorate(source.directorateCode); location.hash = 'detail'; showModule('detail'); setTimeout(() => { document.querySelector('#detailSearch').value = code; renderModule2(); }, 0); });
+}, 0);
+setTimeout(() => {
+  const detailView = document.querySelector('#detailView');
+  const setupPanel = () => { const panel = document.querySelector('#detailAnalysisPanel'); if (!panel || panel.dataset.backReady) return; panel.dataset.backReady = 'true'; const attachBackButton = () => { if (panel.querySelector('.analysis-heading') && !panel.querySelector('[data-close-analysis]')) panel.insertAdjacentHTML('afterbegin', '<button class="analysis-back" type="button" data-close-analysis>← Kembali ke Detail Anggaran</button>'); }; new MutationObserver(attachBackButton).observe(panel, { childList: true }); panel.addEventListener('click', event => { if (!event.target.closest('[data-close-analysis]')) return; module2SelectedNodeId = null; renderModule2(); }); attachBackButton(); };
+  new MutationObserver(setupPanel).observe(detailView, { childList: true, subtree: true });
+  setupPanel();
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && !document.querySelector('#detailView').hidden && module2SelectedNodeId) { module2SelectedNodeId = null; renderModule2(); } });
+}, 0);
