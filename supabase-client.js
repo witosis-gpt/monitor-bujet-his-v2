@@ -43,6 +43,17 @@
       status('Data tersinkron ke cloud');
       return (await response.json())[0];
     },
+    async deleteSnapshot(year, month, sourceType) {
+      if (!configured) throw new Error('Konfigurasi Supabase belum tersedia.');
+      if (!session?.access_token) throw new Error('Sesi login diperlukan untuk menghapus snapshot.');
+      const query = new URLSearchParams({ year: `eq.${year}`, month: `eq.${month}`, source_type: `eq.${sourceType}` });
+      const response = await fetch(`${config.url}/rest/v1/sakti_snapshots?${query}`, { method: 'DELETE', headers: { ...headers(), Prefer: 'return=representation' } });
+      if (!response.ok) { const body = await response.text(); throw new Error(`Gagal menghapus snapshot dari cloud (${response.status}): ${body}`); }
+      const deleted = await response.json();
+      if (deleted.length !== 1) throw new Error('Snapshot yang dipilih tidak ditemukan atau tidak dapat dihapus.');
+      status('Snapshot dihapus dari cloud');
+      return deleted[0];
+    },
     status,
   };
 })();

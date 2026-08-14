@@ -133,3 +133,119 @@ document.querySelector('#logoutButton').addEventListener('click', async () => { 
 init();
 setTimeout(bootAuthentication, 0);
 setTimeout(() => { startCloudSnapshots(); document.querySelector('#applySaktiData').addEventListener('click', async () => { const pending = pendingSaktiImport; if (!pending?.dataset) return; try { await window.SaktiCloud.saveSnapshot(pending.dataset, pending.filename, pending.sourceType); } catch (error) { console.warn('Supabase snapshot save failed', error); showToast('Data berhasil diparsing tetapi belum berhasil disimpan ke cloud.'); window.SaktiCloud?.status('Mode offline: menggunakan data tersimpan di perangkat'); } }); }, 0);
+
+/* Module 1 polish: source provenance, safe snapshot deletion, and filtered totals. */
+function sourceTimestamp(value) {
+  if (!value) return 'Waktu impor tidak tersedia';
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? 'Waktu impor tidak tersedia' : date.toLocaleString('id-ID', { dateStyle: 'long', timeStyle: 'short' });
+}
+function renderSourceInfo() {
+  const node = document.querySelector('#sourceInfo');
+  const provenance = activeSnapshot?.provenance;
+  if (!provenance?.sp2d) { node.hidden = true; node.innerHTML = ''; return; }
+  const reference = yearlyView ? 'Sumber data referensi' : 'Sumber data';
+  const entry = (label, record) => record
+    ? `<div><strong>${label}</strong><span>${record.filename || 'Nama file tidak tersedia'}</span><small>Diperbarui: ${sourceTimestamp(record.savedAt)}</small></div>`
+    : `<div><strong>${label}</strong><span>Akrual belum tersedia</span></div>`;
+  node.hidden = false;
+  node.innerHTML = `<span class="eyebrow">${reference}</span><div class="source-info-list">${entry('SP2D', provenance.sp2d)}${entry('Akrual', provenance.accrual)}</div>`;
+}
+function attentionRules() {
+  const average = executiveSummary.pagu ? executiveSummary.realization / executiveSummary.pagu * 100 : 0;
+  const period = activeSnapshot?.period?.label?.split(' ')[0] || 'periode aktif';
+  return directorates.flatMap(directorate => {
+    const accrual = aggregateAccrualForScope(activeSnapshot?.pairedRows || [], directorate.id).outstanding;
+    const absorption = pct(directorate);
+    let message = null;
+    if (directorate.monthly === 0 && accrual === 0) message = `Belum ada realisasi pada ${period}`;
+    else if (absorption < 35 && accrual > 0) message = `Serapan SP2D ${fmtPct(absorption)} · terdapat akrual ${compact(accrual)}`;
+    else if (absorption < 35) message = `Serapan SP2D ${fmtPct(absorption)}`;
+    else if (absorption < average - 10) message = `Serapan di bawah rata-rata Eselon I (${fmtPct(average)})`;
+    return message ? [{ name: directorate.name, message, hasAccrual: accrual > 0 }] : [];
+  });
+}
+function renderAttention() {
+  const items = attentionRules();
+  document.querySelector('#attentionCount').textContent = `${items.length} catatan`;
+  document.querySelector('#attentionItems').innerHTML = items.map(item => `<div class="attention-item ${item.hasAccrual ? 'has-accrual' : ''}"><span>!</span><div><strong>${item.name}</strong><p>${item.message}</p></div></div>`).join('') || '<p class="section-note">Tidak ada catatan perhatian untuk periode ini.</p>';
+}
+function renderAccounts() {
+  const search = document.querySelector('#accountSearch').value.trim().toLowerCase();
+  const directorate = document.querySelector('#accountDirectorate').value;
+  const [sortKey, sortDirection] = document.querySelector('#accountSort').value.split('-');
+  const source = activeSnapshot?.rows?.map(row => ({
+    accountCode: row.accountCode, accountName: row.accountName, directorateId: row.directorateCode,
+    commodity: row.commodity, pagu: Number(row.pagu) || 0, realization: Number(row.cumulative) || 0,
+    remaining: Number.isFinite(Number(row.remaining)) ? Number(row.remaining) : (Number(row.pagu) || 0) - (Number(row.cumulative) || 0),
+    absorption: Number.isFinite(Number(row.absorption)) ? Number(row.absorption) : ((Number(row.pagu) || 0) ? (Number(row.cumulative) || 0) / Number(row.pagu) * 100 : 0),
+  })) || accountDetails;
+  const rows = source.filter(assertSaktiAccount).filter(account => (!directorate || account.directorateId === directorate) && (!search || `${account.accountCode} ${account.accountName}`.toLowerCase().includes(search))).sort((a, b) => sortDirection === 'asc' ? a[sortKey] - b[sortKey] : b[sortKey] - a[sortKey]);
+  const totals = rows.reduce((sum, account) => ({ pagu: sum.pagu + account.pagu, realization: sum.realization + account.realization, remaining: sum.remaining + account.remaining }), { pagu: 0, realization: 0, remaining: 0 });
+  const pageCount = Math.max(1, Math.ceil(rows.length / accountPageSize));
+  accountPage = Math.min(accountPage, pageCount);
+  const first = (accountPage - 1) * accountPageSize;
+  const pageRows = rows.slice(first, first + accountPageSize);
+  const subtotalByAccount = rows.reduce((groups, account) => {
+    const subtotal = groups.get(account.accountCode) || { pagu: 0, realization: 0, remaining: 0 };
+    subtotal.pagu += account.pagu;
+    subtotal.realization += account.realization;
+    subtotal.remaining += account.remaining;
+    groups.set(account.accountCode, subtotal);
+    return groups;
+  }, new Map());
+  const visibleGroups = pageRows.reduce((groups, account) => {
+    const group = groups.get(account.accountCode) || [];
+    group.push(account);
+    groups.set(account.accountCode, group);
+    return groups;
+  }, new Map());
+  const detailMarkup = [...visibleGroups.entries()].map(([accountCode, accounts]) => {
+    const details = accounts.map(account => `<tr class="account-detail-row"><td><strong>${account.accountCode}</strong></td><td>${account.accountName}</td><td>${accountDirectorateName(account.directorateId)}</td><td>${account.commodity || '—'}</td><td>${rupiah.format(account.pagu)}</td><td>${rupiah.format(account.realization)}</td><td><strong>${rupiah.format(account.remaining)}</strong></td><td><span class="percent-pill">${fmtPct(account.absorption)}</span></td></tr>`).join('');
+    const subtotal = subtotalByAccount.get(accountCode);
+    return `${details}<tr class="account-subtotal-row"><td colspan="4">Subtotal ${accountCode}</td><td>${rupiah.format(subtotal.pagu)}</td><td>${rupiah.format(subtotal.realization)}</td><td>${rupiah.format(subtotal.remaining)}</td><td></td></tr>`;
+  }).join('');
+  document.querySelector('#accountsTable').innerHTML = detailMarkup || '<tr><td class="empty-row" colspan="8">Tidak ada akun yang sesuai dengan pencarian.</td></tr>';
+  document.querySelector('#accountsTotal').innerHTML = `<tr><th colspan="4">TOTAL</th><th>${rupiah.format(totals.pagu)}</th><th>${rupiah.format(totals.realization)}</th><th>${rupiah.format(totals.remaining)}</th><th></th></tr>`;
+  document.querySelector('#accountSummary').textContent = rows.length ? `Menampilkan ${first + 1}–${Math.min(first + accountPageSize, rows.length)} dari ${rows.length} akun` : '0 akun';
+  document.querySelector('#accountPage').textContent = `Halaman ${accountPage} / ${pageCount}`;
+  document.querySelector('#accountPrevious').disabled = accountPage === 1;
+  document.querySelector('#accountNext').disabled = accountPage === pageCount;
+}
+function refreshDashboard() {
+  accountPage = 1;
+  selectedCompositionScope = selectedDirectorate === 'all' ? 'deputy' : selectedDirectorate;
+  selectedCompositionCategory = null;
+  document.querySelector('#directorateSelect').value = selectedDirectorate;
+  document.querySelector('#compositionScope').value = selectedCompositionScope;
+  renderKpis(); renderPerformance(); lineChart(); renderComposition(); renderCurrentMonth(); renderAttention(); renderSourceInfo(); renderAccounts();
+}
+async function deleteActiveSnapshot() {
+  if (!activeSnapshot?.period || !window.SaktiCloud?.isAuthenticated()) { showToast('Silakan masuk kembali untuk menghapus snapshot.'); return; }
+  const sourceType = document.querySelector('#deleteSnapshotSource').value;
+  const sourceLabel = sourceType === 'accrual' ? 'Akrual' : 'SP2D';
+  const label = activeSnapshot.period.label;
+  if (!window.confirm(`Hapus snapshot ${label} - ${sourceLabel}?\n\nData akan dihapus dari cloud dan cache lokal.`)) return;
+  const key = snapshotKey(activeSnapshot.period);
+  try {
+    await window.SaktiCloud.deleteSnapshot(activeSnapshot.period.year, activeSnapshot.period.month, sourceType);
+    const snapshots = loadSnapshots();
+    if (snapshots[key]) {
+      snapshots[key][sourceType] = null;
+      if (!snapshots[key].sp2d && !snapshots[key].accrual) delete snapshots[key];
+      saveSnapshots(snapshots);
+    }
+    const remainingKeys = sortedSnapshotKeys(snapshots).filter(candidate => snapshotDataset(snapshots[candidate]));
+    const preferredKey = snapshotDataset(snapshots[key]) ? key : remainingKeys.sort((a, b) => Math.abs(Number(a.replace('-', '')) - Number(key.replace('-', ''))) - Math.abs(Number(b.replace('-', '')) - Number(key.replace('-', ''))))[0];
+    if (preferredKey) setActiveSnapshot(preferredKey);
+    else { activeSnapshot = null; refreshDashboard(); }
+    showToast(`Snapshot ${sourceLabel} berhasil dihapus.`);
+  } catch (error) {
+    console.error('Snapshot delete failed', error);
+    showToast(error.message || 'Snapshot tidak dapat dihapus. Data lokal tetap dipertahankan.');
+  }
+}
+setTimeout(() => {
+  document.querySelector('#deleteSnapshotButton').addEventListener('click', deleteActiveSnapshot);
+  renderSourceInfo();
+}, 0);
