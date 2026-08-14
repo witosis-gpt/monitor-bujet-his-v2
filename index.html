@@ -17,7 +17,7 @@
         <nav aria-label="Navigasi utama">
           <a class="nav-item active" id="dashboardNav" href="#dashboard"><span>▦</span> Dashboard</a>
           <a class="nav-item" id="detailNav" href="#detail"><span>▤</span> Detail Anggaran</a>
-          <a class="nav-item disabled" href="#laporan" aria-disabled="true"><span>▱</span> Laporan</a>
+          <a class="nav-item" id="reportNav" href="#report"><span>▱</span> Laporan</a>
         </nav>
         <div class="sidebar-footer"><span>PERIODE AKTIF</span><strong id="sidebarPeriod">Belum ada data SAKTI</strong><small id="updatedAt">Unggah laporan SAKTI untuk mulai</small><small id="currentUser"></small><button class="logout-button" id="logoutButton" type="button">Keluar</button></div>
       </aside>
@@ -46,6 +46,11 @@
 
         <section class="panel accounts-panel"><div class="section-heading"><div><p class="eyebrow">RINCIAN AKUN</p><h2>Detail Sisa Anggaran per Akun</h2></div><button class="button secondary detail-link" id="detailBudgetButton">Lihat Detail Anggaran</button></div><div class="account-controls"><label class="account-search">Cari akun atau uraian<input id="accountSearch" type="search" placeholder="Contoh: 524111 atau perjalanan dinas" /></label><label>Direktorat<select id="accountDirectorate"></select></label><label>Urutkan<select id="accountSort"><option value="remaining-desc">Sisa terbesar</option><option value="remaining-asc">Sisa terkecil</option><option value="absorption-asc">Serapan terendah</option><option value="absorption-desc">Serapan tertinggi</option><option value="pagu-desc">Pagu terbesar</option></select></label><label>Tampilkan<select id="accountPageSize"><option value="10">10 baris</option><option value="20">20 baris</option><option value="50">50 baris</option></select></label></div><div class="table-scroll account-table-scroll"><table><thead><tr><th>Akun</th><th>Uraian</th><th>Direktorat</th><th>RO / Komoditas</th><th>Pagu</th><th>Realisasi</th><th>Sisa</th><th>% Serapan</th></tr></thead><tbody id="accountsTable"></tbody><tfoot id="accountsTotal"></tfoot></table></div><div class="table-footer"><span id="accountSummary"></span><div class="pagination"><button id="accountPrevious" type="button">‹</button><span id="accountPage"></span><button id="accountNext" type="button">›</button></div></div></section>
         <section id="detailView" class="detail-view" hidden><header class="detail-header"><div><p class="eyebrow">MODULE 2</p><h1>Detail Anggaran</h1><p id="detailBreadcrumb" class="subtitle">Detail Anggaran</p></div><div class="detail-actions"><button class="button secondary" id="expandAllButton" type="button">Buka Semua</button><button class="button secondary" id="collapseAllButton" type="button">Tutup Semua</button></div></header><section class="filter-bar detail-filter-bar" aria-label="Filter detail anggaran"><label>Tahun<select id="detailYearSelect"></select></label><label>Periode<select id="detailPeriodSelect"></select></label><label class="directorate-filter">Direktorat<select id="detailDirectorateSelect"></select></label><label class="detail-search">Cari hierarki<input id="detailSearch" type="search" placeholder="Kode atau uraian Direktorat, RO, Komponen, Subkomponen, Akun" /></label></section><section id="detailSummary" class="detail-summary" aria-label="Ringkasan detail anggaran"></section><section class="panel detail-tree-panel"><div class="section-heading"><div><p class="eyebrow">HIRARKI SAKTI</p><h2>Direktorat sampai Akun</h2></div><span id="detailTreeCount" class="section-note"></span></div><div class="detail-tree-scroll"><table class="detail-tree-table"><thead><tr><th>Uraian Hierarki</th><th>Pagu</th><th>SP2D</th><th>Akrual</th><th>Potensi</th><th>Sisa</th><th>% SP2D</th></tr></thead><tbody id="detailTreeRows"></tbody></table></div></section></section>
+        <section id="reportView" class="report-view" hidden>
+          <header class="detail-header"><div><p class="eyebrow">MODULE 3</p><h1>Laporan &amp; PowerPoint</h1><p class="subtitle">Buat laporan anggaran editable dari data SAKTI periode aktif.</p></div></header>
+          <section class="panel report-settings"><div class="section-heading"><div><p class="eyebrow">PENGATURAN LAPORAN</p><h2>PowerPoint Tabel Keuangan</h2></div></div><div class="report-controls"><label>Tahun<select id="reportYearSelect"></select></label><label>Periode<select id="reportPeriodSelect"></select></label><label>Ruang lingkup<select id="reportScopeSelect"></select></label></div><div class="report-options"><label><input id="reportIncludeAccounts" type="checkbox" /> Sertakan rincian akun</label><label><input id="reportIncludeAccountRemaining" type="checkbox" /> Sertakan sisa anggaran per akun</label><label><input id="reportIncludeVisual" type="checkbox" /> Sertakan slide ringkasan visual</label></div></section>
+          <section class="panel report-preview"><p class="eyebrow">PRATINJAU</p><div id="reportPreview"></div><div class="report-actions"><button class="button primary" id="reportGenerateButton" type="button">Generate PowerPoint</button><button class="button secondary report-test-button" id="reportTestButton" type="button">Test PPT Sederhana</button><span id="reportStatus" role="status"></span></div><div id="reportResult" class="report-result" hidden></div></section>
+        </section>
       </main>
     </div>
     <div id="toast" class="toast" role="status"></div>
@@ -53,6 +58,8 @@
     <script src="supabase-public-config.js?v=1"></script>
     <script src="supabase-client.js?v=3"></script>
     <script src="vendor/xlsx.full.min.js"></script>
+    <script src="vendor/jszip.min.js?v=1"></script>
+    <script src="vendor/pptxgen.bundle.js?v=1"></script>
     <script src="app.js"></script>
   </body>
 </html>
