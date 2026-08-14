@@ -24,7 +24,7 @@
       <main>
         <header class="page-header">
           <div><p class="eyebrow">DEPUTI HILIRISASI INVESTASI STRATEGIS</p><h1>Dashboard Keuangan Deputi HIS</h1><p class="subtitle">Monitoring realisasi anggaran <span id="activePeriod">• Belum ada data SAKTI</span></p></div>
-          <div class="header-actions"><span id="cloudStatus" class="cloud-status">Memuat data anggaran…</span><button class="button secondary" id="uploadButton">Update Data SAKTI</button><label class="snapshot-source" for="deleteSnapshotSource">Sumber<select id="deleteSnapshotSource"><option value="sp2d">SP2D</option><option value="accrual">Akrual</option></select></label><button class="button secondary snapshot-delete" id="deleteSnapshotButton" type="button">Hapus Snapshot</button><button class="button primary" id="pptButton">Generate PowerPoint</button></div>
+          <div class="header-actions"><span id="cloudStatus" class="cloud-status">Memuat data anggaran…</span><button class="button secondary" id="uploadButton">Update Data SAKTI</button><label class="snapshot-source" for="deleteSnapshotSource">Sumber<select id="deleteSnapshotSource"><option value="sp2d">SP2D</option><option value="accrual">Akrual</option></select></label><button class="button secondary snapshot-delete" id="deleteSnapshotButton" type="button">Hapus Data</button><button class="button primary" id="pptButton">Generate PowerPoint</button></div>
         </header>
 
         <section class="filter-bar" aria-label="Filter data"><label for="yearSelect">Tahun<select id="yearSelect"><option>—</option></select></label><label for="monthSelect">Periode<select id="monthSelect"><option>Belum ada data</option></select></label><label class="directorate-filter" for="directorateSelect">Direktorat<select id="directorateSelect"></select></label><button class="reset" id="resetButton">↺ Reset Filter</button></section>
@@ -61,5 +61,7 @@
     <script src="vendor/jszip.min.js?v=1"></script>
     <script src="vendor/pptxgen.bundle.js?v=1"></script>
     <script src="app.js"></script>
+    <script src="pptx-download-fix.js?v=1"></script>
+    <script src="ui-polish.js?v=1"></script>
   </body>
 </html>
