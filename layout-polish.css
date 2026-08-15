@@ -1,0 +1,52 @@
+/* Responsive proportion fixes for dashboard header and sidebar footer */
+
+/* Keep the dashboard title visually balanced on medium/large screens. */
+.page-header > div:first-child{min-width:420px;max-width:560px;flex:0 1 560px}
+.page-header h1{font-size:42px;line-height:1.08;letter-spacing:-1px;max-width:560px}
+.page-header .subtitle{font-size:16px;line-height:1.45;max-width:520px}
+
+/* Let the action area breathe without forcing the title into 3 narrow lines. */
+.header-actions{align-items:flex-end;justify-content:flex-end;flex-wrap:wrap;max-width:760px}
+.header-actions .cloud-status{align-self:center;white-space:nowrap}
+
+/* Make logout a real button-sized action instead of tiny plain text. */
+.logout-button{margin-top:8px;width:100%;min-height:40px;padding:9px 12px;border:1px solid #4a667a;border-radius:6px;background:rgba(255,255,255,.06);color:#fff;font:600 13px 'DM Sans',Arial,sans-serif;text-align:left;cursor:pointer;transition:background .15s,border-color .15s}
+.logout-button:hover{background:rgba(255,255,255,.12);border-color:#7890a0}
+.logout-button:active{transform:translateY(1px)}
+
+/* Sidebar footer hierarchy. */
+.sidebar-footer{gap:8px}
+.sidebar-footer strong{font-size:15px;line-height:1.3}
+.sidebar-footer small{font-size:12px;line-height:1.35}
+
+/* Tablet landscape: retain readable title and balanced action buttons. */
+@media(max-width:1250px) and (min-width:901px){
+  main{padding-left:36px;padding-right:36px}
+  .page-header{gap:22px}
+  .page-header > div:first-child{min-width:360px;max-width:470px;flex-basis:470px}
+  .page-header h1{font-size:38px;max-width:470px}
+  .header-actions{max-width:620px;gap:8px}
+  .header-actions .button{padding:10px 13px}
+}
+
+/* Compact tablet mode: stack header cleanly rather than crushing the title. */
+@media(max-width:1050px){
+  .page-header{flex-direction:column;align-items:stretch}
+  .page-header > div:first-child{min-width:0;max-width:none;flex:auto}
+  .page-header h1{max-width:none;font-size:38px}
+  .header-actions{max-width:none;justify-content:flex-start}
+}
+
+@media(max-width:900px){
+  .page-header h1{font-size:34px;line-height:1.1}
+  .page-header .subtitle{font-size:14px}
+}
+
+@media(max-width:620px){
+  .page-header h1{font-size:30px}
+  .header-actions{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:8px}
+  .header-actions .cloud-status{grid-column:1 / -1}
+  .header-actions .snapshot-source{min-width:0}
+  .header-actions .snapshot-source select{width:100%}
+  .header-actions .button{width:100%}
+}
