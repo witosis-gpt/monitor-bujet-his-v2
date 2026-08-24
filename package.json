@@ -3,7 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "scripts": {
-    "dev": "node serve.js"
+    "dev": "node serve.js",
+    "test:pptx": "node scripts/validate-pptx-package.js"
   },
   "dependencies": {
     "xlsx": "^0.18.5"
