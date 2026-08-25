@@ -15,6 +15,7 @@
   const recordFor = (dataset, filename, sourceType) => ({
     year: dataset.period.year, month: dataset.period.month, period_label: dataset.period.label, source_type: sourceType,
     satker_code: dataset.satker?.code || null, satker_name: dataset.satker?.name || null, filename,
+    imported_at: new Date().toISOString(),
     pagu: dataset.executiveSummary.pagu, previous_period: dataset.rows.reduce((sum, row) => sum + (row.previousPeriod || 0), 0),
     current_period: dataset.executiveSummary.monthly, cumulative: dataset.executiveSummary.realization,
     remaining: dataset.executiveSummary.pagu - dataset.executiveSummary.realization,
