@@ -9,11 +9,21 @@
   const rowsForScope = () => getRows().filter(row => (scope() === 'all' || row.directorateCode === scope()) && row.accountCode);
 
   function metric(row) {
-    try { if (typeof module2Metrics === 'function') return module2Metrics(row); } catch {}
+    if (typeof window.getFinancialMetrics === 'function') return window.getFinancialMetrics(row);
     const pagu = Number(row.pagu) || 0;
     const sp2d = Number(row.cumulative) || 0;
     const accrual = Number(row.accrualOutstanding) || 0;
-    return { pagu, sp2d, accrual, remaining: pagu - sp2d, absorption: pagu ? sp2d / pagu * 100 : 0 };
+    const potential = Number(row.potential ?? (sp2d + accrual)) || 0;
+    const remainingSp2d = pagu - sp2d;
+    const remainingPotential = pagu - potential;
+    return {
+      pagu, sp2d, accrual, potential,
+      remainingSp2d,
+      remainingPotential,
+      remaining: remainingPotential,
+      pctSp2d: pagu ? sp2d / pagu * 100 : 0,
+      absorption: pagu ? sp2d / pagu * 100 : 0,
+    };
   }
 
   const label = row => `${row.accountCode || '—'} · ${row.accountName || 'Tanpa uraian'}`;
@@ -40,19 +50,57 @@
     }
 
     const items = rowsForScope().map(row => ({ row, m: metric(row) }));
-    const remaining = items.filter(x => x.m.remaining > 0).sort((a,b) => b.m.remaining - a.m.remaining);
-    const zero = items.filter(x => x.m.pagu > 0 && x.m.sp2d === 0).sort((a,b) => b.m.remaining - a.m.remaining);
-    const low = items.filter(x => x.m.pagu > 0 && x.m.sp2d > 0 && x.m.absorption < 25).sort((a,b) => a.m.absorption - b.m.absorption);
-    const accrual = items.filter(x => x.m.accrual > 0).sort((a,b) => b.m.accrual - a.m.accrual);
-    const topRemaining = remaining[0], topZero = zero[0], topLow = low[0], topAccrual = accrual[0];
+
+    // Potential-based ranking: true remaining budget after SP2D + accrual.
+    const remaining = items
+      .filter(x => x.m.remainingPotential > 0)
+      .sort((a, b) => b.m.remainingPotential - a.m.remainingPotential);
+
+    // Official realization indicators remain SP2D-based by design.
+    const zero = items
+      .filter(x => x.m.pagu > 0 && x.m.sp2d === 0)
+      .sort((a, b) => b.m.remainingSp2d - a.m.remainingSp2d);
+    const low = items
+      .filter(x => x.m.pagu > 0 && x.m.sp2d > 0 && x.m.pctSp2d < 25)
+      .sort((a, b) => a.m.pctSp2d - b.m.pctSp2d);
+    const accrual = items
+      .filter(x => x.m.accrual > 0)
+      .sort((a, b) => b.m.accrual - a.m.accrual);
+    const accrualOnly = items
+      .filter(x => x.m.sp2d === 0 && x.m.accrual > 0)
+      .sort((a, b) => b.m.accrual - a.m.accrual);
+
+    const topRemaining = remaining[0];
+    const topZero = zero[0];
+    const topLow = low[0];
+    const topAccrual = accrual[0];
 
     panel.innerHTML = `
-      <div class="module2-focus-heading"><div><p class="eyebrow">FOKUS CEPAT</p><h2>Akun yang perlu dilihat dulu</h2></div><span>${items.length.toLocaleString('id-ID')} akun pada cakupan aktif</span></div>
+      <div class="module2-focus-heading">
+        <div><p class="eyebrow">FOKUS CEPAT</p><h2>Akun yang perlu dilihat dulu</h2></div>
+        <span>${items.length.toLocaleString('id-ID')} akun pada cakupan aktif</span>
+      </div>
       <div class="module2-focus-grid">
-        <button class="module2-focus-card" data-focus="remaining" ${topRemaining ? '' : 'disabled'}><span>Sisa terbesar</span><strong>${topRemaining ? label(topRemaining.row) : 'Tidak ada'}</strong><small>${topRemaining ? rupiah.format(topRemaining.m.remaining) : '—'}</small></button>
-        <button class="module2-focus-card" data-focus="zero" ${topZero ? '' : 'disabled'}><span>Belum realisasi</span><strong>${zero.length.toLocaleString('id-ID')} akun</strong><small>${topZero ? label(topZero.row) : 'Tidak ada akun'}</small></button>
-        <button class="module2-focus-card" data-focus="low" ${topLow ? '' : 'disabled'}><span>Serapan &lt; 25%</span><strong>${low.length.toLocaleString('id-ID')} akun</strong><small>${topLow ? `${label(topLow.row)} · ${topLow.m.absorption.toLocaleString('id-ID',{maximumFractionDigits:2})}%` : 'Tidak ada akun'}</small></button>
-        <button class="module2-focus-card" data-focus="accrual" ${topAccrual ? '' : 'disabled'}><span>Ada akrual</span><strong>${accrual.length.toLocaleString('id-ID')} akun</strong><small>${topAccrual ? `${label(topAccrual.row)} · ${rupiah.format(topAccrual.m.accrual)}` : 'Belum ada akrual'}</small></button>
+        <button class="module2-focus-card" data-focus="remaining" ${topRemaining ? '' : 'disabled'}>
+          <span>Sisa terbesar setelah akrual</span>
+          <strong>${topRemaining ? label(topRemaining.row) : 'Tidak ada'}</strong>
+          <small>${topRemaining ? `${rupiah.format(topRemaining.m.remainingPotential)} · ${topRemaining.m.pctRemainingPotential?.toLocaleString('id-ID',{maximumFractionDigits:2}) || '0'}% sisa` : '—'}</small>
+        </button>
+        <button class="module2-focus-card" data-focus="zero" ${topZero ? '' : 'disabled'}>
+          <span>Belum realisasi SP2D</span>
+          <strong>${zero.length.toLocaleString('id-ID')} akun</strong>
+          <small>${topZero ? label(topZero.row) : 'Tidak ada akun'}</small>
+        </button>
+        <button class="module2-focus-card" data-focus="low" ${topLow ? '' : 'disabled'}>
+          <span>Serapan SP2D &lt; 25%</span>
+          <strong>${low.length.toLocaleString('id-ID')} akun</strong>
+          <small>${topLow ? `${label(topLow.row)} · ${topLow.m.pctSp2d.toLocaleString('id-ID',{maximumFractionDigits:2})}%` : 'Tidak ada akun'}</small>
+        </button>
+        <button class="module2-focus-card" data-focus="accrual" ${topAccrual ? '' : 'disabled'}>
+          <span>Ada akrual</span>
+          <strong>${accrual.length.toLocaleString('id-ID')} akun</strong>
+          <small>${topAccrual ? `${label(topAccrual.row)} · ${rupiah.format(topAccrual.m.accrual)}${accrualOnly.includes(topAccrual) ? ' · akrual saja' : ''}` : 'Belum ada akrual'}</small>
+        </button>
       </div>`;
 
     panel.querySelector('[data-focus="remaining"]')?.addEventListener('click', () => focus(topRemaining?.row));
@@ -68,7 +116,6 @@
     document.head.appendChild(style);
   }
 
-  // ui-polish intercepts sidebar clicks in capture phase, so hashchange is the reliable trigger.
   window.addEventListener('hashchange', () => {
     if (location.hash === '#detail') setTimeout(safeRender, 120);
   });
