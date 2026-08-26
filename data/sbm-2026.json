@@ -1,0 +1,6235 @@
+{
+  "version": "2026.2",
+  "year": 2026,
+  "source_regulation": "PMK Nomor 32 Tahun 2025 tentang Standar Biaya Masukan Tahun Anggaran 2026",
+  "source_url": "https://jdih.kemenkeu.go.id/api/download/ccce2e9f-11fe-41ee-9da3-c7d42609b484/2025pmkeuangan032.pdf",
+  "rates": {
+    "daily_allowances": {
+      "ACEH": {
+        "luar_kota": 360000,
+        "dalam_kota_gt_8_jam": 140000,
+        "diklat": 110000,
+        "unit": "OH"
+      },
+      "SUMATERA UTARA": {
+        "luar_kota": 370000,
+        "dalam_kota_gt_8_jam": 150000,
+        "diklat": 110000,
+        "unit": "OH"
+      },
+      "RIAU": {
+        "luar_kota": 370000,
+        "dalam_kota_gt_8_jam": 150000,
+        "diklat": 110000,
+        "unit": "OH"
+      },
+      "KEPULAUAN RIAU": {
+        "luar_kota": 370000,
+        "dalam_kota_gt_8_jam": 150000,
+        "diklat": 110000,
+        "unit": "OH"
+      },
+      "JAMBI": {
+        "luar_kota": 370000,
+        "dalam_kota_gt_8_jam": 150000,
+        "diklat": 110000,
+        "unit": "OH"
+      },
+      "SUMATERA BARAT": {
+        "luar_kota": 380000,
+        "dalam_kota_gt_8_jam": 150000,
+        "diklat": 110000,
+        "unit": "OH"
+      },
+      "SUMATERA SELATAN": {
+        "luar_kota": 380000,
+        "dalam_kota_gt_8_jam": 150000,
+        "diklat": 110000,
+        "unit": "OH"
+      },
+      "LAMPUNG": {
+        "luar_kota": 380000,
+        "dalam_kota_gt_8_jam": 150000,
+        "diklat": 110000,
+        "unit": "OH"
+      },
+      "BENGKULU": {
+        "luar_kota": 380000,
+        "dalam_kota_gt_8_jam": 150000,
+        "diklat": 110000,
+        "unit": "OH"
+      },
+      "BANGKA BELITUNG": {
+        "luar_kota": 410000,
+        "dalam_kota_gt_8_jam": 160000,
+        "diklat": 120000,
+        "unit": "OH"
+      },
+      "BANTEN": {
+        "luar_kota": 370000,
+        "dalam_kota_gt_8_jam": 150000,
+        "diklat": 110000,
+        "unit": "OH"
+      },
+      "JAWA BARAT": {
+        "luar_kota": 430000,
+        "dalam_kota_gt_8_jam": 170000,
+        "diklat": 130000,
+        "unit": "OH"
+      },
+      "DKI JAKARTA": {
+        "luar_kota": 530000,
+        "dalam_kota_gt_8_jam": 210000,
+        "diklat": 160000,
+        "unit": "OH"
+      },
+      "JAWA TENGAH": {
+        "luar_kota": 370000,
+        "dalam_kota_gt_8_jam": 150000,
+        "diklat": 110000,
+        "unit": "OH"
+      },
+      "DI YOGYAKARTA": {
+        "luar_kota": 420000,
+        "dalam_kota_gt_8_jam": 170000,
+        "diklat": 130000,
+        "unit": "OH"
+      },
+      "JAWA TIMUR": {
+        "luar_kota": 410000,
+        "dalam_kota_gt_8_jam": 160000,
+        "diklat": 120000,
+        "unit": "OH"
+      },
+      "BALI": {
+        "luar_kota": 480000,
+        "dalam_kota_gt_8_jam": 190000,
+        "diklat": 140000,
+        "unit": "OH"
+      },
+      "NUSA TENGGARA BARAT": {
+        "luar_kota": 440000,
+        "dalam_kota_gt_8_jam": 180000,
+        "diklat": 130000,
+        "unit": "OH"
+      },
+      "NUSA TENGGARA TIMUR": {
+        "luar_kota": 430000,
+        "dalam_kota_gt_8_jam": 170000,
+        "diklat": 130000,
+        "unit": "OH"
+      },
+      "KALIMANTAN BARAT": {
+        "luar_kota": 380000,
+        "dalam_kota_gt_8_jam": 150000,
+        "diklat": 110000,
+        "unit": "OH"
+      },
+      "KALIMANTAN TENGAH": {
+        "luar_kota": 360000,
+        "dalam_kota_gt_8_jam": 140000,
+        "diklat": 110000,
+        "unit": "OH"
+      },
+      "KALIMANTAN SELATAN": {
+        "luar_kota": 380000,
+        "dalam_kota_gt_8_jam": 150000,
+        "diklat": 110000,
+        "unit": "OH"
+      },
+      "KALIMANTAN TIMUR": {
+        "luar_kota": 430000,
+        "dalam_kota_gt_8_jam": 170000,
+        "diklat": 130000,
+        "unit": "OH"
+      },
+      "KALIMANTAN UTARA": {
+        "luar_kota": 430000,
+        "dalam_kota_gt_8_jam": 170000,
+        "diklat": 130000,
+        "unit": "OH"
+      },
+      "SULAWESI UTARA": {
+        "luar_kota": 370000,
+        "dalam_kota_gt_8_jam": 150000,
+        "diklat": 110000,
+        "unit": "OH"
+      },
+      "GORONTALO": {
+        "luar_kota": 370000,
+        "dalam_kota_gt_8_jam": 150000,
+        "diklat": 110000,
+        "unit": "OH"
+      },
+      "SULAWESI BARAT": {
+        "luar_kota": 410000,
+        "dalam_kota_gt_8_jam": 160000,
+        "diklat": 120000,
+        "unit": "OH"
+      },
+      "SULAWESI SELATAN": {
+        "luar_kota": 430000,
+        "dalam_kota_gt_8_jam": 170000,
+        "diklat": 130000,
+        "unit": "OH"
+      },
+      "SULAWESI TENGAH": {
+        "luar_kota": 370000,
+        "dalam_kota_gt_8_jam": 150000,
+        "diklat": 110000,
+        "unit": "OH"
+      },
+      "SULAWESI TENGGARA": {
+        "luar_kota": 380000,
+        "dalam_kota_gt_8_jam": 150000,
+        "diklat": 110000,
+        "unit": "OH"
+      },
+      "MALUKU": {
+        "luar_kota": 380000,
+        "dalam_kota_gt_8_jam": 150000,
+        "diklat": 110000,
+        "unit": "OH"
+      },
+      "MALUKU UTARA": {
+        "luar_kota": 430000,
+        "dalam_kota_gt_8_jam": 170000,
+        "diklat": 130000,
+        "unit": "OH"
+      },
+      "PAPUA": {
+        "luar_kota": 580000,
+        "dalam_kota_gt_8_jam": 230000,
+        "diklat": 170000,
+        "unit": "OH"
+      },
+      "PAPUA BARAT": {
+        "luar_kota": 480000,
+        "dalam_kota_gt_8_jam": 190000,
+        "diklat": 140000,
+        "unit": "OH"
+      },
+      "PAPUA BARAT DAYA": {
+        "luar_kota": 480000,
+        "dalam_kota_gt_8_jam": 190000,
+        "diklat": 140000,
+        "unit": "OH"
+      },
+      "PAPUA TENGAH": {
+        "luar_kota": 580000,
+        "dalam_kota_gt_8_jam": 230000,
+        "diklat": 170000,
+        "unit": "OH"
+      },
+      "PAPUA SELATAN": {
+        "luar_kota": 580000,
+        "dalam_kota_gt_8_jam": 230000,
+        "diklat": 170000,
+        "unit": "OH"
+      },
+      "PAPUA PEGUNUNGAN": {
+        "luar_kota": 580000,
+        "dalam_kota_gt_8_jam": 230000,
+        "diklat": 170000,
+        "unit": "OH"
+      }
+    },
+    "accommodation": {
+      "ACEH": {
+        "Pejabat Negara/Wamen/Eselon I": 5109000,
+        "Pejabat Negara lainnya/Eselon II": 3526000,
+        "Eselon III/Gol IV": 1578000,
+        "Eselon IV/Gol III/II/I": 770000,
+        "unit": "OH"
+      },
+      "SUMATERA UTARA": {
+        "Pejabat Negara/Wamen/Eselon I": 4960000,
+        "Pejabat Negara lainnya/Eselon II": 2195000,
+        "Eselon III/Gol IV": 1188000,
+        "Eselon IV/Gol III/II/I": 699000,
+        "unit": "OH"
+      },
+      "RIAU": {
+        "Pejabat Negara/Wamen/Eselon I": 3820000,
+        "Pejabat Negara lainnya/Eselon II": 3119000,
+        "Eselon III/Gol IV": 1650000,
+        "Eselon IV/Gol III/II/I": 852000,
+        "unit": "OH"
+      },
+      "KEPULAUAN RIAU": {
+        "Pejabat Negara/Wamen/Eselon I": 6177000,
+        "Pejabat Negara lainnya/Eselon II": 2481000,
+        "Eselon III/Gol IV": 1388000,
+        "Eselon IV/Gol III/II/I": 792000,
+        "unit": "OH"
+      },
+      "JAMBI": {
+        "Pejabat Negara/Wamen/Eselon I": 5004000,
+        "Pejabat Negara lainnya/Eselon II": 4102000,
+        "Eselon III/Gol IV": 1252000,
+        "Eselon IV/Gol III/II/I": 580000,
+        "unit": "OH"
+      },
+      "SUMATERA BARAT": {
+        "Pejabat Negara/Wamen/Eselon I": 5603000,
+        "Pejabat Negara lainnya/Eselon II": 3373000,
+        "Eselon III/Gol IV": 1353000,
+        "Eselon IV/Gol III/II/I": 701000,
+        "unit": "OH"
+      },
+      "SUMATERA SELATAN": {
+        "Pejabat Negara/Wamen/Eselon I": 6298000,
+        "Pejabat Negara lainnya/Eselon II": 3134000,
+        "Eselon III/Gol IV": 1966000,
+        "Eselon IV/Gol III/II/I": 861000,
+        "unit": "OH"
+      },
+      "LAMPUNG": {
+        "Pejabat Negara/Wamen/Eselon I": 4806000,
+        "Pejabat Negara lainnya/Eselon II": 2663000,
+        "Eselon III/Gol IV": 1539000,
+        "Eselon IV/Gol III/II/I": 621000,
+        "unit": "OH"
+      },
+      "BENGKULU": {
+        "Pejabat Negara/Wamen/Eselon I": 2140000,
+        "Pejabat Negara lainnya/Eselon II": 1628000,
+        "Eselon III/Gol IV": 1546000,
+        "Eselon IV/Gol III/II/I": 692000,
+        "unit": "OH"
+      },
+      "BANGKA BELITUNG": {
+        "Pejabat Negara/Wamen/Eselon I": 4424000,
+        "Pejabat Negara lainnya/Eselon II": 2838000,
+        "Eselon III/Gol IV": 1957000,
+        "Eselon IV/Gol III/II/I": 724000,
+        "unit": "OH"
+      },
+      "BANTEN": {
+        "Pejabat Negara/Wamen/Eselon I": 5725000,
+        "Pejabat Negara lainnya/Eselon II": 2373000,
+        "Eselon III/Gol IV": 1301000,
+        "Eselon IV/Gol III/II/I": 775000,
+        "unit": "OH"
+      },
+      "JAWA BARAT": {
+        "Pejabat Negara/Wamen/Eselon I": 5812000,
+        "Pejabat Negara lainnya/Eselon II": 2755000,
+        "Eselon III/Gol IV": 1366000,
+        "Eselon IV/Gol III/II/I": 735000,
+        "unit": "OH"
+      },
+      "DKI JAKARTA": {
+        "Pejabat Negara/Wamen/Eselon I": 9331000,
+        "Pejabat Negara lainnya/Eselon II": 2084000,
+        "Eselon III/Gol IV": 1062000,
+        "Eselon IV/Gol III/II/I": 730000,
+        "unit": "OH"
+      },
+      "JAWA TENGAH": {
+        "Pejabat Negara/Wamen/Eselon I": 6129000,
+        "Pejabat Negara lainnya/Eselon II": 2138000,
+        "Eselon III/Gol IV": 1286000,
+        "Eselon IV/Gol III/II/I": 810000,
+        "unit": "OH"
+      },
+      "DI YOGYAKARTA": {
+        "Pejabat Negara/Wamen/Eselon I": 5100000,
+        "Pejabat Negara lainnya/Eselon II": 2695000,
+        "Eselon III/Gol IV": 1600000,
+        "Eselon IV/Gol III/II/I": 845000,
+        "unit": "OH"
+      },
+      "JAWA TIMUR": {
+        "Pejabat Negara/Wamen/Eselon I": 4449000,
+        "Pejabat Negara lainnya/Eselon II": 2007000,
+        "Eselon III/Gol IV": 1234000,
+        "Eselon IV/Gol III/II/I": 814000,
+        "unit": "OH"
+      },
+      "BALI": {
+        "Pejabat Negara/Wamen/Eselon I": 7328000,
+        "Pejabat Negara lainnya/Eselon II": 2433000,
+        "Eselon III/Gol IV": 1754000,
+        "Eselon IV/Gol III/II/I": 1138000,
+        "unit": "OH"
+      },
+      "NUSA TENGGARA BARAT": {
+        "Pejabat Negara/Wamen/Eselon I": 4682000,
+        "Pejabat Negara lainnya/Eselon II": 2648000,
+        "Eselon III/Gol IV": 1418000,
+        "Eselon IV/Gol III/II/I": 907000,
+        "unit": "OH"
+      },
+      "NUSA TENGGARA TIMUR": {
+        "Pejabat Negara/Wamen/Eselon I": 4013000,
+        "Pejabat Negara lainnya/Eselon II": 2283000,
+        "Eselon III/Gol IV": 1450000,
+        "Eselon IV/Gol III/II/I": 737000,
+        "unit": "OH"
+      },
+      "KALIMANTAN BARAT": {
+        "Pejabat Negara/Wamen/Eselon I": 2654000,
+        "Pejabat Negara lainnya/Eselon II": 1923000,
+        "Eselon III/Gol IV": 1125000,
+        "Eselon IV/Gol III/II/I": 576000,
+        "unit": "OH"
+      },
+      "KALIMANTAN TENGAH": {
+        "Pejabat Negara/Wamen/Eselon I": 4901000,
+        "Pejabat Negara lainnya/Eselon II": 3391000,
+        "Eselon III/Gol IV": 1189000,
+        "Eselon IV/Gol III/II/I": 706000,
+        "unit": "OH"
+      },
+      "KALIMANTAN SELATAN": {
+        "Pejabat Negara/Wamen/Eselon I": 4797000,
+        "Pejabat Negara lainnya/Eselon II": 3316000,
+        "Eselon III/Gol IV": 1500000,
+        "Eselon IV/Gol III/II/I": 746000,
+        "unit": "OH"
+      },
+      "KALIMANTAN TIMUR": {
+        "Pejabat Negara/Wamen/Eselon I": 4000000,
+        "Pejabat Negara lainnya/Eselon II": 2342000,
+        "Eselon III/Gol IV": 1507000,
+        "Eselon IV/Gol III/II/I": 804000,
+        "unit": "OH"
+      },
+      "KALIMANTAN UTARA": {
+        "Pejabat Negara/Wamen/Eselon I": 4000000,
+        "Pejabat Negara lainnya/Eselon II": 2854000,
+        "Eselon III/Gol IV": 1507000,
+        "Eselon IV/Gol III/II/I": 904000,
+        "unit": "OH"
+      },
+      "SULAWESI UTARA": {
+        "Pejabat Negara/Wamen/Eselon I": 5264000,
+        "Pejabat Negara lainnya/Eselon II": 2290000,
+        "Eselon III/Gol IV": 1270000,
+        "Eselon IV/Gol III/II/I": 978000,
+        "unit": "OH"
+      },
+      "GORONTALO": {
+        "Pejabat Negara/Wamen/Eselon I": 4168000,
+        "Pejabat Negara lainnya/Eselon II": 3107000,
+        "Eselon III/Gol IV": 1606000,
+        "Eselon IV/Gol III/II/I": 955000,
+        "unit": "OH"
+      },
+      "SULAWESI BARAT": {
+        "Pejabat Negara/Wamen/Eselon I": 4076000,
+        "Pejabat Negara lainnya/Eselon II": 3098000,
+        "Eselon III/Gol IV": 1344000,
+        "Eselon IV/Gol III/II/I": 704000,
+        "unit": "OH"
+      },
+      "SULAWESI SELATAN": {
+        "Pejabat Negara/Wamen/Eselon I": 4820000,
+        "Pejabat Negara lainnya/Eselon II": 1938000,
+        "Eselon III/Gol IV": 1423000,
+        "Eselon IV/Gol III/II/I": 745000,
+        "unit": "OH"
+      },
+      "SULAWESI TENGAH": {
+        "Pejabat Negara/Wamen/Eselon I": 2309000,
+        "Pejabat Negara lainnya/Eselon II": 2166000,
+        "Eselon III/Gol IV": 1679000,
+        "Eselon IV/Gol III/II/I": 951000,
+        "unit": "OH"
+      },
+      "SULAWESI TENGGARA": {
+        "Pejabat Negara/Wamen/Eselon I": 3089000,
+        "Pejabat Negara lainnya/Eselon II": 2755000,
+        "Eselon III/Gol IV": 1297000,
+        "Eselon IV/Gol III/II/I": 786000,
+        "unit": "OH"
+      },
+      "MALUKU": {
+        "Pejabat Negara/Wamen/Eselon I": 3467000,
+        "Pejabat Negara lainnya/Eselon II": 3240000,
+        "Eselon III/Gol IV": 1059000,
+        "Eselon IV/Gol III/II/I": 667000,
+        "unit": "OH"
+      },
+      "MALUKU UTARA": {
+        "Pejabat Negara/Wamen/Eselon I": 4612000,
+        "Pejabat Negara lainnya/Eselon II": 3843000,
+        "Eselon III/Gol IV": 1160000,
+        "Eselon IV/Gol III/II/I": 654000,
+        "unit": "OH"
+      },
+      "PAPUA": {
+        "Pejabat Negara/Wamen/Eselon I": 3859000,
+        "Pejabat Negara lainnya/Eselon II": 3318000,
+        "Eselon III/Gol IV": 2521000,
+        "Eselon IV/Gol III/II/I": 1038000,
+        "unit": "OH"
+      },
+      "PAPUA BARAT": {
+        "Pejabat Negara/Wamen/Eselon I": 3872000,
+        "Pejabat Negara lainnya/Eselon II": 3575000,
+        "Eselon III/Gol IV": 2056000,
+        "Eselon IV/Gol III/II/I": 967000,
+        "unit": "OH"
+      },
+      "PAPUA BARAT DAYA": {
+        "Pejabat Negara/Wamen/Eselon I": 3872000,
+        "Pejabat Negara lainnya/Eselon II": 3575000,
+        "Eselon III/Gol IV": 2056000,
+        "Eselon IV/Gol III/II/I": 967000,
+        "unit": "OH"
+      },
+      "PAPUA TENGAH": {
+        "Pejabat Negara/Wamen/Eselon I": 3859000,
+        "Pejabat Negara lainnya/Eselon II": 3318000,
+        "Eselon III/Gol IV": 2521000,
+        "Eselon IV/Gol III/II/I": 1038000,
+        "unit": "OH"
+      },
+      "PAPUA SELATAN": {
+        "Pejabat Negara/Wamen/Eselon I": 5673000,
+        "Pejabat Negara lainnya/Eselon II": 4877000,
+        "Eselon III/Gol IV": 3706000,
+        "Eselon IV/Gol III/II/I": 1526000,
+        "unit": "OH"
+      },
+      "PAPUA PEGUNUNGAN": {
+        "Pejabat Negara/Wamen/Eselon I": 5711000,
+        "Pejabat Negara lainnya/Eselon II": 4911000,
+        "Eselon III/Gol IV": 3731000,
+        "Eselon IV/Gol III/II/I": 1536000,
+        "unit": "OH"
+      }
+    },
+    "terminal_transport": {
+      "ACEH": {
+        "rate": 123000,
+        "unit": "Orang/Kali"
+      },
+      "SUMATERA UTARA": {
+        "rate": 278000,
+        "unit": "Orang/Kali"
+      },
+      "RIAU": {
+        "rate": 99000,
+        "unit": "Orang/Kali"
+      },
+      "KEPULAUAN RIAU": {
+        "rate": 159000,
+        "unit": "Orang/Kali"
+      },
+      "JAMBI": {
+        "rate": 133000,
+        "unit": "Orang/Kali"
+      },
+      "SUMATERA BARAT": {
+        "rate": 171000,
+        "unit": "Orang/Kali"
+      },
+      "SUMATERA SELATAN": {
+        "rate": 162000,
+        "unit": "Orang/Kali"
+      },
+      "LAMPUNG": {
+        "rate": 162000,
+        "unit": "Orang/Kali"
+      },
+      "BENGKULU": {
+        "rate": 106000,
+        "unit": "Orang/Kali"
+      },
+      "BANGKA BELITUNG": {
+        "rate": 94000,
+        "unit": "Orang/Kali"
+      },
+      "BANTEN": {
+        "rate": 300000,
+        "unit": "Orang/Kali"
+      },
+      "JAWA BARAT": {
+        "rate": 180000,
+        "unit": "Orang/Kali"
+      },
+      "DKI JAKARTA": {
+        "rate": 250000,
+        "unit": "Orang/Kali"
+      },
+      "JAWA TENGAH": {
+        "rate": 105000,
+        "unit": "Orang/Kali"
+      },
+      "DI YOGYAKARTA": {
+        "rate": 258000,
+        "unit": "Orang/Kali"
+      },
+      "JAWA TIMUR": {
+        "rate": 225000,
+        "unit": "Orang/Kali"
+      },
+      "BALI": {
+        "rate": 219000,
+        "unit": "Orang/Kali"
+      },
+      "NUSA TENGGARA BARAT": {
+        "rate": 224000,
+        "unit": "Orang/Kali"
+      },
+      "NUSA TENGGARA TIMUR": {
+        "rate": 105000,
+        "unit": "Orang/Kali"
+      },
+      "KALIMANTAN BARAT": {
+        "rate": 165000,
+        "unit": "Orang/Kali"
+      },
+      "KALIMANTAN TENGAH": {
+        "rate": 130000,
+        "unit": "Orang/Kali"
+      },
+      "KALIMANTAN SELATAN": {
+        "rate": 174000,
+        "unit": "Orang/Kali"
+      },
+      "KALIMANTAN TIMUR": {
+        "rate": 300000,
+        "unit": "Orang/Kali"
+      },
+      "KALIMANTAN UTARA": {
+        "rate": 211000,
+        "unit": "Orang/Kali"
+      },
+      "SULAWESI UTARA": {
+        "rate": 134000,
+        "unit": "Orang/Kali"
+      },
+      "GORONTALO": {
+        "rate": 256000,
+        "unit": "Orang/Kali"
+      },
+      "SULAWESI BARAT": {
+        "rate": 283000,
+        "unit": "Orang/Kali"
+      },
+      "SULAWESI SELATAN": {
+        "rate": 181000,
+        "unit": "Orang/Kali"
+      },
+      "SULAWESI TENGAH": {
+        "rate": 149000,
+        "unit": "Orang/Kali"
+      },
+      "SULAWESI TENGGARA": {
+        "rate": 154000,
+        "unit": "Orang/Kali"
+      },
+      "MALUKU": {
+        "rate": 279000,
+        "unit": "Orang/Kali"
+      },
+      "MALUKU UTARA": {
+        "rate": 208000,
+        "unit": "Orang/Kali"
+      },
+      "PAPUA": {
+        "rate": 462000,
+        "unit": "Orang/Kali"
+      },
+      "PAPUA BARAT": {
+        "rate": 228000,
+        "unit": "Orang/Kali"
+      }
+    },
+    "airline_pp_routes": {
+      "JAKARTA|AMBON": {
+        "origin": "JAKARTA",
+        "destination": "AMBON",
+        "business": 13285000,
+        "economy": 7081000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|BALIKPAPAN": {
+        "origin": "JAKARTA",
+        "destination": "BALIKPAPAN",
+        "business": 7412000,
+        "economy": 3797000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|BANDA ACEH": {
+        "origin": "JAKARTA",
+        "destination": "BANDA ACEH",
+        "business": 7519000,
+        "economy": 4807000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|BANDAR LAMPUNG": {
+        "origin": "JAKARTA",
+        "destination": "BANDAR LAMPUNG",
+        "business": 2407000,
+        "economy": 1583000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|BANJARMASIN": {
+        "origin": "JAKARTA",
+        "destination": "BANJARMASIN",
+        "business": 5252000,
+        "economy": 3205000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|BATAM": {
+        "origin": "JAKARTA",
+        "destination": "BATAM",
+        "business": 4867000,
+        "economy": 3091000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|BENGKULU": {
+        "origin": "JAKARTA",
+        "destination": "BENGKULU",
+        "business": 4364000,
+        "economy": 2770000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|BIAK": {
+        "origin": "JAKARTA",
+        "destination": "BIAK",
+        "business": 14065000,
+        "economy": 8046000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|DENPASAR": {
+        "origin": "JAKARTA",
+        "destination": "DENPASAR",
+        "business": 5305000,
+        "economy": 3262000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|GORONTALO": {
+        "origin": "JAKARTA",
+        "destination": "GORONTALO",
+        "business": 7231000,
+        "economy": 5162000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|JAMBI": {
+        "origin": "JAKARTA",
+        "destination": "JAMBI",
+        "business": 4065000,
+        "economy": 2584000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|JAYAPURA": {
+        "origin": "JAKARTA",
+        "destination": "JAYAPURA",
+        "business": 14568000,
+        "economy": 8767000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|YOGYAKARTA": {
+        "origin": "JAKARTA",
+        "destination": "YOGYAKARTA",
+        "business": 4107000,
+        "economy": 2268000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|KENDARI": {
+        "origin": "JAKARTA",
+        "destination": "KENDARI",
+        "business": 7658000,
+        "economy": 4265000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|KUPANG": {
+        "origin": "JAKARTA",
+        "destination": "KUPANG",
+        "business": 9413000,
+        "economy": 5081000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|MAKASSAR": {
+        "origin": "JAKARTA",
+        "destination": "MAKASSAR",
+        "business": 7444000,
+        "economy": 3829000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|MALANG": {
+        "origin": "JAKARTA",
+        "destination": "MALANG",
+        "business": 4599000,
+        "economy": 2695000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|MAMUJU": {
+        "origin": "JAKARTA",
+        "destination": "MAMUJU",
+        "business": 7295000,
+        "economy": 5208000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|MANADO": {
+        "origin": "JAKARTA",
+        "destination": "MANADO",
+        "business": 10824000,
+        "economy": 5460000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|MANOKWARI": {
+        "origin": "JAKARTA",
+        "destination": "MANOKWARI",
+        "business": 16226000,
+        "economy": 10824000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|MATARAM": {
+        "origin": "JAKARTA",
+        "destination": "MATARAM",
+        "business": 5316000,
+        "economy": 3230000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|MEDAN": {
+        "origin": "JAKARTA",
+        "destination": "MEDAN",
+        "business": 7252000,
+        "economy": 4054000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|PADANG": {
+        "origin": "JAKARTA",
+        "destination": "PADANG",
+        "business": 5530000,
+        "economy": 3159000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|PALANGKARAYA": {
+        "origin": "JAKARTA",
+        "destination": "PALANGKARAYA",
+        "business": 4984000,
+        "economy": 2984000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|PALEMBANG": {
+        "origin": "JAKARTA",
+        "destination": "PALEMBANG",
+        "business": 3861000,
+        "economy": 2268000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|PALU": {
+        "origin": "JAKARTA",
+        "destination": "PALU",
+        "business": 9348000,
+        "economy": 5113000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|PANGKAL PINANG": {
+        "origin": "JAKARTA",
+        "destination": "PANGKAL PINANG",
+        "business": 3412000,
+        "economy": 2139000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|PEKANBARU": {
+        "origin": "JAKARTA",
+        "destination": "PEKANBARU",
+        "business": 5583000,
+        "economy": 3016000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|PONTIANAK": {
+        "origin": "JAKARTA",
+        "destination": "PONTIANAK",
+        "business": 4353000,
+        "economy": 2781000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|SEMARANG": {
+        "origin": "JAKARTA",
+        "destination": "SEMARANG",
+        "business": 3861000,
+        "economy": 2182000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|SOLO": {
+        "origin": "JAKARTA",
+        "destination": "SOLO",
+        "business": 3861000,
+        "economy": 2342000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|SURABAYA": {
+        "origin": "JAKARTA",
+        "destination": "SURABAYA",
+        "business": 5466000,
+        "economy": 2674000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|TERNATE": {
+        "origin": "JAKARTA",
+        "destination": "TERNATE",
+        "business": 10001000,
+        "economy": 6664000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|TIMIKA": {
+        "origin": "JAKARTA",
+        "destination": "TIMIKA",
+        "business": 13830000,
+        "economy": 7902000,
+        "unit": "Orang/PP"
+      },
+      "JAKARTA|TANJUNG SELOR": {
+        "origin": "JAKARTA",
+        "destination": "TANJUNG SELOR",
+        "business": 7424000,
+        "economy": 4341000,
+        "unit": "Orang/PP"
+      },
+      "AMBON|DENPASAR": {
+        "origin": "AMBON",
+        "destination": "DENPASAR",
+        "business": 8054000,
+        "economy": 4784000,
+        "unit": "Orang/PP"
+      },
+      "AMBON|JAYAPURA": {
+        "origin": "AMBON",
+        "destination": "JAYAPURA",
+        "business": 7434000,
+        "economy": 4453000,
+        "unit": "Orang/PP"
+      },
+      "AMBON|KENDARI": {
+        "origin": "AMBON",
+        "destination": "KENDARI",
+        "business": 4824000,
+        "economy": 3056000,
+        "unit": "Orang/PP"
+      },
+      "AMBON|MAKASSAR": {
+        "origin": "AMBON",
+        "destination": "MAKASSAR",
+        "business": 6022000,
+        "economy": 3697000,
+        "unit": "Orang/PP"
+      },
+      "AMBON|MANOKWARI": {
+        "origin": "AMBON",
+        "destination": "MANOKWARI",
+        "business": 5177000,
+        "economy": 3239000,
+        "unit": "Orang/PP"
+      },
+      "AMBON|PALU": {
+        "origin": "AMBON",
+        "destination": "PALU",
+        "business": 6140000,
+        "economy": 3754000,
+        "unit": "Orang/PP"
+      },
+      "AMBON|SORONG": {
+        "origin": "AMBON",
+        "destination": "SORONG",
+        "business": 3637000,
+        "economy": 2415000,
+        "unit": "Orang/PP"
+      },
+      "AMBON|SURABAYA": {
+        "origin": "AMBON",
+        "destination": "SURABAYA",
+        "business": 8803000,
+        "economy": 5185000,
+        "unit": "Orang/PP"
+      },
+      "AMBON|TERNATE": {
+        "origin": "AMBON",
+        "destination": "TERNATE",
+        "business": 4022000,
+        "economy": 2621000,
+        "unit": "Orang/PP"
+      },
+      "BALIKPAPAN|BANDA ACEH": {
+        "origin": "BALIKPAPAN",
+        "destination": "BANDA ACEH",
+        "business": 12739000,
+        "economy": 7222000,
+        "unit": "Orang/PP"
+      },
+      "BALIKPAPAN|BATAM": {
+        "origin": "BALIKPAPAN",
+        "destination": "BATAM",
+        "business": 10354000,
+        "economy": 5677000,
+        "unit": "Orang/PP"
+      },
+      "BALIKPAPAN|DENPASAR": {
+        "origin": "BALIKPAPAN",
+        "destination": "DENPASAR",
+        "business": 10739000,
+        "economy": 6044000,
+        "unit": "Orang/PP"
+      },
+      "BALIKPAPAN|JAYAPURA": {
+        "origin": "BALIKPAPAN",
+        "destination": "JAYAPURA",
+        "business": 19071000,
+        "economy": 10793000,
+        "unit": "Orang/PP"
+      },
+      "BALIKPAPAN|YOGYAKARTA": {
+        "origin": "BALIKPAPAN",
+        "destination": "YOGYAKARTA",
+        "business": 9669000,
+        "economy": 5082000,
+        "unit": "Orang/PP"
+      },
+      "BALIKPAPAN|MAKASSAR": {
+        "origin": "BALIKPAPAN",
+        "destination": "MAKASSAR",
+        "business": 12664000,
+        "economy": 6581000,
+        "unit": "Orang/PP"
+      },
+      "BALIKPAPAN|MANADO": {
+        "origin": "BALIKPAPAN",
+        "destination": "MANADO",
+        "business": 15702000,
+        "economy": 7806000,
+        "unit": "Orang/PP"
+      },
+      "BALIKPAPAN|MEDAN": {
+        "origin": "BALIKPAPAN",
+        "destination": "MEDAN",
+        "business": 12493000,
+        "economy": 6570000,
+        "unit": "Orang/PP"
+      },
+      "BALIKPAPAN|PADANG": {
+        "origin": "BALIKPAPAN",
+        "destination": "PADANG",
+        "business": 10942000,
+        "economy": 5745000,
+        "unit": "Orang/PP"
+      },
+      "BALIKPAPAN|PALEMBANG": {
+        "origin": "BALIKPAPAN",
+        "destination": "PALEMBANG",
+        "business": 9445000,
+        "economy": 5082000,
+        "unit": "Orang/PP"
+      },
+      "BALIKPAPAN|PEKANBARU": {
+        "origin": "BALIKPAPAN",
+        "destination": "PEKANBARU",
+        "business": 10996000,
+        "economy": 5803000,
+        "unit": "Orang/PP"
+      },
+      "BALIKPAPAN|SEMARANG": {
+        "origin": "BALIKPAPAN",
+        "destination": "SEMARANG",
+        "business": 9445000,
+        "economy": 5002000,
+        "unit": "Orang/PP"
+      },
+      "BALIKPAPAN|SOLO": {
+        "origin": "BALIKPAPAN",
+        "destination": "SOLO",
+        "business": 9445000,
+        "economy": 5150000,
+        "unit": "Orang/PP"
+      },
+      "BALIKPAPAN|SURABAYA": {
+        "origin": "BALIKPAPAN",
+        "destination": "SURABAYA",
+        "business": 10889000,
+        "economy": 5471000,
+        "unit": "Orang/PP"
+      },
+      "BALIKPAPAN|TIMIKA": {
+        "origin": "BALIKPAPAN",
+        "destination": "TIMIKA",
+        "business": 18408000,
+        "economy": 10107000,
+        "unit": "Orang/PP"
+      },
+      "BANDA ACEH|DENPASAR": {
+        "origin": "BANDA ACEH",
+        "destination": "DENPASAR",
+        "business": 10835000,
+        "economy": 6719000,
+        "unit": "Orang/PP"
+      },
+      "BANDA ACEH|JAYAPURA": {
+        "origin": "BANDA ACEH",
+        "destination": "JAYAPURA",
+        "business": 19167000,
+        "economy": 11468000,
+        "unit": "Orang/PP"
+      },
+      "BANDA ACEH|YOGYAKARTA": {
+        "origin": "BANDA ACEH",
+        "destination": "YOGYAKARTA",
+        "business": 9765000,
+        "economy": 5757000,
+        "unit": "Orang/PP"
+      },
+      "BANDA ACEH|MAKASSAR": {
+        "origin": "BANDA ACEH",
+        "destination": "MAKASSAR",
+        "business": 12760000,
+        "economy": 7256000,
+        "unit": "Orang/PP"
+      },
+      "BANDA ACEH|MANADO": {
+        "origin": "BANDA ACEH",
+        "destination": "MANADO",
+        "business": 15798000,
+        "economy": 8481000,
+        "unit": "Orang/PP"
+      },
+      "BANDA ACEH|PONTIANAK": {
+        "origin": "BANDA ACEH",
+        "destination": "PONTIANAK",
+        "business": 9990000,
+        "economy": 6249000,
+        "unit": "Orang/PP"
+      },
+      "BANDA ACEH|SEMARANG": {
+        "origin": "BANDA ACEH",
+        "destination": "SEMARANG",
+        "business": 9530000,
+        "economy": 5677000,
+        "unit": "Orang/PP"
+      },
+      "BANDA ACEH|SOLO": {
+        "origin": "BANDA ACEH",
+        "destination": "SOLO",
+        "business": 9530000,
+        "economy": 5826000,
+        "unit": "Orang/PP"
+      },
+      "BANDA ACEH|SURABAYA": {
+        "origin": "BANDA ACEH",
+        "destination": "SURABAYA",
+        "business": 10985000,
+        "economy": 6147000,
+        "unit": "Orang/PP"
+      },
+      "BANDA ACEH|TIMIKA": {
+        "origin": "BANDA ACEH",
+        "destination": "TIMIKA",
+        "business": 18504000,
+        "economy": 10782000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|BALIKPAPAN": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "BALIKPAPAN",
+        "business": 8129000,
+        "economy": 4419000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|BANDA ACEH": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "BANDA ACEH",
+        "business": 8225000,
+        "economy": 5094000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|BANJARMASIN": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "BANJARMASIN",
+        "business": 6193000,
+        "economy": 3651000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|BATAM": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "BATAM",
+        "business": 5840000,
+        "economy": 3549000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|BIAK": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "BIAK",
+        "business": 14119000,
+        "economy": 8012000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|DENPASAR": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "DENPASAR",
+        "business": 6236000,
+        "economy": 3903000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|JAYAPURA": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "JAYAPURA",
+        "business": 14568000,
+        "economy": 8664000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|YOGYAKARTA": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "YOGYAKARTA",
+        "business": 5155000,
+        "economy": 2954000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|KENDARI": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "KENDARI",
+        "business": 8354000,
+        "economy": 4796000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|MAKASSAR": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "MAKASSAR",
+        "business": 8161000,
+        "economy": 4453000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|MALANG": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "MALANG",
+        "business": 5594000,
+        "economy": 3354000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|MANADO": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "MANADO",
+        "business": 11199000,
+        "economy": 5677000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|MATARAM": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "MATARAM",
+        "business": 6246000,
+        "economy": 3880000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|MEDAN": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "MEDAN",
+        "business": 7979000,
+        "economy": 4441000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|PADANG": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "PADANG",
+        "business": 6439000,
+        "economy": 3617000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|PALANGKARAYA": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "PALANGKARAYA",
+        "business": 5947000,
+        "economy": 3640000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|PALEMBANG": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "PALEMBANG",
+        "business": 4931000,
+        "economy": 2954000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|PEKANBARU": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "PEKANBARU",
+        "business": 6482000,
+        "economy": 3674000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|PONTIANAK": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "PONTIANAK",
+        "business": 5380000,
+        "economy": 3446000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|SEMARANG": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "SEMARANG",
+        "business": 4931000,
+        "economy": 2873000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|SOLO": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "SOLO",
+        "business": 4931000,
+        "economy": 3022000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|SURABAYA": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "SURABAYA",
+        "business": 6386000,
+        "economy": 3342000,
+        "unit": "Orang/PP"
+      },
+      "BANDAR LAMPUNG|TIMIKA": {
+        "origin": "BANDAR LAMPUNG",
+        "destination": "TIMIKA",
+        "business": 13905000,
+        "economy": 7977000,
+        "unit": "Orang/PP"
+      },
+      "BANJARMASIN|BANDA ACEH": {
+        "origin": "BANJARMASIN",
+        "destination": "BANDA ACEH",
+        "business": 10792000,
+        "economy": 6022000,
+        "unit": "Orang/PP"
+      },
+      "BANJARMASIN|BATAM": {
+        "origin": "BANJARMASIN",
+        "destination": "BATAM",
+        "business": 8407000,
+        "economy": 4578000,
+        "unit": "Orang/PP"
+      },
+      "BANJARMASIN|BIAK": {
+        "origin": "BANJARMASIN",
+        "destination": "BIAK",
+        "business": 16686000,
+        "economy": 8749000,
+        "unit": "Orang/PP"
+      },
+      "BANJARMASIN|DENPASAR": {
+        "origin": "BANJARMASIN",
+        "destination": "DENPASAR",
+        "business": 8792000,
+        "economy": 4920000,
+        "unit": "Orang/PP"
+      },
+      "BANJARMASIN|JAYAPURA": {
+        "origin": "BANJARMASIN",
+        "destination": "JAYAPURA",
+        "business": 17135000,
+        "economy": 9359000,
+        "unit": "Orang/PP"
+      },
+      "BANJARMASIN|YOGYAKARTA": {
+        "origin": "BANJARMASIN",
+        "destination": "YOGYAKARTA",
+        "business": 7723000,
+        "economy": 4304000,
+        "unit": "Orang/PP"
+      },
+      "BANJARMASIN|MEDAN": {
+        "origin": "BANJARMASIN",
+        "destination": "MEDAN",
+        "business": 10546000,
+        "economy": 5412000,
+        "unit": "Orang/PP"
+      },
+      "BANJARMASIN|PADANG": {
+        "origin": "BANJARMASIN",
+        "destination": "PADANG",
+        "business": 9006000,
+        "economy": 4642000,
+        "unit": "Orang/PP"
+      },
+      "BANJARMASIN|PALEMBANG": {
+        "origin": "BANJARMASIN",
+        "destination": "PALEMBANG",
+        "business": 7498000,
+        "economy": 4022000,
+        "unit": "Orang/PP"
+      },
+      "BANJARMASIN|PEKANBARU": {
+        "origin": "BANJARMASIN",
+        "destination": "PEKANBARU",
+        "business": 9049000,
+        "economy": 4696000,
+        "unit": "Orang/PP"
+      },
+      "BANJARMASIN|SEMARANG": {
+        "origin": "BANJARMASIN",
+        "destination": "SEMARANG",
+        "business": 7498000,
+        "economy": 3958000,
+        "unit": "Orang/PP"
+      },
+      "BANJARMASIN|SOLO": {
+        "origin": "BANJARMASIN",
+        "destination": "SOLO",
+        "business": 7498000,
+        "economy": 4097000,
+        "unit": "Orang/PP"
+      },
+      "BANJARMASIN|SURABAYA": {
+        "origin": "BANJARMASIN",
+        "destination": "SURABAYA",
+        "business": 8942000,
+        "economy": 4592000,
+        "unit": "Orang/PP"
+      },
+      "BANJARMASIN|TIMIKA": {
+        "origin": "BANJARMASIN",
+        "destination": "TIMIKA",
+        "business": 16472000,
+        "economy": 8897000,
+        "unit": "Orang/PP"
+      },
+      "BATAM|BANDA ACEH": {
+        "origin": "BATAM",
+        "destination": "BANDA ACEH",
+        "business": 10439000,
+        "economy": 5936000,
+        "unit": "Orang/PP"
+      },
+      "BATAM|DENPASAR": {
+        "origin": "BATAM",
+        "destination": "DENPASAR",
+        "business": 8450000,
+        "economy": 4824000,
+        "unit": "Orang/PP"
+      },
+      "BATAM|JAYAPURA": {
+        "origin": "BATAM",
+        "destination": "JAYAPURA",
+        "business": 16782000,
+        "economy": 9263000,
+        "unit": "Orang/PP"
+      },
+      "BATAM|YOGYAKARTA": {
+        "origin": "BATAM",
+        "destination": "YOGYAKARTA",
+        "business": 7370000,
+        "economy": 3936000,
+        "unit": "Orang/PP"
+      },
+      "BATAM|MAKASSAR": {
+        "origin": "BATAM",
+        "destination": "MAKASSAR",
+        "business": 10375000,
+        "economy": 5711000,
+        "unit": "Orang/PP"
+      },
+      "BATAM|MANADO": {
+        "origin": "BATAM",
+        "destination": "MANADO",
+        "business": 13413000,
+        "economy": 6482000,
+        "unit": "Orang/PP"
+      },
+      "BATAM|MEDAN": {
+        "origin": "BATAM",
+        "destination": "MEDAN",
+        "business": 10193000,
+        "economy": 5316000,
+        "unit": "Orang/PP"
+      },
+      "BATAM|PADANG": {
+        "origin": "BATAM",
+        "destination": "PADANG",
+        "business": 8653000,
+        "economy": 4546000,
+        "unit": "Orang/PP"
+      },
+      "BATAM|PALEMBANG": {
+        "origin": "BATAM",
+        "destination": "PALEMBANG",
+        "business": 7145000,
+        "economy": 3936000,
+        "unit": "Orang/PP"
+      },
+      "BATAM|PEKANBARU": {
+        "origin": "BATAM",
+        "destination": "PEKANBARU",
+        "business": 8707000,
+        "economy": 4599000,
+        "unit": "Orang/PP"
+      },
+      "BATAM|PONTIANAK": {
+        "origin": "BATAM",
+        "destination": "PONTIANAK",
+        "business": 7594000,
+        "economy": 4396000,
+        "unit": "Orang/PP"
+      },
+      "BATAM|SEMARANG": {
+        "origin": "BATAM",
+        "destination": "SEMARANG",
+        "business": 7145000,
+        "economy": 3861000,
+        "unit": "Orang/PP"
+      },
+      "BATAM|SOLO": {
+        "origin": "BATAM",
+        "destination": "SOLO",
+        "business": 7145000,
+        "economy": 4000000,
+        "unit": "Orang/PP"
+      },
+      "BATAM|SURABAYA": {
+        "origin": "BATAM",
+        "destination": "SURABAYA",
+        "business": 8600000,
+        "economy": 4300000,
+        "unit": "Orang/PP"
+      },
+      "BATAM|TIMIKA": {
+        "origin": "BATAM",
+        "destination": "TIMIKA",
+        "business": 16119000,
+        "economy": 8621000,
+        "unit": "Orang/PP"
+      },
+      "BENGKULU|PALEMBANG": {
+        "origin": "BENGKULU",
+        "destination": "PALEMBANG",
+        "business": 2899000,
+        "economy": 2026000,
+        "unit": "Orang/PP"
+      },
+      "BIAK|BALIKPAPAN": {
+        "origin": "BIAK",
+        "destination": "BALIKPAPAN",
+        "business": 18622000,
+        "economy": 9477000,
+        "unit": "Orang/PP"
+      },
+      "BIAK|BANDA ACEH": {
+        "origin": "BIAK",
+        "destination": "BANDA ACEH",
+        "business": 18718000,
+        "economy": 10108000,
+        "unit": "Orang/PP"
+      },
+      "BIAK|BATAM": {
+        "origin": "BIAK",
+        "destination": "BATAM",
+        "business": 16333000,
+        "economy": 8664000,
+        "unit": "Orang/PP"
+      },
+      "BIAK|DENPASAR": {
+        "origin": "BIAK",
+        "destination": "DENPASAR",
+        "business": 16729000,
+        "economy": 8995000,
+        "unit": "Orang/PP"
+      },
+      "BIAK|JAYAPURA": {
+        "origin": "BIAK",
+        "destination": "JAYAPURA",
+        "business": 3615000,
+        "economy": 2321000,
+        "unit": "Orang/PP"
+      },
+      "BIAK|YOGYAKARTA": {
+        "origin": "BIAK",
+        "destination": "YOGYAKARTA",
+        "business": 15648000,
+        "economy": 8108000,
+        "unit": "Orang/PP"
+      },
+      "BIAK|MANADO": {
+        "origin": "BIAK",
+        "destination": "MANADO",
+        "business": 11734000,
+        "economy": 6353000,
+        "unit": "Orang/PP"
+      },
+      "BIAK|MEDAN": {
+        "origin": "BIAK",
+        "destination": "MEDAN",
+        "business": 18472000,
+        "economy": 9498000,
+        "unit": "Orang/PP"
+      },
+      "BIAK|PADANG": {
+        "origin": "BIAK",
+        "destination": "PADANG",
+        "business": 16932000,
+        "economy": 8728000,
+        "unit": "Orang/PP"
+      },
+      "BIAK|PALEMBANG": {
+        "origin": "BIAK",
+        "destination": "PALEMBANG",
+        "business": 15424000,
+        "economy": 8108000,
+        "unit": "Orang/PP"
+      },
+      "BIAK|PEKANBARU": {
+        "origin": "BIAK",
+        "destination": "PEKANBARU",
+        "business": 16985000,
+        "economy": 8781000,
+        "unit": "Orang/PP"
+      },
+      "BIAK|PONTIANAK": {
+        "origin": "BIAK",
+        "destination": "PONTIANAK",
+        "business": 15873000,
+        "economy": 8568000,
+        "unit": "Orang/PP"
+      },
+      "BIAK|SURABAYA": {
+        "origin": "BIAK",
+        "destination": "SURABAYA",
+        "business": 12782000,
+        "economy": 7081000,
+        "unit": "Orang/PP"
+      },
+      "BIAK|TIMIKA": {
+        "origin": "BIAK",
+        "destination": "TIMIKA",
+        "business": 5808000,
+        "economy": 3444000,
+        "unit": "Orang/PP"
+      },
+      "DENPASAR|JAYAPURA": {
+        "origin": "DENPASAR",
+        "destination": "JAYAPURA",
+        "business": 11680000,
+        "economy": 7325000,
+        "unit": "Orang/PP"
+      },
+      "DENPASAR|KUPANG": {
+        "origin": "DENPASAR",
+        "destination": "KUPANG",
+        "business": 5091000,
+        "economy": 3159000,
+        "unit": "Orang/PP"
+      },
+      "DENPASAR|MAKASSAR": {
+        "origin": "DENPASAR",
+        "destination": "MAKASSAR",
+        "business": 4182000,
+        "economy": 2816000,
+        "unit": "Orang/PP"
+      },
+      "DENPASAR|MANADO": {
+        "origin": "DENPASAR",
+        "destination": "MANADO",
+        "business": 7851000,
+        "economy": 4578000,
+        "unit": "Orang/PP"
+      },
+      "DENPASAR|MATARAM": {
+        "origin": "DENPASAR",
+        "destination": "MATARAM",
+        "business": 1840000,
+        "economy": 1488000,
+        "unit": "Orang/PP"
+      },
+      "DENPASAR|MEDAN": {
+        "origin": "DENPASAR",
+        "destination": "MEDAN",
+        "business": 10589000,
+        "economy": 5658000,
+        "unit": "Orang/PP"
+      },
+      "DENPASAR|PADANG": {
+        "origin": "DENPASAR",
+        "destination": "PADANG",
+        "business": 9049000,
+        "economy": 4888000,
+        "unit": "Orang/PP"
+      },
+      "DENPASAR|PALANGKARAYA": {
+        "origin": "DENPASAR",
+        "destination": "PALANGKARAYA",
+        "business": 8557000,
+        "economy": 4909000,
+        "unit": "Orang/PP"
+      },
+      "DENPASAR|PALEMBANG": {
+        "origin": "DENPASAR",
+        "destination": "PALEMBANG",
+        "business": 7541000,
+        "economy": 4278000,
+        "unit": "Orang/PP"
+      },
+      "DENPASAR|PEKANBARU": {
+        "origin": "DENPASAR",
+        "destination": "PEKANBARU",
+        "business": 9092000,
+        "economy": 4942000,
+        "unit": "Orang/PP"
+      },
+      "DENPASAR|PONTIANAK": {
+        "origin": "DENPASAR",
+        "destination": "PONTIANAK",
+        "business": 7990000,
+        "economy": 4738000,
+        "unit": "Orang/PP"
+      },
+      "DENPASAR|TIMIKA": {
+        "origin": "DENPASAR",
+        "destination": "TIMIKA",
+        "business": 10140000,
+        "economy": 6559000,
+        "unit": "Orang/PP"
+      },
+      "JAMBI|BALIKPAPAN": {
+        "origin": "JAMBI",
+        "destination": "BALIKPAPAN",
+        "business": 7733000,
+        "economy": 4407000,
+        "unit": "Orang/PP"
+      },
+      "JAMBI|BANJARMASIN": {
+        "origin": "JAMBI",
+        "destination": "BANJARMASIN",
+        "business": 7690000,
+        "economy": 4193000,
+        "unit": "Orang/PP"
+      },
+      "JAMBI|DENPASAR": {
+        "origin": "JAMBI",
+        "destination": "DENPASAR",
+        "business": 7733000,
+        "economy": 4439000,
+        "unit": "Orang/PP"
+      },
+      "JAMBI|YOGYAKARTA": {
+        "origin": "JAMBI",
+        "destination": "YOGYAKARTA",
+        "business": 6653000,
+        "economy": 3551000,
+        "unit": "Orang/PP"
+      },
+      "JAMBI|KUPANG": {
+        "origin": "JAMBI",
+        "destination": "KUPANG",
+        "business": 11434000,
+        "economy": 6075000,
+        "unit": "Orang/PP"
+      },
+      "JAMBI|MAKASSAR": {
+        "origin": "JAMBI",
+        "destination": "MAKASSAR",
+        "business": 9659000,
+        "economy": 4952000,
+        "unit": "Orang/PP"
+      },
+      "JAMBI|MALANG": {
+        "origin": "JAMBI",
+        "destination": "MALANG",
+        "business": 7091000,
+        "economy": 3925000,
+        "unit": "Orang/PP"
+      },
+      "JAMBI|MANADO": {
+        "origin": "JAMBI",
+        "destination": "MANADO",
+        "business": 12707000,
+        "economy": 6097000,
+        "unit": "Orang/PP"
+      },
+      "JAMBI|PALANGKARAYA": {
+        "origin": "JAMBI",
+        "destination": "PALANGKARAYA",
+        "business": 7444000,
+        "economy": 4193000,
+        "unit": "Orang/PP"
+      },
+      "JAMBI|PONTIANAK": {
+        "origin": "JAMBI",
+        "destination": "PONTIANAK",
+        "business": 6878000,
+        "economy": 4011000,
+        "unit": "Orang/PP"
+      },
+      "JAMBI|SEMARANG": {
+        "origin": "JAMBI",
+        "destination": "SEMARANG",
+        "business": 6428000,
+        "economy": 3476000,
+        "unit": "Orang/PP"
+      },
+      "JAMBI|SOLO": {
+        "origin": "JAMBI",
+        "destination": "SOLO",
+        "business": 6428000,
+        "economy": 3615000,
+        "unit": "Orang/PP"
+      },
+      "JAMBI|SURABAYA": {
+        "origin": "JAMBI",
+        "destination": "SURABAYA",
+        "business": 7883000,
+        "economy": 3915000,
+        "unit": "Orang/PP"
+      },
+      "JAYAPURA|YOGYAKARTA": {
+        "origin": "JAYAPURA",
+        "destination": "YOGYAKARTA",
+        "business": 13274000,
+        "economy": 7690000,
+        "unit": "Orang/PP"
+      },
+      "JAYAPURA|MANADO": {
+        "origin": "JAYAPURA",
+        "destination": "MANADO",
+        "business": 22109000,
+        "economy": 11263000,
+        "unit": "Orang/PP"
+      },
+      "JAYAPURA|MEDAN": {
+        "origin": "JAYAPURA",
+        "destination": "MEDAN",
+        "business": 18932000,
+        "economy": 10097000,
+        "unit": "Orang/PP"
+      },
+      "JAYAPURA|PADANG": {
+        "origin": "JAYAPURA",
+        "destination": "PADANG",
+        "business": 17381000,
+        "economy": 9327000,
+        "unit": "Orang/PP"
+      },
+      "JAYAPURA|PALEMBANG": {
+        "origin": "JAYAPURA",
+        "destination": "PALEMBANG",
+        "business": 15873000,
+        "economy": 8717000,
+        "unit": "Orang/PP"
+      },
+      "JAYAPURA|PEKANBARU": {
+        "origin": "JAYAPURA",
+        "destination": "PEKANBARU",
+        "business": 17435000,
+        "economy": 9380000,
+        "unit": "Orang/PP"
+      },
+      "JAYAPURA|PONTIANAK": {
+        "origin": "JAYAPURA",
+        "destination": "PONTIANAK",
+        "business": 16322000,
+        "economy": 9177000,
+        "unit": "Orang/PP"
+      },
+      "JAYAPURA|TIMIKA": {
+        "origin": "JAYAPURA",
+        "destination": "TIMIKA",
+        "business": 3615000,
+        "economy": 2289000,
+        "unit": "Orang/PP"
+      },
+      "YOGYAKARTA|DENPASAR": {
+        "origin": "YOGYAKARTA",
+        "destination": "DENPASAR",
+        "business": 3861000,
+        "economy": 2655000,
+        "unit": "Orang/PP"
+      },
+      "YOGYAKARTA|MAKASSAR": {
+        "origin": "YOGYAKARTA",
+        "destination": "MAKASSAR",
+        "business": 6525000,
+        "economy": 3893000,
+        "unit": "Orang/PP"
+      },
+      "YOGYAKARTA|MANADO": {
+        "origin": "YOGYAKARTA",
+        "destination": "MANADO",
+        "business": 10536000,
+        "economy": 5722000,
+        "unit": "Orang/PP"
+      },
+      "YOGYAKARTA|MEDAN": {
+        "origin": "YOGYAKARTA",
+        "destination": "MEDAN",
+        "business": 9519000,
+        "economy": 4770000,
+        "unit": "Orang/PP"
+      },
+      "YOGYAKARTA|PADANG": {
+        "origin": "YOGYAKARTA",
+        "destination": "PADANG",
+        "business": 7969000,
+        "economy": 4280000,
+        "unit": "Orang/PP"
+      },
+      "YOGYAKARTA|PALEMBANG": {
+        "origin": "YOGYAKARTA",
+        "destination": "PALEMBANG",
+        "business": 6460000,
+        "economy": 3617000,
+        "unit": "Orang/PP"
+      },
+      "YOGYAKARTA|PEKANBARU": {
+        "origin": "YOGYAKARTA",
+        "destination": "PEKANBARU",
+        "business": 8022000,
+        "economy": 4054000,
+        "unit": "Orang/PP"
+      },
+      "YOGYAKARTA|PONTIANAK": {
+        "origin": "YOGYAKARTA",
+        "destination": "PONTIANAK",
+        "business": 6910000,
+        "economy": 3840000,
+        "unit": "Orang/PP"
+      },
+      "YOGYAKARTA|TIMIKA": {
+        "origin": "YOGYAKARTA",
+        "destination": "TIMIKA",
+        "business": 11894000,
+        "economy": 7114000,
+        "unit": "Orang/PP"
+      },
+      "KENDARI|BANDA ACEH": {
+        "origin": "KENDARI",
+        "destination": "BANDA ACEH",
+        "business": 12953000,
+        "economy": 7102000,
+        "unit": "Orang/PP"
+      },
+      "KENDARI|BATAM": {
+        "origin": "KENDARI",
+        "destination": "BATAM",
+        "business": 10568000,
+        "economy": 5658000,
+        "unit": "Orang/PP"
+      },
+      "KENDARI|DENPASAR": {
+        "origin": "KENDARI",
+        "destination": "DENPASAR",
+        "business": 5455000,
+        "economy": 3503000,
+        "unit": "Orang/PP"
+      },
+      "KENDARI|YOGYAKARTA": {
+        "origin": "KENDARI",
+        "destination": "YOGYAKARTA",
+        "business": 8129000,
+        "economy": 4706000,
+        "unit": "Orang/PP"
+      },
+      "KENDARI|PADANG": {
+        "origin": "KENDARI",
+        "destination": "PADANG",
+        "business": 11167000,
+        "economy": 5722000,
+        "unit": "Orang/PP"
+      },
+      "KENDARI|PALEMBANG": {
+        "origin": "KENDARI",
+        "destination": "PALEMBANG",
+        "business": 9659000,
+        "economy": 5102000,
+        "unit": "Orang/PP"
+      },
+      "KENDARI|PEKANBARU": {
+        "origin": "KENDARI",
+        "destination": "PEKANBARU",
+        "business": 11220000,
+        "economy": 5776000,
+        "unit": "Orang/PP"
+      },
+      "KENDARI|SEMARANG": {
+        "origin": "KENDARI",
+        "destination": "SEMARANG",
+        "business": 9659000,
+        "economy": 5027000,
+        "unit": "Orang/PP"
+      },
+      "KENDARI|SOLO": {
+        "origin": "KENDARI",
+        "destination": "SOLO",
+        "business": 9659000,
+        "economy": 5166000,
+        "unit": "Orang/PP"
+      },
+      "KENDARI|SURABAYA": {
+        "origin": "KENDARI",
+        "destination": "SURABAYA",
+        "business": 11103000,
+        "economy": 5466000,
+        "unit": "Orang/PP"
+      },
+      "KENDARI|TIMIKA": {
+        "origin": "KENDARI",
+        "destination": "TIMIKA",
+        "business": 18633000,
+        "economy": 9798000,
+        "unit": "Orang/PP"
+      },
+      "KUPANG|JAYAPURA": {
+        "origin": "KUPANG",
+        "destination": "JAYAPURA",
+        "business": 14386000,
+        "economy": 8676000,
+        "unit": "Orang/PP"
+      },
+      "KUPANG|YOGYAKARTA": {
+        "origin": "KUPANG",
+        "destination": "YOGYAKARTA",
+        "business": 7348000,
+        "economy": 4182000,
+        "unit": "Orang/PP"
+      },
+      "KUPANG|MAKASSAR": {
+        "origin": "KUPANG",
+        "destination": "MAKASSAR",
+        "business": 7637000,
+        "economy": 4311000,
+        "unit": "Orang/PP"
+      },
+      "KUPANG|MANADO": {
+        "origin": "KUPANG",
+        "destination": "MANADO",
+        "business": 11648000,
+        "economy": 6140000,
+        "unit": "Orang/PP"
+      },
+      "KUPANG|SURABAYA": {
+        "origin": "KUPANG",
+        "destination": "SURABAYA",
+        "business": 6749000,
+        "economy": 3983000,
+        "unit": "Orang/PP"
+      },
+      "MAKASSAR|BIAK": {
+        "origin": "MAKASSAR",
+        "destination": "BIAK",
+        "business": 8493000,
+        "economy": 4931000,
+        "unit": "Orang/PP"
+      },
+      "MAKASSAR|JAYAPURA": {
+        "origin": "MAKASSAR",
+        "destination": "JAYAPURA",
+        "business": 10193000,
+        "economy": 6193000,
+        "unit": "Orang/PP"
+      },
+      "MAKASSAR|KENDARI": {
+        "origin": "MAKASSAR",
+        "destination": "KENDARI",
+        "business": 2663000,
+        "economy": 1912000,
+        "unit": "Orang/PP"
+      },
+      "MAKASSAR|MANADO": {
+        "origin": "MAKASSAR",
+        "destination": "MANADO",
+        "business": 5327000,
+        "economy": 2909000,
+        "unit": "Orang/PP"
+      },
+      "MAKASSAR|TIMIKA": {
+        "origin": "MAKASSAR",
+        "destination": "TIMIKA",
+        "business": 11723000,
+        "economy": 7027000,
+        "unit": "Orang/PP"
+      },
+      "MALANG|BALIKPAPAN": {
+        "origin": "MALANG",
+        "destination": "BALIKPAPAN",
+        "business": 10108000,
+        "economy": 5134000,
+        "unit": "Orang/PP"
+      },
+      "MALANG|BANDA ACEH": {
+        "origin": "MALANG",
+        "destination": "BANDA ACEH",
+        "business": 10204000,
+        "economy": 5765000,
+        "unit": "Orang/PP"
+      },
+      "MALANG|BANJARMASIN": {
+        "origin": "MALANG",
+        "destination": "BANJARMASIN",
+        "business": 8161000,
+        "economy": 4407000,
+        "unit": "Orang/PP"
+      },
+      "MALANG|BATAM": {
+        "origin": "MALANG",
+        "destination": "BATAM",
+        "business": 7819000,
+        "economy": 4311000,
+        "unit": "Orang/PP"
+      },
+      "MALANG|BIAK": {
+        "origin": "MALANG",
+        "destination": "BIAK",
+        "business": 16087000,
+        "economy": 8482000,
+        "unit": "Orang/PP"
+      },
+      "MALANG|JAYAPURA": {
+        "origin": "MALANG",
+        "destination": "JAYAPURA",
+        "business": 16536000,
+        "economy": 9092000,
+        "unit": "Orang/PP"
+      },
+      "MALANG|KENDARI": {
+        "origin": "MALANG",
+        "destination": "KENDARI",
+        "business": 10322000,
+        "economy": 5487000,
+        "unit": "Orang/PP"
+      },
+      "MALANG|MAKASSAR": {
+        "origin": "MALANG",
+        "destination": "MAKASSAR",
+        "business": 10129000,
+        "economy": 5166000,
+        "unit": "Orang/PP"
+      },
+      "MALANG|MANADO": {
+        "origin": "MALANG",
+        "destination": "MANADO",
+        "business": 13167000,
+        "economy": 6311000,
+        "unit": "Orang/PP"
+      },
+      "MALANG|MEDAN": {
+        "origin": "MALANG",
+        "destination": "MEDAN",
+        "business": 9958000,
+        "economy": 5145000,
+        "unit": "Orang/PP"
+      },
+      "MALANG|PADANG": {
+        "origin": "MALANG",
+        "destination": "PADANG",
+        "business": 8418000,
+        "economy": 4385000,
+        "unit": "Orang/PP"
+      },
+      "MALANG|PALANGKARAYA": {
+        "origin": "MALANG",
+        "destination": "PALANGKARAYA",
+        "business": 7915000,
+        "economy": 4407000,
+        "unit": "Orang/PP"
+      },
+      "MALANG|PALEMBANG": {
+        "origin": "MALANG",
+        "destination": "PALEMBANG",
+        "business": 6899000,
+        "economy": 3765000,
+        "unit": "Orang/PP"
+      },
+      "MALANG|PEKANBARU": {
+        "origin": "MALANG",
+        "destination": "PEKANBARU",
+        "business": 8461000,
+        "economy": 4439000,
+        "unit": "Orang/PP"
+      },
+      "MALANG|TIMIKA": {
+        "origin": "MALANG",
+        "destination": "TIMIKA",
+        "business": 15873000,
+        "economy": 8461000,
+        "unit": "Orang/PP"
+      },
+      "MANADO|MEDAN": {
+        "origin": "MANADO",
+        "destination": "MEDAN",
+        "business": 15552000,
+        "economy": 7316000,
+        "unit": "Orang/PP"
+      },
+      "MANADO|PADANG": {
+        "origin": "MANADO",
+        "destination": "PADANG",
+        "business": 14012000,
+        "economy": 6546000,
+        "unit": "Orang/PP"
+      },
+      "MANADO|PALEMBANG": {
+        "origin": "MANADO",
+        "destination": "PALEMBANG",
+        "business": 12504000,
+        "economy": 5926000,
+        "unit": "Orang/PP"
+      },
+      "MANADO|PEKANBARU": {
+        "origin": "MANADO",
+        "destination": "PEKANBARU",
+        "business": 14055000,
+        "economy": 6599000,
+        "unit": "Orang/PP"
+      },
+      "MANADO|PONTIANAK": {
+        "origin": "MANADO",
+        "destination": "PONTIANAK",
+        "business": 12953000,
+        "economy": 6396000,
+        "unit": "Orang/PP"
+      },
+      "MANADO|SEMARANG": {
+        "origin": "MANADO",
+        "destination": "SEMARANG",
+        "business": 12504000,
+        "economy": 5851000,
+        "unit": "Orang/PP"
+      },
+      "MANADO|SOLO": {
+        "origin": "MANADO",
+        "destination": "SOLO",
+        "business": 12504000,
+        "economy": 5990000,
+        "unit": "Orang/PP"
+      },
+      "MANADO|SURABAYA": {
+        "origin": "MANADO",
+        "destination": "SURABAYA",
+        "business": 9937000,
+        "economy": 5262000,
+        "unit": "Orang/PP"
+      },
+      "MANADO|TIMIKA": {
+        "origin": "MANADO",
+        "destination": "TIMIKA",
+        "business": 16183000,
+        "economy": 8995000,
+        "unit": "Orang/PP"
+      },
+      "MATARAM|BALIKPAPAN": {
+        "origin": "MATARAM",
+        "destination": "BALIKPAPAN",
+        "business": 10750000,
+        "economy": 5615000,
+        "unit": "Orang/PP"
+      },
+      "MATARAM|BANDA ACEH": {
+        "origin": "MATARAM",
+        "destination": "BANDA ACEH",
+        "business": 10846000,
+        "economy": 6246000,
+        "unit": "Orang/PP"
+      },
+      "MATARAM|BANJARMASIN": {
+        "origin": "MATARAM",
+        "destination": "BANJARMASIN",
+        "business": 8803000,
+        "economy": 4888000,
+        "unit": "Orang/PP"
+      },
+      "MATARAM|BATAM": {
+        "origin": "MATARAM",
+        "destination": "BATAM",
+        "business": 8461000,
+        "economy": 4803000,
+        "unit": "Orang/PP"
+      },
+      "MATARAM|BIAK": {
+        "origin": "MATARAM",
+        "destination": "BIAK",
+        "business": 11552000,
+        "economy": 6546000,
+        "unit": "Orang/PP"
+      },
+      "MATARAM|JAYAPURA": {
+        "origin": "MATARAM",
+        "destination": "JAYAPURA",
+        "business": 13092000,
+        "economy": 7575000,
+        "unit": "Orang/PP"
+      },
+      "MATARAM|YOGYAKARTA": {
+        "origin": "MATARAM",
+        "destination": "YOGYAKARTA",
+        "business": 4417000,
+        "economy": 2968000,
+        "unit": "Orang/PP"
+      },
+      "MATARAM|MAKASSAR": {
+        "origin": "MATARAM",
+        "destination": "MAKASSAR",
+        "business": 4717000,
+        "economy": 3113000,
+        "unit": "Orang/PP"
+      },
+      "MATARAM|MANADO": {
+        "origin": "MATARAM",
+        "destination": "MANADO",
+        "business": 8717000,
+        "economy": 5070000,
+        "unit": "Orang/PP"
+      },
+      "MATARAM|MEDAN": {
+        "origin": "MATARAM",
+        "destination": "MEDAN",
+        "business": 10600000,
+        "economy": 5637000,
+        "unit": "Orang/PP"
+      },
+      "MATARAM|PADANG": {
+        "origin": "MATARAM",
+        "destination": "PADANG",
+        "business": 9060000,
+        "economy": 4867000,
+        "unit": "Orang/PP"
+      },
+      "MATARAM|PALEMBANG": {
+        "origin": "MATARAM",
+        "destination": "PALEMBANG",
+        "business": 7551000,
+        "economy": 4246000,
+        "unit": "Orang/PP"
+      },
+      "MATARAM|PEKANBARU": {
+        "origin": "MATARAM",
+        "destination": "PEKANBARU",
+        "business": 9102000,
+        "economy": 4909000,
+        "unit": "Orang/PP"
+      },
+      "MATARAM|PONTIANAK": {
+        "origin": "MATARAM",
+        "destination": "PONTIANAK",
+        "business": 8001000,
+        "economy": 4706000,
+        "unit": "Orang/PP"
+      },
+      "MATARAM|SURABAYA": {
+        "origin": "MATARAM",
+        "destination": "SURABAYA",
+        "business": 3829000,
+        "economy": 2484000,
+        "unit": "Orang/PP"
+      },
+      "MEDAN|BANDA ACEH": {
+        "origin": "MEDAN",
+        "destination": "BANDA ACEH",
+        "business": 3466000,
+        "economy": 2347000,
+        "unit": "Orang/PP"
+      },
+      "MEDAN|MAKASSAR": {
+        "origin": "MEDAN",
+        "destination": "MAKASSAR",
+        "business": 12514000,
+        "economy": 6172000,
+        "unit": "Orang/PP"
+      },
+      "MEDAN|PONTIANAK": {
+        "origin": "MEDAN",
+        "destination": "PONTIANAK",
+        "business": 9733000,
+        "economy": 5230000,
+        "unit": "Orang/PP"
+      },
+      "MEDAN|SEMARANG": {
+        "origin": "MEDAN",
+        "destination": "SEMARANG",
+        "business": 9284000,
+        "economy": 4696000,
+        "unit": "Orang/PP"
+      },
+      "MEDAN|SOLO": {
+        "origin": "MEDAN",
+        "destination": "SOLO",
+        "business": 9284000,
+        "economy": 4835000,
+        "unit": "Orang/PP"
+      },
+      "MEDAN|SURABAYA": {
+        "origin": "MEDAN",
+        "destination": "SURABAYA",
+        "business": 10739000,
+        "economy": 5134000,
+        "unit": "Orang/PP"
+      },
+      "MEDAN|TIMIKA": {
+        "origin": "MEDAN",
+        "destination": "TIMIKA",
+        "business": 18258000,
+        "economy": 9455000,
+        "unit": "Orang/PP"
+      },
+      "PADANG|MAKASSAR": {
+        "origin": "PADANG",
+        "destination": "MAKASSAR",
+        "business": 10974000,
+        "economy": 5402000,
+        "unit": "Orang/PP"
+      },
+      "PADANG|PONTIANAK": {
+        "origin": "PADANG",
+        "destination": "PONTIANAK",
+        "business": 8193000,
+        "economy": 4460000,
+        "unit": "Orang/PP"
+      },
+      "PADANG|SEMARANG": {
+        "origin": "PADANG",
+        "destination": "SEMARANG",
+        "business": 7744000,
+        "economy": 3925000,
+        "unit": "Orang/PP"
+      },
+      "PADANG|SOLO": {
+        "origin": "PADANG",
+        "destination": "SOLO",
+        "business": 7744000,
+        "economy": 4065000,
+        "unit": "Orang/PP"
+      },
+      "PADANG|SURABAYA": {
+        "origin": "PADANG",
+        "destination": "SURABAYA",
+        "business": 9199000,
+        "economy": 4364000,
+        "unit": "Orang/PP"
+      },
+      "PADANG|TIMIKA": {
+        "origin": "PADANG",
+        "destination": "TIMIKA",
+        "business": 16718000,
+        "economy": 8685000,
+        "unit": "Orang/PP"
+      },
+      "PALANGKARAYA|BANDA ACEH": {
+        "origin": "PALANGKARAYA",
+        "destination": "BANDA ACEH",
+        "business": 10546000,
+        "economy": 6022000,
+        "unit": "Orang/PP"
+      },
+      "PALANGKARAYA|BATAM": {
+        "origin": "PALANGKARAYA",
+        "destination": "BATAM",
+        "business": 8161000,
+        "economy": 4578000,
+        "unit": "Orang/PP"
+      },
+      "PALANGKARAYA|YOGYAKARTA": {
+        "origin": "PALANGKARAYA",
+        "destination": "YOGYAKARTA",
+        "business": 7477000,
+        "economy": 4304000,
+        "unit": "Orang/PP"
+      },
+      "PALANGKARAYA|MATARAM": {
+        "origin": "PALANGKARAYA",
+        "destination": "MATARAM",
+        "business": 8557000,
+        "economy": 4888000,
+        "unit": "Orang/PP"
+      },
+      "PALANGKARAYA|MEDAN": {
+        "origin": "PALANGKARAYA",
+        "destination": "MEDAN",
+        "business": 10300000,
+        "economy": 5412000,
+        "unit": "Orang/PP"
+      },
+      "PALANGKARAYA|PADANG": {
+        "origin": "PALANGKARAYA",
+        "destination": "PADANG",
+        "business": 8760000,
+        "economy": 4642000,
+        "unit": "Orang/PP"
+      },
+      "PALANGKARAYA|PALEMBANG": {
+        "origin": "PALANGKARAYA",
+        "destination": "PALEMBANG",
+        "business": 7252000,
+        "economy": 4022000,
+        "unit": "Orang/PP"
+      },
+      "PALANGKARAYA|PEKANBARU": {
+        "origin": "PALANGKARAYA",
+        "destination": "PEKANBARU",
+        "business": 8803000,
+        "economy": 4696000,
+        "unit": "Orang/PP"
+      },
+      "PALANGKARAYA|SEMARANG": {
+        "origin": "PALANGKARAYA",
+        "destination": "SEMARANG",
+        "business": 7252000,
+        "economy": 3947000,
+        "unit": "Orang/PP"
+      },
+      "PALANGKARAYA|SOLO": {
+        "origin": "PALANGKARAYA",
+        "destination": "SOLO",
+        "business": 7252000,
+        "economy": 4086000,
+        "unit": "Orang/PP"
+      },
+      "PALANGKARAYA|SURABAYA": {
+        "origin": "PALANGKARAYA",
+        "destination": "SURABAYA",
+        "business": 8696000,
+        "economy": 4385000,
+        "unit": "Orang/PP"
+      },
+      "PALEMBANG|BALIKPAPAN": {
+        "origin": "PALEMBANG",
+        "destination": "BALIKPAPAN",
+        "business": 9894000,
+        "economy": 5220000,
+        "unit": "Orang/PP"
+      },
+      "PALEMBANG|MAKASSAR": {
+        "origin": "PALEMBANG",
+        "destination": "MAKASSAR",
+        "business": 9466000,
+        "economy": 4781000,
+        "unit": "Orang/PP"
+      },
+      "PALEMBANG|PONTIANAK": {
+        "origin": "PALEMBANG",
+        "destination": "PONTIANAK",
+        "business": 6685000,
+        "economy": 3840000,
+        "unit": "Orang/PP"
+      },
+      "PALEMBANG|SEMARANG": {
+        "origin": "PALEMBANG",
+        "destination": "SEMARANG",
+        "business": 6236000,
+        "economy": 3305000,
+        "unit": "Orang/PP"
+      },
+      "PALEMBANG|SOLO": {
+        "origin": "PALEMBANG",
+        "destination": "SOLO",
+        "business": 6236000,
+        "economy": 3444000,
+        "unit": "Orang/PP"
+      },
+      "PALEMBANG|SURABAYA": {
+        "origin": "PALEMBANG",
+        "destination": "SURABAYA",
+        "business": 7690000,
+        "economy": 3744000,
+        "unit": "Orang/PP"
+      },
+      "PALEMBANG|TIMIKA": {
+        "origin": "PALEMBANG",
+        "destination": "TIMIKA",
+        "business": 15210000,
+        "economy": 8076000,
+        "unit": "Orang/PP"
+      },
+      "PALU|MAKASSAR": {
+        "origin": "PALU",
+        "destination": "MAKASSAR",
+        "business": 4268000,
+        "economy": 2578000,
+        "unit": "Orang/PP"
+      },
+      "PALU|POSO": {
+        "origin": "PALU",
+        "destination": "POSO",
+        "business": 1957000,
+        "economy": 1423000,
+        "unit": "Orang/PP"
+      },
+      "PALU|SORONG": {
+        "origin": "PALU",
+        "destination": "SORONG",
+        "business": 6878000,
+        "economy": 4155000,
+        "unit": "Orang/PP"
+      },
+      "PALU|SURABAYA": {
+        "origin": "PALU",
+        "destination": "SURABAYA",
+        "business": 6878000,
+        "economy": 3883000,
+        "unit": "Orang/PP"
+      },
+      "PANGKAL PINANG|BALIKPAPAN": {
+        "origin": "PANGKAL PINANG",
+        "destination": "BALIKPAPAN",
+        "business": 9038000,
+        "economy": 4631000,
+        "unit": "Orang/PP"
+      },
+      "PANGKAL PINANG|BANJARMASIN": {
+        "origin": "PANGKAL PINANG",
+        "destination": "BANJARMASIN",
+        "business": 7091000,
+        "economy": 3915000,
+        "unit": "Orang/PP"
+      },
+      "PANGKAL PINANG|BATAM": {
+        "origin": "PANGKAL PINANG",
+        "destination": "BATAM",
+        "business": 6739000,
+        "economy": 3818000,
+        "unit": "Orang/PP"
+      },
+      "PANGKAL PINANG|YOGYAKARTA": {
+        "origin": "PANGKAL PINANG",
+        "destination": "YOGYAKARTA",
+        "business": 6065000,
+        "economy": 3262000,
+        "unit": "Orang/PP"
+      },
+      "PANGKAL PINANG|MAKASSAR": {
+        "origin": "PANGKAL PINANG",
+        "destination": "MAKASSAR",
+        "business": 9060000,
+        "economy": 4663000,
+        "unit": "Orang/PP"
+      },
+      "PANGKAL PINANG|MANADO": {
+        "origin": "PANGKAL PINANG",
+        "destination": "MANADO",
+        "business": 12097000,
+        "economy": 5808000,
+        "unit": "Orang/PP"
+      },
+      "PANGKAL PINANG|MEDAN": {
+        "origin": "PANGKAL PINANG",
+        "destination": "MEDAN",
+        "business": 8888000,
+        "economy": 4653000,
+        "unit": "Orang/PP"
+      },
+      "PANGKAL PINANG|PADANG": {
+        "origin": "PANGKAL PINANG",
+        "destination": "PADANG",
+        "business": 7337000,
+        "economy": 3883000,
+        "unit": "Orang/PP"
+      },
+      "PANGKAL PINANG|PALEMBANG": {
+        "origin": "PANGKAL PINANG",
+        "destination": "PALEMBANG",
+        "business": 5829000,
+        "economy": 3262000,
+        "unit": "Orang/PP"
+      },
+      "PANGKAL PINANG|PEKANBARU": {
+        "origin": "PANGKAL PINANG",
+        "destination": "PEKANBARU",
+        "business": 7391000,
+        "economy": 3936000,
+        "unit": "Orang/PP"
+      },
+      "PANGKAL PINANG|PONTIANAK": {
+        "origin": "PANGKAL PINANG",
+        "destination": "PONTIANAK",
+        "business": 6279000,
+        "economy": 3733000,
+        "unit": "Orang/PP"
+      },
+      "PANGKAL PINANG|SEMARANG": {
+        "origin": "PANGKAL PINANG",
+        "destination": "SEMARANG",
+        "business": 5829000,
+        "economy": 3187000,
+        "unit": "Orang/PP"
+      },
+      "PANGKAL PINANG|SOLO": {
+        "origin": "PANGKAL PINANG",
+        "destination": "SOLO",
+        "business": 5829000,
+        "economy": 3326000,
+        "unit": "Orang/PP"
+      },
+      "PANGKAL PINANG|SURABAYA": {
+        "origin": "PANGKAL PINANG",
+        "destination": "SURABAYA",
+        "business": 7284000,
+        "economy": 3626000,
+        "unit": "Orang/PP"
+      },
+      "PEKANBARU|PONTIANAK": {
+        "origin": "PEKANBARU",
+        "destination": "PONTIANAK",
+        "business": 8247000,
+        "economy": 4514000,
+        "unit": "Orang/PP"
+      },
+      "PEKANBARU|SEMARANG": {
+        "origin": "PEKANBARU",
+        "destination": "SEMARANG",
+        "business": 7797000,
+        "economy": 3979000,
+        "unit": "Orang/PP"
+      },
+      "PEKANBARU|SOLO": {
+        "origin": "PEKANBARU",
+        "destination": "SOLO",
+        "business": 7797000,
+        "economy": 4118000,
+        "unit": "Orang/PP"
+      },
+      "PEKANBARU|SURABAYA": {
+        "origin": "PEKANBARU",
+        "destination": "SURABAYA",
+        "business": 9241000,
+        "economy": 4407000,
+        "unit": "Orang/PP"
+      },
+      "PEKANBARU|TIMIKA": {
+        "origin": "PEKANBARU",
+        "destination": "TIMIKA",
+        "business": 16771000,
+        "economy": 8739000,
+        "unit": "Orang/PP"
+      },
+      "PONTIANAK|MAKASSAR": {
+        "origin": "PONTIANAK",
+        "destination": "MAKASSAR",
+        "business": 9915000,
+        "economy": 5241000,
+        "unit": "Orang/PP"
+      },
+      "PONTIANAK|SEMARANG": {
+        "origin": "PONTIANAK",
+        "destination": "SEMARANG",
+        "business": 6685000,
+        "economy": 3765000,
+        "unit": "Orang/PP"
+      },
+      "PONTIANAK|SOLO": {
+        "origin": "PONTIANAK",
+        "destination": "SOLO",
+        "business": 6685000,
+        "economy": 3904000,
+        "unit": "Orang/PP"
+      },
+      "PONTIANAK|SURABAYA": {
+        "origin": "PONTIANAK",
+        "destination": "SURABAYA",
+        "business": 8140000,
+        "economy": 4204000,
+        "unit": "Orang/PP"
+      },
+      "PONTIANAK|TIMIKA": {
+        "origin": "PONTIANAK",
+        "destination": "TIMIKA",
+        "business": 15659000,
+        "economy": 8535000,
+        "unit": "Orang/PP"
+      },
+      "SEMARANG|MAKASSAR": {
+        "origin": "SEMARANG",
+        "destination": "MAKASSAR",
+        "business": 9466000,
+        "economy": 4706000,
+        "unit": "Orang/PP"
+      },
+      "SOLO|MAKASSAR": {
+        "origin": "SOLO",
+        "destination": "MAKASSAR",
+        "business": 9466000,
+        "economy": 4845000,
+        "unit": "Orang/PP"
+      },
+      "SURABAYA|DENPASAR": {
+        "origin": "SURABAYA",
+        "destination": "DENPASAR",
+        "business": 3198000,
+        "economy": 2118000,
+        "unit": "Orang/PP"
+      },
+      "SURABAYA|JAYAPURA": {
+        "origin": "SURABAYA",
+        "destination": "JAYAPURA",
+        "business": 12675000,
+        "economy": 7250000,
+        "unit": "Orang/PP"
+      },
+      "SURABAYA|MAKASSAR": {
+        "origin": "SURABAYA",
+        "destination": "MAKASSAR",
+        "business": 5936000,
+        "economy": 3674000,
+        "unit": "Orang/PP"
+      },
+      "SURABAYA|TIMIKA": {
+        "origin": "SURABAYA",
+        "destination": "TIMIKA",
+        "business": 11295000,
+        "economy": 6589000,
+        "unit": "Orang/PP"
+      }
+    },
+    "ground_transport": [
+      {
+        "origin": "Banda Aceh",
+        "destination": "Kab. Aceh Barat",
+        "rate": 275000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banda Aceh",
+        "destination": "Kab. Aceh Barat Daya",
+        "rate": 298000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banda Aceh",
+        "destination": "Kab. Aceh Besar",
+        "rate": 183000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banda Aceh",
+        "destination": "Kab. Aceh Jaya",
+        "rate": 238000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banda Aceh",
+        "destination": "Kab. Aceh Selatan",
+        "rate": 325000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banda Aceh",
+        "destination": "Kab. Aceh Singkil",
+        "rate": 420000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banda Aceh",
+        "destination": "Kab. Aceh Tamiang",
+        "rate": 315000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banda Aceh",
+        "destination": "Kab. Aceh Tengah",
+        "rate": 293000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banda Aceh",
+        "destination": "Kab. Aceh Tenggara",
+        "rate": 460000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banda Aceh",
+        "destination": "Kab. Aceh Timur",
+        "rate": 289000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banda Aceh",
+        "destination": "Kab. Aceh Utara",
+        "rate": 270000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banda Aceh",
+        "destination": "Kab. Bener Meriah",
+        "rate": 278000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banda Aceh",
+        "destination": "Kab. Bireuen",
+        "rate": 220000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banda Aceh",
+        "destination": "Kab. Gayo Lues",
+        "rate": 370000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banda Aceh",
+        "destination": "Kab. Nagan Raya",
+        "rate": 275000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banda Aceh",
+        "destination": "Kab. Pidie",
+        "rate": 190000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banda Aceh",
+        "destination": "Kab. Pidie Jaya",
+        "rate": 205000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banda Aceh",
+        "destination": "Kota Langsa",
+        "rate": 301000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banda Aceh",
+        "destination": "Kota Lhokseumawe",
+        "rate": 240000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banda Aceh",
+        "destination": "Kota Subulussalam",
+        "rate": 400000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Asahan",
+        "rate": 259000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Batubara",
+        "rate": 225000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Dairi",
+        "rate": 270000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Deli Serdang",
+        "rate": 186000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Humbang Hasundutan",
+        "rate": 300000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Karo",
+        "rate": 200000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Labuhan Batu",
+        "rate": 287000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Labuhan Batu Selatan",
+        "rate": 360000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Labuhan Batu Utara",
+        "rate": 300000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Langkat",
+        "rate": 186000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Mandailing Natal",
+        "rate": 420000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Padang Lawas",
+        "rate": 420000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Padang Lawas Utara",
+        "rate": 420000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Pakpak Bharat",
+        "rate": 300000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Samosir",
+        "rate": 330000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Serdang Bedagai",
+        "rate": 200000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Simalungun",
+        "rate": 264000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Tapanuli Selatan",
+        "rate": 328000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Tapanuli Tengah",
+        "rate": 345000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Tapanuli Utara",
+        "rate": 330000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kab. Toba Samosir",
+        "rate": 300000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kota Binjai",
+        "rate": 180000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kota Pematang Siantar",
+        "rate": 225000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kota Sibolga",
+        "rate": 345000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kota Tanjung Balai",
+        "rate": 285000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Medan",
+        "destination": "Kota Tebing Tinggi",
+        "rate": 203000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pekanbaru",
+        "destination": "Kab. Indragiri Hilir",
+        "rate": 380000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pekanbaru",
+        "destination": "Kab. Indragiri Hulu",
+        "rate": 315000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pekanbaru",
+        "destination": "Kab. Kampar",
+        "rate": 200000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pekanbaru",
+        "destination": "Kab. Kuantan Singingi",
+        "rate": 300000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pekanbaru",
+        "destination": "Kab. Pelalawan",
+        "rate": 225000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pekanbaru",
+        "destination": "Kab. Rokan Hilir",
+        "rate": 350000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pekanbaru",
+        "destination": "Kab. Rokan Hulu",
+        "rate": 322000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pekanbaru",
+        "destination": "Kab. Siak",
+        "rate": 350000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pekanbaru",
+        "destination": "Kota Dumai",
+        "rate": 400000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Tanjung Pinang",
+        "destination": "Kab. Bintan",
+        "rate": 185000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jambi",
+        "destination": "Kab. Batanghari",
+        "rate": 175000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jambi",
+        "destination": "Kab. Bungo",
+        "rate": 270000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jambi",
+        "destination": "Kab. Kerinci",
+        "rate": 325000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jambi",
+        "destination": "Kab. Merangin",
+        "rate": 260000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jambi",
+        "destination": "Kab. Muaro Jambi",
+        "rate": 170000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jambi",
+        "destination": "Kab. Sarolangun",
+        "rate": 241000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jambi",
+        "destination": "Kab. Tanjung Jabung Barat",
+        "rate": 225000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jambi",
+        "destination": "Kab. Tanjung Jabung Timur",
+        "rate": 190000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jambi",
+        "destination": "Kab. Tebo",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jambi",
+        "destination": "Kota Sungai Penuh",
+        "rate": 308000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Padang",
+        "destination": "Kab. Agam",
+        "rate": 225000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Padang",
+        "destination": "Kab. Dharmasraya",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Padang",
+        "destination": "Kab. Lima Puluh Kota",
+        "rate": 225000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Padang",
+        "destination": "Kab. Padang Pariaman",
+        "rate": 205000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Padang",
+        "destination": "Kab. Pasaman",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Padang",
+        "destination": "Kab. Pasaman Barat",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Padang",
+        "destination": "Kab. Pesisir Selatan",
+        "rate": 205000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Padang",
+        "destination": "Kab. Sijunjung",
+        "rate": 225000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Padang",
+        "destination": "Kab. Solok",
+        "rate": 210000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Padang",
+        "destination": "Kab. Solok Selatan",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Padang",
+        "destination": "Kab. Tanah Datar",
+        "rate": 220000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Padang",
+        "destination": "Kota Bukit Tinggi",
+        "rate": 215000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Padang",
+        "destination": "Kota Padang Panjang",
+        "rate": 210000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Padang",
+        "destination": "Kota Pariaman",
+        "rate": 200000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Padang",
+        "destination": "Kota Payakumbuh",
+        "rate": 225000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Padang",
+        "destination": "Kota Sawahlunto",
+        "rate": 215000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Padang",
+        "destination": "Kota Solok",
+        "rate": 210000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palembang",
+        "destination": "Kab. Banyuasin",
+        "rate": 203000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palembang",
+        "destination": "Kab. Empat Lawang",
+        "rate": 315000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palembang",
+        "destination": "Kab. Lahat",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palembang",
+        "destination": "Kab. Muara Enim",
+        "rate": 235000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palembang",
+        "destination": "Kab. Musi Banyuasin",
+        "rate": 235000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palembang",
+        "destination": "Kab. Musi Rawas",
+        "rate": 320000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palembang",
+        "destination": "Kab. Musi Rawas Utara",
+        "rate": 325000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palembang",
+        "destination": "Kab. Ogan Ilir",
+        "rate": 205000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palembang",
+        "destination": "Kab. Ogan Komering Ilir",
+        "rate": 205000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palembang",
+        "destination": "Kab. Ogan Komering Ulu",
+        "rate": 248000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palembang",
+        "destination": "Kab. Ogan Komering Ulu",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palembang",
+        "destination": "Kab. Ogan Komering Ulu",
+        "rate": 245000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palembang",
+        "destination": "Kab. Pali",
+        "rate": 265000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palembang",
+        "destination": "Kota Lubuk Linggau",
+        "rate": 290000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palembang",
+        "destination": "Kota Pagar Alam",
+        "rate": 280000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palembang",
+        "destination": "Kota Prabumulih",
+        "rate": 205000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandar Lampung",
+        "destination": "Kab. Lampung Barat",
+        "rate": 270000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandar Lampung",
+        "destination": "Kab. Lampung Selatan",
+        "rate": 234000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandar Lampung",
+        "destination": "Kab. Lampung Tengah",
+        "rate": 246000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandar Lampung",
+        "destination": "Kab. Lampung Timur",
+        "rate": 246000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandar Lampung",
+        "destination": "Kab. Lampung Utara",
+        "rate": 252000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandar Lampung",
+        "destination": "Kab. Mesuji",
+        "rate": 276000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandar Lampung",
+        "destination": "Kab. Pesawaran",
+        "rate": 216000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandar Lampung",
+        "destination": "Kab. Pesisir Barat",
+        "rate": 270000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandar Lampung",
+        "destination": "Kab. Pringsewu",
+        "rate": 222000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandar Lampung",
+        "destination": "Kab. Tanggamus",
+        "rate": 240000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandar Lampung",
+        "destination": "Kab. Tulang Bawang",
+        "rate": 252000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandar Lampung",
+        "destination": "Kab. Tulang Bawang Barat",
+        "rate": 267000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandar Lampung",
+        "destination": "Kab. Way Kanan",
+        "rate": 270000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandar Lampung",
+        "destination": "Kota Metro",
+        "rate": 234000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bengkulu",
+        "destination": "Kab. Bengkulu Selatan",
+        "rate": 344000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bengkulu",
+        "destination": "Kab. Bengkulu Tengah",
+        "rate": 232000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bengkulu",
+        "destination": "Kab. Bengkulu Utara",
+        "rate": 313000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bengkulu",
+        "destination": "Kab. Kaur",
+        "rate": 385000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bengkulu",
+        "destination": "Kab. Kepahiang",
+        "rate": 298000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bengkulu",
+        "destination": "Kab. Lebong",
+        "rate": 375000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bengkulu",
+        "destination": "Kab. Mukomuko",
+        "rate": 423000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bengkulu",
+        "destination": "Kab. Rejang Lebong",
+        "rate": 313000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bengkulu",
+        "destination": "Kab. Seluma",
+        "rate": 282000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pangkalpinang",
+        "destination": "Kab. Bangka",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pangkalpinang",
+        "destination": "Kab. Bangka Barat",
+        "rate": 275000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pangkalpinang",
+        "destination": "Kab. Bangka Selatan",
+        "rate": 275000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pangkalpinang",
+        "destination": "Kab. Bangka Tengah",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Serang",
+        "destination": "Kab. Lebak",
+        "rate": 208000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Serang",
+        "destination": "Kab. Pandeglang",
+        "rate": 138000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Serang",
+        "destination": "Kab. Serang",
+        "rate": 160000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Serang",
+        "destination": "Kab. Tangerang",
+        "rate": 254000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Serang",
+        "destination": "Kota Cilegon",
+        "rate": 160000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Serang",
+        "destination": "Kota Tangerang",
+        "rate": 313000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Serang",
+        "destination": "Kota Tangerang Selatan",
+        "rate": 347000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kab. Bandung",
+        "rate": 183000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kab. Bandung Barat",
+        "rate": 275000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kab. Bekasi",
+        "rate": 265000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kab. Bogor",
+        "rate": 275000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kab. Ciamis",
+        "rate": 245000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kab. Cianjur",
+        "rate": 215000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kab. Cirebon",
+        "rate": 280000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kab. Garut",
+        "rate": 243000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kab. Indramayu",
+        "rate": 275000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kab. Karawang",
+        "rate": 248000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kab. Kuningan",
+        "rate": 275000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kab. Majalengka",
+        "rate": 235000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kab. Pangadaran",
+        "rate": 283000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kab. Purwakarta",
+        "rate": 218000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kab. Subang",
+        "rate": 208000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kab. Sukabumi",
+        "rate": 245000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kab. Sumedang",
+        "rate": 230000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kab. Tasikmalaya",
+        "rate": 245000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kota Banjar",
+        "rate": 283000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kota Bekasi",
+        "rate": 265000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kota Bogor",
+        "rate": 285000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kota Cimahi",
+        "rate": 168000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kota Cirebon",
+        "rate": 270000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kota Depok",
+        "rate": 275000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kota Sukabumi",
+        "rate": 226000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Bandung",
+        "destination": "Kota Tasikmalaya",
+        "rate": 245000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Banjarnegara",
+        "rate": 260000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Banyumas",
+        "rate": 257000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Batang",
+        "rate": 240000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Blora",
+        "rate": 270000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Boyolali",
+        "rate": 240000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Brebes",
+        "rate": 263000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Cilacap",
+        "rate": 280000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Demak",
+        "rate": 230000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Grobogan",
+        "rate": 235000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Jepara",
+        "rate": 240000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Karanganyar",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Kebumen",
+        "rate": 260000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Kendal",
+        "rate": 230000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Klaten",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Kudus",
+        "rate": 235000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Magelang",
+        "rate": 240000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Pati",
+        "rate": 240000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Pekalongan",
+        "rate": 245000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Pemalang",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Purbalingga",
+        "rate": 270000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Purworejo",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Rembang",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Semarang",
+        "rate": 230000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Sragen",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Sukoharjo",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Tegal",
+        "rate": 260000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Temanggung",
+        "rate": 240000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Wonogiri",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kab. Wonosobo",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kota Magelang",
+        "rate": 240000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kota Pekalongan",
+        "rate": 245000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kota Salatiga",
+        "rate": 235000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kota Surakarta",
+        "rate": 245000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Semarang",
+        "destination": "Kota Tegal",
+        "rate": 260000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Yogyakarta",
+        "destination": "Kab. Bantul",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Yogyakarta",
+        "destination": "Kab. Gunung Kidul",
+        "rate": 350000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Yogyakarta",
+        "destination": "Kab. Kulon Progo",
+        "rate": 350000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Yogyakarta",
+        "destination": "Kab. Sleman",
+        "rate": 200000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Bangkalan",
+        "rate": 225000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Banyuwangi",
+        "rate": 285000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Blitar",
+        "rate": 255000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Bojonegoro",
+        "rate": 225000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Bondowoso",
+        "rate": 255000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Gresik",
+        "rate": 225000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Jember",
+        "rate": 261000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Jombang",
+        "rate": 235000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Kediri",
+        "rate": 235000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Lamongan",
+        "rate": 225000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Lumajang",
+        "rate": 261000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Madiun",
+        "rate": 245000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Magetan",
+        "rate": 253000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Malang",
+        "rate": 228000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Mojokerto",
+        "rate": 225000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Nganjuk",
+        "rate": 245000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Ngawi",
+        "rate": 253000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Pacitan",
+        "rate": 285000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Pamekasan",
+        "rate": 243000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Pasuruan",
+        "rate": 228000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Ponorogo",
+        "rate": 255000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Probolinggo",
+        "rate": 228000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Sampang",
+        "rate": 235000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Sidoarjo",
+        "rate": 240000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Situbondo",
+        "rate": 255000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Sumenep",
+        "rate": 255000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Trenggalek",
+        "rate": 245000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Tuban",
+        "rate": 245000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kab. Tulungagung",
+        "rate": 245000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kota Batu",
+        "rate": 242000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kota Blitar",
+        "rate": 255000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kota Bojonegoro",
+        "rate": 225000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kota Kediri",
+        "rate": 235000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kota Madiun",
+        "rate": 245000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kota Malang",
+        "rate": 228000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kota Mojokerto",
+        "rate": 225000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Surabaya",
+        "destination": "Kota Probolinggo",
+        "rate": 228000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Denpasar",
+        "destination": "Kab. Badung",
+        "rate": 188000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Denpasar",
+        "destination": "Kab. Bangli",
+        "rate": 225000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Denpasar",
+        "destination": "Kab. Buleleng",
+        "rate": 265000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Denpasar",
+        "destination": "Kab. Gianyar",
+        "rate": 225000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Denpasar",
+        "destination": "Kab. Jembrana",
+        "rate": 270000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Denpasar",
+        "destination": "Kab. Karangasem",
+        "rate": 263000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Denpasar",
+        "destination": "Kab. Tabanan",
+        "rate": 225000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Mataram",
+        "destination": "Kab. Lombok Barat",
+        "rate": 325000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Mataram",
+        "destination": "Kab. Lombok Tengah",
+        "rate": 450000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Mataram",
+        "destination": "Kab. Lombok Timur",
+        "rate": 350000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Kupang",
+        "destination": "Kab. Belu",
+        "rate": 325000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Kupang",
+        "destination": "Kab. Kupang",
+        "rate": 175000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Kupang",
+        "destination": "Kab. Timor Tengah Selatan",
+        "rate": 218000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Kupang",
+        "destination": "Kab. Timor Tengah Utara",
+        "rate": 275000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pontianak",
+        "destination": "Kab. Bengkayang",
+        "rate": 270000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pontianak",
+        "destination": "Kab. Kapuas Hulu",
+        "rate": 550000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pontianak",
+        "destination": "Kab. Kayong Utara",
+        "rate": 550000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pontianak",
+        "destination": "Kab. Ketapang",
+        "rate": 550000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pontianak",
+        "destination": "Kab. Kubu Raya",
+        "rate": 185000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pontianak",
+        "destination": "Kab. Landak",
+        "rate": 270000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pontianak",
+        "destination": "Kab. Melawi",
+        "rate": 430000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pontianak",
+        "destination": "Kab. Mempawah",
+        "rate": 230000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pontianak",
+        "destination": "Kab. Sambas",
+        "rate": 300000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pontianak",
+        "destination": "Kab. Sanggau",
+        "rate": 303000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pontianak",
+        "destination": "Kab. Sekadau",
+        "rate": 343000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pontianak",
+        "destination": "Kab. Sintang",
+        "rate": 392000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Pontianak",
+        "destination": "Kota Singkawang",
+        "rate": 257000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palangkaraya",
+        "destination": "Kab. Barito Selatan",
+        "rate": 290000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palangkaraya",
+        "destination": "Kab. Barito Timur",
+        "rate": 333000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palangkaraya",
+        "destination": "Kab. Barito Utara",
+        "rate": 425000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palangkaraya",
+        "destination": "Kab. Gunung Mas",
+        "rate": 300000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palangkaraya",
+        "destination": "Kab. Kapuas",
+        "rate": 275000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palangkaraya",
+        "destination": "Kab. Katingan",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palangkaraya",
+        "destination": "Kab. Kotawaringin Barat",
+        "rate": 425000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palangkaraya",
+        "destination": "Kab. Kotawaringin Timur",
+        "rate": 300000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palangkaraya",
+        "destination": "Kab. Lamandau",
+        "rate": 525000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palangkaraya",
+        "destination": "Kab. Murung Raya",
+        "rate": 448000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palangkaraya",
+        "destination": "Kab. Pulau Pisau",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palangkaraya",
+        "destination": "Kab. Seruyan",
+        "rate": 328000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palangkaraya",
+        "destination": "Kab. Sukamara",
+        "rate": 525000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banjarmasin",
+        "destination": "Kab. Balangan",
+        "rate": 230000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banjarmasin",
+        "destination": "Kab. Banjar",
+        "rate": 170000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banjarmasin",
+        "destination": "Kab. Barito Kuala",
+        "rate": 200000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banjarmasin",
+        "destination": "Kab. Hulu Sungai Selatan",
+        "rate": 200000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banjarmasin",
+        "destination": "Kab. Hulu Sungai Tengah",
+        "rate": 212000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banjarmasin",
+        "destination": "Kab. Hulu Sungai Utara",
+        "rate": 218000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banjarmasin",
+        "destination": "Kab. Kota Baru",
+        "rate": 290000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banjarmasin",
+        "destination": "Kab. Tabalong",
+        "rate": 234000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banjarmasin",
+        "destination": "Kab. Tanah Bumbu",
+        "rate": 300000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banjarmasin",
+        "destination": "Kab. Tanah Laut",
+        "rate": 200000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banjarmasin",
+        "destination": "Kab. Tapin",
+        "rate": 189000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Banjarmasin",
+        "destination": "Kota Banjarbaru",
+        "rate": 225000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Samarinda",
+        "destination": "Kab. Kutai Barat",
+        "rate": 1500000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Samarinda",
+        "destination": "Kab. Kutai Kartanegara",
+        "rate": 500000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Samarinda",
+        "destination": "Kab. Kutai Timur",
+        "rate": 1350000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Samarinda",
+        "destination": "Kab. Paser",
+        "rate": 1650000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Samarinda",
+        "destination": "Kab. Penajam Paser Utara",
+        "rate": 650000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Samarinda",
+        "destination": "Kota Balikpapan",
+        "rate": 550000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Samarinda",
+        "destination": "Kota Bontang",
+        "rate": 600000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Manado",
+        "destination": "Kab. Bolaang Mongondow",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Manado",
+        "destination": "Kab. Bolaang Mongondow",
+        "rate": 275000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Manado",
+        "destination": "Kab. Bolaang Mongondow",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Manado",
+        "destination": "Kab. Bolaang Mongondow",
+        "rate": 300000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Manado",
+        "destination": "Kab. Minahasa",
+        "rate": 180000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Manado",
+        "destination": "Kab. Minahasa Selatan",
+        "rate": 180000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Manado",
+        "destination": "Kab. Minahasa Tenggara",
+        "rate": 200000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Manado",
+        "destination": "Kab. Minahasa Utara",
+        "rate": 175000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Manado",
+        "destination": "Kota Bitung",
+        "rate": 175000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Manado",
+        "destination": "Kota Kotamobagu",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Manado",
+        "destination": "Kota Tomohon",
+        "rate": 170000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Gorontalo",
+        "destination": "Kab. Boalemo",
+        "rate": 400000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Gorontalo",
+        "destination": "Kab. Gorontalo",
+        "rate": 300000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Gorontalo",
+        "destination": "Kab. Gorontalo Utara",
+        "rate": 350000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Gorontalo",
+        "destination": "Kab. Pahuwato",
+        "rate": 650000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Mamuju",
+        "destination": "Kab. Majene",
+        "rate": 240000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Mamuju",
+        "destination": "Kab. Mamasa",
+        "rate": 359000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Mamuju",
+        "destination": "Kab. Mamuju Tengah",
+        "rate": 200000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Mamuju",
+        "destination": "Kab. Mamuju utara",
+        "rate": 270000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Mamuju",
+        "destination": "Kab. Polewali Mandar",
+        "rate": 260000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kab. Bantaeng",
+        "rate": 235000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kab. Barru",
+        "rate": 210000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kab. Bone",
+        "rate": 240000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kab. Bulukumba",
+        "rate": 240000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kab. Enrekang",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kab. Gowa",
+        "rate": 175000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kab. Jeneponto",
+        "rate": 230000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kab. Luwu",
+        "rate": 350000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kab. Luwu Timur",
+        "rate": 375000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kab. Luwu Utara",
+        "rate": 365000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kab. Maros",
+        "rate": 170000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kab. Pinrang",
+        "rate": 230000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kab. Sidenreng Rappang",
+        "rate": 230000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kab. Sinjai",
+        "rate": 235000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kab. Soppeng",
+        "rate": 235000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kab. Takalar",
+        "rate": 190000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kab. Tanatoraja",
+        "rate": 350000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kab. Toraja Utara",
+        "rate": 350000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kab. Wajo",
+        "rate": 230000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kota Palopo",
+        "rate": 350000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Makassar",
+        "destination": "Kota Pare-Pare",
+        "rate": 225000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palu",
+        "destination": "Kab. Luwuk",
+        "rate": 400000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palu",
+        "destination": "Kab. Buol",
+        "rate": 472000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palu",
+        "destination": "Kab. Donggala",
+        "rate": 130000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palu",
+        "destination": "Kab. Morowali",
+        "rate": 400000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palu",
+        "destination": "Kab. Morowali Utara",
+        "rate": 400000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palu",
+        "destination": "Kab. Parigi Moutong",
+        "rate": 250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palu",
+        "destination": "Kab. Poso",
+        "rate": 280000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palu",
+        "destination": "Kab. Sigi",
+        "rate": 219000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palu",
+        "destination": "Kab. Tojouna-Una",
+        "rate": 350000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Palu",
+        "destination": "Kab. Toli-Toli",
+        "rate": 412000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Kendari",
+        "destination": "Kab. Bombana",
+        "rate": 355000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Kendari",
+        "destination": "Kab. Kolaka",
+        "rate": 370000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Kendari",
+        "destination": "Kab. Kolaka Timur",
+        "rate": 300000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Kendari",
+        "destination": "Kab. Kolaka Utara",
+        "rate": 425000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Kendari",
+        "destination": "Kab. Konawe",
+        "rate": 300000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Kendari",
+        "destination": "Kab. Konawe Selatan",
+        "rate": 305000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Kendari",
+        "destination": "Kab. Konawe Utara",
+        "rate": 300000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Sofifi",
+        "destination": "Kab. Halmahera Barat",
+        "rate": 850000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Sofifi",
+        "destination": "Kab. Halmahera Tengah",
+        "rate": 1000000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Sofifi",
+        "destination": "Kab. Halmahera Timur",
+        "rate": 1250000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Sofifi",
+        "destination": "Kab. Halmahera Utara",
+        "rate": 900000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jayapura",
+        "destination": "Kab. Jayapura",
+        "rate": 600000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jayapura",
+        "destination": "Kab. Keerom",
+        "rate": 900000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jayapura",
+        "destination": "Kab. Sarmi",
+        "rate": 2700000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Manokwari",
+        "destination": "Kab. Teluk Bintuni",
+        "rate": 900000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Manokwari",
+        "destination": "Kab. Manokwari Selatan",
+        "rate": 750000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Manokwari",
+        "destination": "Kab. Pegunungan Arfak",
+        "rate": 2650000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      }
+    ],
+    "jakarta_surrounding_ground_transport": [
+      {
+        "origin": "Jakarta",
+        "destination": "Kota Bekasi",
+        "rate": 256000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jakarta",
+        "destination": "Kab. Bekasi",
+        "rate": 256000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jakarta",
+        "destination": "Kab. Bogor",
+        "rate": 270000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jakarta",
+        "destination": "Kota Bogor",
+        "rate": 270000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jakarta",
+        "destination": "Kota Depok",
+        "rate": 248000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jakarta",
+        "destination": "Kota Tangerang",
+        "rate": 258000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jakarta",
+        "destination": "Kota Tangerang Selatan",
+        "rate": 258000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jakarta",
+        "destination": "Kab. Tangerang",
+        "rate": 279000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      },
+      {
+        "origin": "Jakarta",
+        "destination": "Kepulauan Seribu",
+        "rate": 386000,
+        "unit": "Orang/Kali",
+        "one_way": true
+      }
+    ],
+    "meeting_packages": {
+      "ACEH": {
+        "Menteri/Wamen": {
+          "halfday": 485000,
+          "fullday": 663000,
+          "fullboard": 1871000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 413000,
+          "fullday": 575000,
+          "fullboard": 1151000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 338000,
+          "fullday": 425000,
+          "fullboard": 992000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "SUMATERA UTARA": {
+        "Menteri/Wamen": {
+          "halfday": 451000,
+          "fullday": 675000,
+          "fullboard": 1350000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 411000,
+          "fullday": 511000,
+          "fullboard": 1011000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 279000,
+          "fullday": 462000,
+          "fullboard": 826000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "RIAU": {
+        "Menteri/Wamen": {
+          "halfday": 319000,
+          "fullday": 582000,
+          "fullboard": 1229000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 279000,
+          "fullday": 432000,
+          "fullboard": 1084000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 219000,
+          "fullday": 397000,
+          "fullboard": 888000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "KEPULAUAN RIAU": {
+        "Menteri/Wamen": {
+          "halfday": 545000,
+          "fullday": 733000,
+          "fullboard": 1716000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 431000,
+          "fullday": 531000,
+          "fullboard": 1170000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 261000,
+          "fullday": 321000,
+          "fullboard": 807000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "JAMBI": {
+        "Menteri/Wamen": {
+          "halfday": 509000,
+          "fullday": 595000,
+          "fullboard": 1538000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 425000,
+          "fullday": 525000,
+          "fullboard": 1298000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 288000,
+          "fullday": 393000,
+          "fullboard": 1110000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "SUMATERA BARAT": {
+        "Menteri/Wamen": {
+          "halfday": 351000,
+          "fullday": 502000,
+          "fullboard": 1492000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 311000,
+          "fullday": 432000,
+          "fullboard": 987000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 195000,
+          "fullday": 252000,
+          "fullboard": 789000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "SUMATERA SELATAN": {
+        "Menteri/Wamen": {
+          "halfday": 541000,
+          "fullday": 776000,
+          "fullboard": 1511000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 391000,
+          "fullday": 525000,
+          "fullboard": 1050000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 290000,
+          "fullday": 455000,
+          "fullboard": 806000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "LAMPUNG": {
+        "Menteri/Wamen": {
+          "halfday": 452000,
+          "fullday": 599000,
+          "fullboard": 1284000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 421000,
+          "fullday": 512000,
+          "fullboard": 1098000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 255000,
+          "fullday": 336000,
+          "fullboard": 1008000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "BENGKULU": {
+        "Menteri/Wamen": {
+          "halfday": 383000,
+          "fullday": 538000,
+          "fullboard": 1262000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 343000,
+          "fullday": 468000,
+          "fullboard": 1129000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 290000,
+          "fullday": 416000,
+          "fullboard": 1067000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "BANGKA BELITUNG": {
+        "Menteri/Wamen": {
+          "halfday": 594000,
+          "fullday": 714000,
+          "fullboard": 1747000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 481000,
+          "fullday": 582000,
+          "fullboard": 1128000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 343000,
+          "fullday": 440000,
+          "fullboard": 977000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "BANTEN": {
+        "Menteri/Wamen": {
+          "halfday": 785000,
+          "fullday": 972000,
+          "fullboard": 1875000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 502000,
+          "fullday": 632000,
+          "fullboard": 1201000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 368000,
+          "fullday": 459000,
+          "fullboard": 1051000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "JAWA BARAT": {
+        "Menteri/Wamen": {
+          "halfday": 607000,
+          "fullday": 799000,
+          "fullboard": 1914000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 474000,
+          "fullday": 692000,
+          "fullboard": 1199000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 414000,
+          "fullday": 498000,
+          "fullboard": 1006000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "DKI JAKARTA": {
+        "Menteri/Wamen": {
+          "halfday": 814000,
+          "fullday": 993000,
+          "fullboard": 2257000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 542000,
+          "fullday": 667000,
+          "fullboard": 1347000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 361000,
+          "fullday": 455000,
+          "fullboard": 1197000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "JAWA TENGAH": {
+        "Menteri/Wamen": {
+          "halfday": 494000,
+          "fullday": 738000,
+          "fullboard": 1687000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 318000,
+          "fullday": 474000,
+          "fullboard": 1063000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 255000,
+          "fullday": 319000,
+          "fullboard": 770000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "DI YOGYAKARTA": {
+        "Menteri/Wamen": {
+          "halfday": 491000,
+          "fullday": 623000,
+          "fullboard": 1523000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 384000,
+          "fullday": 507000,
+          "fullboard": 1204000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 303000,
+          "fullday": 407000,
+          "fullboard": 867000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "JAWA TIMUR": {
+        "Menteri/Wamen": {
+          "halfday": 512000,
+          "fullday": 767000,
+          "fullboard": 2332000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 413000,
+          "fullday": 623000,
+          "fullboard": 1784000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 338000,
+          "fullday": 408000,
+          "fullboard": 1381000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "BALI": {
+        "Menteri/Wamen": {
+          "halfday": 789000,
+          "fullday": 971000,
+          "fullboard": 2700000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 528000,
+          "fullday": 705000,
+          "fullboard": 1814000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 388000,
+          "fullday": 472000,
+          "fullboard": 1419000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "NUSA TENGGARA BARAT": {
+        "Menteri/Wamen": {
+          "halfday": 539000,
+          "fullday": 800000,
+          "fullboard": 1512000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 488000,
+          "fullday": 713000,
+          "fullboard": 1213000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 397000,
+          "fullday": 436000,
+          "fullboard": 820000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "NUSA TENGGARA TIMUR": {
+        "Menteri/Wamen": {
+          "halfday": 743000,
+          "fullday": 1046000,
+          "fullboard": 2328000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 463000,
+          "fullday": 602000,
+          "fullboard": 1398000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 339000,
+          "fullday": 498000,
+          "fullboard": 1115000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "KALIMANTAN BARAT": {
+        "Menteri/Wamen": {
+          "halfday": 462000,
+          "fullday": 617000,
+          "fullboard": 1247000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 422000,
+          "fullday": 547000,
+          "fullboard": 1047000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 300000,
+          "fullday": 418000,
+          "fullboard": 836000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "KALIMANTAN TENGAH": {
+        "Menteri/Wamen": {
+          "halfday": 455000,
+          "fullday": 679000,
+          "fullboard": 2239000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 415000,
+          "fullday": 609000,
+          "fullboard": 2017000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 309000,
+          "fullday": 391000,
+          "fullboard": 1362000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "KALIMANTAN SELATAN": {
+        "Menteri/Wamen": {
+          "halfday": 380000,
+          "fullday": 545000,
+          "fullboard": 1341000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 340000,
+          "fullday": 475000,
+          "fullboard": 1317000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 250000,
+          "fullday": 366000,
+          "fullboard": 874000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "KALIMANTAN TIMUR": {
+        "Menteri/Wamen": {
+          "halfday": 423000,
+          "fullday": 750000,
+          "fullboard": 1338000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 350000,
+          "fullday": 478000,
+          "fullboard": 1126000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 258000,
+          "fullday": 392000,
+          "fullboard": 963000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "KALIMANTAN UTARA": {
+        "Menteri/Wamen": {
+          "halfday": 417000,
+          "fullday": 723000,
+          "fullboard": 1764000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 403000,
+          "fullday": 684000,
+          "fullboard": 1732000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 289000,
+          "fullday": 355000,
+          "fullboard": 936000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "SULAWESI UTARA": {
+        "Menteri/Wamen": {
+          "halfday": 490000,
+          "fullday": 620000,
+          "fullboard": 1250000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 450000,
+          "fullday": 550000,
+          "fullboard": 1134000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 269000,
+          "fullday": 362000,
+          "fullboard": 987000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "GORONTALO": {
+        "Menteri/Wamen": {
+          "halfday": 390000,
+          "fullday": 562000,
+          "fullboard": 2297000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 350000,
+          "fullday": 522000,
+          "fullboard": 2088000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 241000,
+          "fullday": 310000,
+          "fullboard": 1299000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "SULAWESI BARAT": {
+        "Menteri/Wamen": {
+          "halfday": 390000,
+          "fullday": 574000,
+          "fullboard": 1301000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 350000,
+          "fullday": 504000,
+          "fullboard": 1179000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 269000,
+          "fullday": 404000,
+          "fullboard": 1116000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "SULAWESI SELATAN": {
+        "Menteri/Wamen": {
+          "halfday": 403000,
+          "fullday": 583000,
+          "fullboard": 2218000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 363000,
+          "fullday": 513000,
+          "fullboard": 1574000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 280000,
+          "fullday": 397000,
+          "fullboard": 1307000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "SULAWESI TENGAH": {
+        "Menteri/Wamen": {
+          "halfday": 440000,
+          "fullday": 652000,
+          "fullboard": 1672000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 400000,
+          "fullday": 582000,
+          "fullboard": 1642000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 303000,
+          "fullday": 422000,
+          "fullboard": 1241000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "SULAWESI TENGGARA": {
+        "Menteri/Wamen": {
+          "halfday": 510000,
+          "fullday": 664000,
+          "fullboard": 1335000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 478000,
+          "fullday": 604000,
+          "fullboard": 1171000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 317000,
+          "fullday": 395000,
+          "fullboard": 930000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "MALUKU": {
+        "Menteri/Wamen": {
+          "halfday": 463000,
+          "fullday": 638000,
+          "fullboard": 1881000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 423000,
+          "fullday": 568000,
+          "fullboard": 1710000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 295000,
+          "fullday": 401000,
+          "fullboard": 999000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "MALUKU UTARA": {
+        "Menteri/Wamen": {
+          "halfday": 575000,
+          "fullday": 693000,
+          "fullboard": 1220000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 523000,
+          "fullday": 623000,
+          "fullboard": 1214000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 295000,
+          "fullday": 477000,
+          "fullboard": 929000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "PAPUA": {
+        "Menteri/Wamen": {
+          "halfday": 482000,
+          "fullday": 768000,
+          "fullboard": 2063000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 478000,
+          "fullday": 706000,
+          "fullboard": 1863000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 351000,
+          "fullday": 478000,
+          "fullboard": 1224000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "PAPUA BARAT": {
+        "Menteri/Wamen": {
+          "halfday": 503000,
+          "fullday": 728000,
+          "fullboard": 1952000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 463000,
+          "fullday": 658000,
+          "fullboard": 1875000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 310000,
+          "fullday": 421000,
+          "fullboard": 1120000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "PAPUA BARAT DAYA": {
+        "Menteri/Wamen": {
+          "halfday": 503000,
+          "fullday": 728000,
+          "fullboard": 1952000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 463000,
+          "fullday": 658000,
+          "fullboard": 1875000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 310000,
+          "fullday": 421000,
+          "fullboard": 1120000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "PAPUA TENGAH": {
+        "Menteri/Wamen": {
+          "halfday": 482000,
+          "fullday": 768000,
+          "fullboard": 2063000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 442000,
+          "fullday": 698000,
+          "fullboard": 1863000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 344000,
+          "fullday": 478000,
+          "fullboard": 1193000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "PAPUA SELATAN": {
+        "Menteri/Wamen": {
+          "halfday": 709000,
+          "fullday": 1129000,
+          "fullboard": 3033000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 650000,
+          "fullday": 1026000,
+          "fullboard": 2739000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 472000,
+          "fullday": 703000,
+          "fullboard": 1738000,
+          "unit": "Orang/Paket"
+        }
+      },
+      "PAPUA PEGUNUNGAN": {
+        "Menteri/Wamen": {
+          "halfday": 739000,
+          "fullday": 1070000,
+          "fullboard": 2869000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon I/II/Fungsional Utama": {
+          "halfday": 650000,
+          "fullday": 1026000,
+          "fullboard": 2739000,
+          "unit": "Orang/Paket"
+        },
+        "Eselon III/Fungsional Madya ke bawah": {
+          "halfday": 472000,
+          "fullday": 703000,
+          "fullboard": 1738000,
+          "unit": "Orang/Paket"
+        }
+      }
+    },
+    "fullboard_daily_allowance": {
+      "rate": 130000,
+      "unit": "OH"
+    },
+    "meeting_consumption": {
+      "province": "DKI JAKARTA",
+      "meal": {
+        "rate": 57000,
+        "unit": "Orang/Kegiatan"
+      },
+      "snack": {
+        "rate": 24000,
+        "unit": "Orang/Kegiatan"
+      }
+    },
+    "professional_honorarium": {
+      "Menteri/Pejabat Setingkat/Wamen": {
+        "rate": 1700000,
+        "unit": "OJ"
+      },
+      "Eselon I/setara": {
+        "rate": 1400000,
+        "unit": "OJ"
+      },
+      "Eselon II/setara": {
+        "rate": 1000000,
+        "unit": "OJ"
+      },
+      "Eselon III ke bawah/setara": {
+        "rate": 900000,
+        "unit": "OJ"
+      },
+      "Moderator": {
+        "rate": 700000,
+        "unit": "Orang/Kegiatan"
+      },
+      "Pembawa Acara": {
+        "rate": 400000,
+        "unit": "Orang/Kegiatan"
+      }
+    },
+    "team_honorarium": {
+      "Keputusan Presiden": {
+        "Pengarah": 2500000,
+        "Penanggung Jawab": 2250000,
+        "Koordinator/Ketua": 2000000,
+        "Wakil Ketua": 1750000,
+        "Sekretaris": 1500000,
+        "Anggota": 1500000
+      },
+      "Keputusan Menteri": {
+        "Pengarah": 1500000,
+        "Penanggung Jawab": 1250000,
+        "Ketua": 1000000,
+        "Wakil Ketua": 850000,
+        "Sekretaris": 750000,
+        "Anggota": 750000
+      },
+      "Keputusan Eselon I": {
+        "Pengarah": 750000,
+        "Penanggung Jawab": 700000,
+        "Ketua": 650000,
+        "Wakil Ketua": 600000,
+        "Sekretaris": 500000,
+        "Anggota": 500000
+      },
+      "Keputusan KPA": {
+        "Pengarah": 500000,
+        "Penanggung Jawab": 450000,
+        "Ketua": 400000,
+        "Wakil Ketua": 350000,
+        "Sekretaris": 300000,
+        "Anggota": 300000
+      }
+    },
+    "financial_management_honorarium": {
+      "KPA": {
+        "<=1 miliar": 630000,
+        ">1-10 miliar": 1180000,
+        ">10-100 miliar": 1800000,
+        ">100-500 miliar": 2860000,
+        ">500 miliar": 3500000
+      },
+      "PPK": {
+        "<=1 miliar": 610000,
+        ">1-10 miliar": 1150000,
+        ">10-100 miliar": 1750000,
+        ">100-500 miliar": 2780000,
+        ">500 miliar": 3390000
+      },
+      "PPSPM": {
+        "<=1 miliar": 240000,
+        ">1-10 miliar": 470000,
+        ">10-100 miliar": 750000,
+        ">100-500 miliar": 1470000,
+        ">500 miliar": 1940000
+      },
+      "Bendahara Pengeluaran": {
+        "<=1 miliar": 210000,
+        ">1-10 miliar": 410000,
+        ">10-100 miliar": 660000,
+        ">100-500 miliar": 1280000,
+        ">500 miliar": 1690000
+      },
+      "Staf Pengelola Keuangan/BPP": {
+        "<=1 miliar": 160000,
+        ">1-10 miliar": 300000,
+        ">10-100 miliar": 490000,
+        ">100-500 miliar": 950000,
+        ">500 miliar": 1260000
+      }
+    }
+  }
+}

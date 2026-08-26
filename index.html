@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="layout-polish.css?v=1" />
+    <link rel="stylesheet" href="module4.css?v=1" />
   </head>
   <body>
     <section id="authScreen" class="auth-screen"><form id="loginForm" class="auth-card"><p class="eyebrow">AKSES INTERNAL DEPUTI HIS</p><h1>Dashboard Keuangan Deputi HIS</h1><p class="auth-organization">Kementerian Investasi dan Hilirisasi / BKPM</p><p class="auth-helper">Akses terbatas untuk pengguna terotorisasi.</p><label>Email<input id="loginEmail" type="email" required autocomplete="email" /></label><label>Kata sandi<input id="loginPassword" type="password" required autocomplete="current-password" /></label><p id="loginError" class="login-error" hidden></p><button class="button primary" type="submit">Masuk</button><div class="auth-disclosure"><p>Autentikasi pengguna menggunakan Supabase Auth.</p><p>Kredensial digunakan hanya untuk autentikasi akses dashboard internal.</p></div></form></section>
@@ -19,6 +20,7 @@
           <a class="nav-item active" id="dashboardNav" href="#dashboard"><span>▦</span> Dashboard</a>
           <a class="nav-item" id="detailNav" href="#detail"><span>▤</span> Detail Anggaran</a>
           <a class="nav-item" id="reportNav" href="#report"><span>▱</span> Laporan</a>
+          <a class="nav-item" id="plannerNav" href="#planner"><span>◫</span> Rencana Kegiatan</a>
         </nav>
         <div class="sidebar-footer"><span>PERIODE AKTIF</span><strong id="sidebarPeriod">Belum ada data SAKTI</strong><small id="updatedAt">Unggah laporan SAKTI untuk mulai</small><small id="currentUser"></small><button class="logout-button" id="logoutButton" type="button">Keluar</button></div>
       </aside>
@@ -52,9 +54,17 @@
           <section class="panel report-settings"><div class="section-heading"><div><p class="eyebrow">PENGATURAN LAPORAN</p><h2>PowerPoint Tabel Keuangan</h2></div></div><div class="report-controls"><label>Tahun<select id="reportYearSelect"></select></label><label>Periode<select id="reportPeriodSelect"></select></label><label>Ruang lingkup<select id="reportScopeSelect"></select></label></div><div class="report-options"><label><input id="reportIncludeAccounts" type="checkbox" /> Sertakan rincian akun</label><label><input id="reportIncludeAccountRemaining" type="checkbox" /> Sertakan sisa anggaran per akun</label><label><input id="reportIncludeVisual" type="checkbox" /> Sertakan slide ringkasan visual</label></div></section>
           <section class="panel report-preview"><p class="eyebrow">PRATINJAU</p><div id="reportPreview"></div><div class="report-actions"><button class="button primary" id="reportGenerateButton" type="button">Generate PowerPoint</button><button class="button secondary report-test-button" id="reportTestButton" type="button">Test PPT Sederhana</button><span id="reportStatus" role="status"></span></div><div id="reportResult" class="report-result" hidden></div></section>
         </section>
+        <section id="plannerView" class="planner-view" hidden>
+          <header class="detail-header"><div><p class="eyebrow">MODULE 4</p><h1>Rencana Kegiatan</h1><p class="subtitle">Rencanakan pemanfaatan sisa anggaran dan proyeksikan realisasi akhir tahun.</p></div><div class="detail-actions"><button id="plannerCreateButton" class="button primary" type="button">+ Buat Kegiatan</button></div></header>
+          <section class="planner-toolbar" aria-label="Pengaturan rencana"><label>Perhitungan<select id="plannerDraftMode"><option value="confirmed">Hanya rencana terkonfirmasi</option><option value="all">Termasuk draft</option></select></label><span id="plannerDataStatus" class="section-note">Memuat rencana…</span></section>
+          <section id="plannerKpis" class="planner-kpis" aria-label="Ringkasan proyeksi"></section>
+          <section class="panel planner-activities"><div class="section-heading"><div><p class="eyebrow">RENCANA TERDAFTAR</p><h2>Daftar Kegiatan</h2></div><span id="plannerActivityCount" class="section-note"></span></div><div id="plannerActivityList" class="planner-activity-list"></div></section>
+          <section class="panel planner-extension"><div><p class="eyebrow">EKSTENSI BERIKUTNYA</p><h2>Ekspor Rencana</h2><p>Ekspor Excel dan PowerPoint akan tersedia setelah data rencana stabil.</p></div><div><button class="button secondary" type="button" disabled>Generate Excel</button><button class="button secondary" type="button" disabled>Generate PowerPoint</button></div></section>
+        </section>
       </main>
     </div>
     <div id="toast" class="toast" role="status"></div>
+    <div id="plannerDrawer" class="planner-drawer-backdrop" hidden><aside class="planner-drawer" role="dialog" aria-modal="true" aria-labelledby="plannerDrawerTitle"><button id="plannerDrawerClose" class="close" type="button" aria-label="Tutup">×</button><p class="eyebrow">RENCANA KEGIATAN</p><h2 id="plannerDrawerTitle">Buat Kegiatan</h2><form id="plannerForm" novalidate><input id="plannerActivityId" type="hidden" /><div class="planner-form-grid"><label>Nama kegiatan<input id="plannerName" required maxlength="180" /></label><label>Tanggal / bulan<input id="plannerDate" type="date" required /></label></div><fieldset><legend>Direktorat terlibat</legend><div id="plannerDirectorates" class="planner-directorates"></div></fieldset><label>Catatan (opsional)<textarea id="plannerNotes" rows="3" maxlength="1000"></textarea></label><label>Status<select id="plannerStatus"><option value="draft">Draft</option><option value="confirmed">Confirmed</option></select></label><div class="planner-line-heading"><div><p class="eyebrow">ANGGARAN KEGIATAN</p><strong>Komponen biaya</strong></div><button id="plannerAddLine" class="button secondary" type="button">+ Tambah Akun</button></div><div id="plannerLines" class="planner-lines"></div><p id="plannerFormError" class="planner-form-error" role="alert" hidden></p><div class="planner-drawer-actions"><button id="plannerDeleteButton" class="button secondary planner-delete" type="button" hidden>Hapus</button><button class="button primary" type="submit">Simpan Rencana</button></div></form></aside></div>
     <div class="upload-backdrop" id="uploadModal" hidden><section class="upload-modal" role="dialog" aria-modal="true" aria-labelledby="uploadTitle"><button class="close" id="uploadClose" aria-label="Tutup">×</button><p class="eyebrow">IMPORT DATA LOKAL</p><h2 id="uploadTitle">Update Data SAKTI</h2><p class="upload-intro">Pilih satu laporan realisasi SAKTI. File dibaca dan diproses langsung di browser ini.</p><label class="composition-select" for="sourceType">Jenis Data<select id="sourceType"><option value="sp2d">SP2D / Definitif</option><option value="accrual">Akrual / Dalam Proses</option></select></label><label class="drop-zone" id="dropZone" for="saktiFile"><input id="saktiFile" type="file" accept=".xlsx,.xls,application/vnd.openxmlformats-officedocument.spreadsheetml.sheet,application/vnd.ms-excel" hidden /><strong>Tarik file Excel ke sini</strong><span>atau pilih file dari komputer</span><em>Format .xlsx atau .xls</em></label><div id="uploadStatus" class="upload-status">Belum ada file dipilih.</div><div id="uploadPreview" class="upload-preview" hidden></div><div class="upload-actions"><button class="button secondary" id="uploadCancel" type="button">Batal</button><button class="button primary" id="applySaktiData" type="button" disabled>Update Dashboard</button></div></section></div>
     <script src="supabase-public-config.js?v=1"></script>
     <script src="supabase-client.js?v=3"></script>
@@ -70,5 +80,7 @@
     <script src="module1-enhance.js?v=1"></script>
     <script src="module2-enhance.js?v=1"></script>
     <script src="module3-enhance.js?v=1"></script>
+    <script src="module4-data.js?v=1"></script>
+    <script src="module4.js?v=1"></script>
   </body>
 </html>
