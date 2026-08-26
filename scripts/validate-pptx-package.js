@@ -54,8 +54,22 @@ async function validatePptxPackage(buffer, JSZip) {
       if (!parts.has(targetPart)) errors.push(`Dangling relationship ${relationshipPart} -> ${target}`);
     }
   }
+  const allowedAnchors = new Set(['t', 'ctr', 'b', 'just', 'dist']);
+  let centeredCells = 0;
+  for (const slidePart of [...parts].filter(part => /^ppt\/slides\/slide\d+\.xml$/i.test(part))) {
+    const xml = await zip.file(slidePart).async('text');
+    if (/\banchor="mid"/i.test(xml)) errors.push(`Invalid table-cell anchor="mid" in ${slidePart}`);
+    for (const tag of xml.match(/<a:tcPr\b[^>]*>/gi) || []) {
+      const anchor = attr(tag, 'anchor');
+      if (anchor && !allowedAnchors.has(anchor)) errors.push(`Invalid table-cell anchor="${anchor}" in ${slidePart}`);
+      if (anchor === 'ctr') centeredCells += 1;
+    }
+    const ids = [...xml.matchAll(/<p:cNvPr\b[^>]*\bid="(\d+)"/gi)].map(match => match[1]);
+    const duplicates = ids.filter((value, index) => ids.indexOf(value) !== index);
+    if (duplicates.length) errors.push(`Duplicate cNvPr IDs in ${slidePart}: ${[...new Set(duplicates)].join(', ')}`);
+  }
   if (errors.length) throw new Error(errors.join('\n'));
-  return { partCount: parts.size };
+  return { partCount: parts.size, centeredCells };
 }
 
 async function main() {
@@ -72,16 +86,15 @@ async function main() {
   for (let index = 0; index < 4; index += 1) {
     const slide = pptx.addSlide();
     slide.background = { color: index === 0 ? '0B3654' : 'F7FAFB' };
-    slide.addShape(pptx.ShapeType.rect, { x: 0, y: 0, w: 13.333, h: .25, fill: { color: '0B3654' }, line: { color: '0B3654' } });
-    slide.addText(index === 0 ? 'Laporan Keuangan Deputi HIS' : `Realisasi Anggaran ${index}`, { x: .5, y: .5, w: 8, h: .35, fontSize: 20, bold: true, color: index === 0 ? 'FFFFFF' : '0B3654' });
-    if (index > 0) slide.addTable(sampleRows, { x: .5, y: 1.2, w: 8.7, border: { type: 'solid', color: 'B9C8D0', pt: .45 }, fontSize: 9, margin: .05 });
+    if (index === 0) slide.addText('Laporan Keuangan Deputi HIS', { x: .5, y: .5, w: 8, h: .35, fontSize: 20, bold: true, color: 'FFFFFF' });
+    else slide.addTable(sampleRows.map(row => row.map(text => ({ text, options: { valign: 'ctr' } }))), { x: .5, y: 1.2, w: 8.7, border: { type: 'solid', color: 'B9C8D0', pt: .45 }, fontSize: 9, margin: .05, valign: 'ctr' });
   }
   const data = await pptx.write({ outputType: 'arraybuffer' });
   const buffer = Buffer.from(data);
   const result = await validatePptxPackage(buffer, zipSandbox.JSZip);
   const output = process.argv[2] || path.join(os.tmpdir(), 'pptx-package-validation-sample.pptx');
   fs.writeFileSync(output, buffer);
-  console.log(`PPTX package valid: ${result.partCount} parts`);
+  console.log(`PPTX package valid: ${result.partCount} parts; ${result.centeredCells} centered table cells`);
   console.log(`Sample: ${output}`);
 }
 
