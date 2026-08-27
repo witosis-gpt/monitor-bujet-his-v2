@@ -66,9 +66,13 @@ const defaultManual = optionalManualLine.components.find(item => item.manualEntr
 assert.ok(defaultManual, 'travel plans must include an optional manual component');
 assert.equal(defaultManual.active, false, 'the default manual component must be inactive');
 const meetingTravel = structuredClone(itinerary); meetingTravel.routeLegs.slice(0, 4).forEach(item => { item.transportType = 'Ground SBM'; });
-const meetingLine = { accountCode: '524119', travel: meetingTravel, components: [{ id: 'meeting', label: 'MENYELENGGARAKAN — paket Fullboard', unit: 'Orang/Hari', quantity: 1, rateUsed: 0, active: false, meetingPackage: true }] };
+const meetingLine = { accountCode: '524119', travel: meetingTravel, components: [{ id: 'meeting', label: 'MENYELENGGARAKAN — paket Fullboard', unit: 'Orang/Hari', quantity: 1, rateUsed: 0, active: false, meetingPackage: true }, { id: 'fullboard-daily', label: 'MENGHADIRI — Uang Harian Fullboard', unit: `Orang/${master.rates.fullboard_daily_allowance.unit}`, quantity: 1, rateUsed: master.rates.fullboard_daily_allowance.rate, referenceRate: master.rates.fullboard_daily_allowance.rate, active: false, meetingPackage: true, fullboardDailyAllowance: true }] };
 recalculateTravelLine(meetingLine);
 assert.ok(meetingLine.components.some(item => item.meetingPackage === true), '524119 must retain its optional meeting package components');
+const fullboardDaily = meetingLine.components.find(item => item.fullboardDailyAllowance === true);
+assert.equal(fullboardDaily.rateUsed, 130000, '524119 fullboard daily allowance must use the SBM master rate');
+assert.equal(fullboardDaily.unit, 'Orang/OH');
+assert.equal(fullboardDaily.active, false, '524119 fullboard daily allowance must remain optional');
 assert.equal(meetingLine.components.filter(item => item.label.startsWith('Transport darat SBM')).reduce((sum, item) => sum + item.quantity * item.rateUsed, 0), 3744000, '524119 must reuse the 524111 ground transport calculation');
-assert.ok(!meetingLine.components.some(item => /MENGHADIRI|Akomodasi reguler|Uang harian reguler|Transport terminal\/bandara/.test(item.label)), '524119 must not retain duplicate travel placeholders');
+assert.ok(!meetingLine.components.some(item => /MENGHADIRI — tiket pesawat|Akomodasi reguler|Uang harian reguler|Transport terminal\/bandara/.test(item.label)), '524119 must not retain duplicate travel placeholders');
 console.log('Module 4 travel checks passed: SBM forward/reverse lookup, repeated legs, zero-stay movement, and province-based stay costs.');
