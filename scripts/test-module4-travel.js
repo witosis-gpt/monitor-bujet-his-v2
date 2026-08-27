@@ -17,9 +17,9 @@ const context = {
 context.id = () => context.crypto.randomUUID();
 context.globalThis = context;
 vm.createContext(context);
-vm.runInContext(`${source.slice(start, end)}\nglobalThis.travelHooks = { destinations, normalizePlaceName, findGroundTransportRate, placesForProvince, canonicalPlace, refreshLegs, calculateStayCosts, calculateMovementCosts };`, context);
+vm.runInContext(`${source.slice(start, end)}\nglobalThis.travelHooks = { destinations, normalizePlaceName, findGroundTransportRate, placesForProvince, canonicalPlace, refreshLegs, calculateStayCosts, calculateMovementCosts, recalculateTravelLine };`, context);
 
-const { destinations, findGroundTransportRate, placesForProvince, canonicalPlace, refreshLegs, calculateStayCosts, calculateMovementCosts } = context.travelHooks;
+const { destinations, findGroundTransportRate, placesForProvince, canonicalPlace, refreshLegs, calculateStayCosts, calculateMovementCosts, recalculateTravelLine } = context.travelHooks;
 const team = () => ({ team: { 'Eselon IV/Gol III/II/I': 4 } });
 const rate = (from, to, expected) => { const result = findGroundTransportRate(from, to, master.rates); assert.ok(result, `${from} → ${to} should resolve from SBM`); assert.equal(result.rate, expected); assert.equal(result.unit, 'Orang/Kali'); return result; };
 const movement = (from, to) => calculateMovementCosts([{ from, to, fromProvince: 'JAWA TIMUR', toProvince: 'JAWA TIMUR', transportType: 'Ground SBM', flightClass: 'economy', rateUsed: 0 }], team(), [], master.rates)[0];
@@ -60,4 +60,9 @@ const provinceStay = { id: 'stay', province: 'JAWA TIMUR', city: 'Malang', days:
 const stayCosts = calculateStayCosts([provinceStay], team(), master.rates);
 assert.ok(stayCosts.some(item => item.label === 'Uang harian luar kota — JAWA TIMUR'), 'daily allowance must use province');
 assert.ok(stayCosts.some(item => item.label.includes('Penginapan — Malang') && item.referenceRate === master.rates.accommodation['JAWA TIMUR']['Eselon IV/Gol III/II/I']), 'accommodation must use province rate and city label');
+const optionalManualLine = { travel: { origin: 'Jakarta', destinations: [{ id: 'single', province: 'JAWA TIMUR', city: 'Surabaya', days: 0, nights: 0 }], team: team().team, routeLegs: [] }, components: [] };
+recalculateTravelLine(optionalManualLine);
+const defaultManual = optionalManualLine.components.find(item => item.manualEntry === true);
+assert.ok(defaultManual, 'travel plans must include an optional manual component');
+assert.equal(defaultManual.active, false, 'the default manual component must be inactive');
 console.log('Module 4 travel checks passed: SBM forward/reverse lookup, repeated legs, zero-stay movement, and province-based stay costs.');
