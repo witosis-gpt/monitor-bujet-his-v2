@@ -61,11 +61,20 @@
     const match = forwardExact || forwardNormalized || reverseExact || reverseNormalized;
     return match ? { ...match, reverseMatched: Boolean(!forwardExact && !forwardNormalized) } : null;
   }
-  function placesForProvince(province, rates) {
+  const titleCasePlace = value => String(value || '').toLocaleLowerCase('id-ID').replace(/(^|\s)\S/g, character => character.toLocaleUpperCase('id-ID'));
+  function groundPlacesForProvince(province, rates) {
     const hubs = rates.ground_transport_hubs?.[province] || [];
     const hubKeys = new Set(hubs.map(normalizePlaceName));
     const routes = province === 'DKI JAKARTA' ? (rates.jakarta_surrounding_ground_transport || []) : (rates.ground_transport || []).filter(route => hubKeys.has(normalizePlaceName(route.origin)));
-    return [...new Set(routes.flatMap(route => [route.origin, route.destination]).filter(Boolean))].sort((a,b) => a.localeCompare(b, 'id-ID'));
+    return routes.flatMap(route => [route.origin, route.destination]).filter(Boolean);
+  }
+  function airlinePlacesForProvince(province, rates) {
+    return Object.entries(rates.airline_city_provinces || {})
+      .filter(([, mappedProvince]) => mappedProvince === province)
+      .map(([city]) => titleCasePlace(city));
+  }
+  function placesForProvince(province, rates) {
+    return [...new Set([...groundPlacesForProvince(province, rates), ...airlinePlacesForProvince(province, rates)])].sort((a,b) => a.localeCompare(b, 'id-ID'));
   }
   function canonicalPlace(value, choices) { const matches = choices.filter(item => normalizePlaceName(item) === normalizePlaceName(value)); return matches.length === 1 ? matches[0] : value; }
   function isJabodetabekGroundRoute(fromCity, toCity, rates) { return (rates.jakarta_surrounding_ground_transport || []).some(route => (normalizePlaceName(route.origin) === normalizePlaceName(fromCity) && normalizePlaceName(route.destination) === normalizePlaceName(toCity)) || (normalizePlaceName(route.origin) === normalizePlaceName(toCity) && normalizePlaceName(route.destination) === normalizePlaceName(fromCity))); }
@@ -91,7 +100,7 @@
       if (leg.transportType === 'Flight') {
         const airportCity = index === routeLegs.length - 1 ? stops[0]?.city : leg.to, flight = routeFor(String(leg.from).toUpperCase(), String(airportCity || '').toUpperCase());
         if (flight) { const key = [flight.origin,flight.destination].sort().join('|'), rate = flight[leg.flightClass] || 0; if (!countedFlights.has(key)) { components.push(capComponent(`Tiket pesawat PP — ${flight.origin} ↔ ${flight.destination}`, 'Orang/PP', rate, people, { rule:'airline' })); countedFlights.add(key); } const a = rates.terminal_transport?.[leg.fromProvince], b = rates.terminal_transport?.[leg.toProvince]; if (a) components.push(capComponent(`Transport terminal — ${leg.fromProvince}`, 'Orang/Kali', a.rate, people)); if (b) components.push(capComponent(`Transport terminal — ${leg.toProvince}`, 'Orang/Kali', b.rate, people)); }
-        else components.push({ ...component(`Tiket pesawat — ${leg.from} → ${leg.to}`, 'Orang/PP', 0, { active:false, rule:'airline' }), lookupError:'Rute penerbangan tidak ada dalam master SBM 2026.' });
+        else components.push({ ...component(`Tiket pesawat — ${leg.from} → ${leg.to}`, 'Orang/PP', 0, { active:false, rule:'airline' }), lookupError:'Tarif penerbangan tidak tersedia di master SBM 2026.' });
       } else if (leg.transportType === 'Ground SBM') {
         Object.assign(leg, { rateUsed: 0, referenceRate: 0, unit: 'Orang/Kali', pricingSource: null, sbmMatched: false });
         const ground = findGroundTransportRate(leg.from, leg.to, rates);
