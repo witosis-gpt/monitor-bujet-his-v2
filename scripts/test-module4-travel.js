@@ -17,9 +17,9 @@ const context = {
 context.id = () => context.crypto.randomUUID();
 context.globalThis = context;
 vm.createContext(context);
-vm.runInContext(`${source.slice(start, end)}\nglobalThis.travelHooks = { destinations, normalizePlaceName, findGroundTransportRate, refreshLegs, calculateStayCosts, calculateMovementCosts };`, context);
+vm.runInContext(`${source.slice(start, end)}\nglobalThis.travelHooks = { destinations, normalizePlaceName, findGroundTransportRate, placesForProvince, canonicalPlace, refreshLegs, calculateStayCosts, calculateMovementCosts };`, context);
 
-const { destinations, findGroundTransportRate, refreshLegs, calculateStayCosts, calculateMovementCosts } = context.travelHooks;
+const { destinations, findGroundTransportRate, placesForProvince, canonicalPlace, refreshLegs, calculateStayCosts, calculateMovementCosts } = context.travelHooks;
 const team = () => ({ team: { 'Eselon IV/Gol III/II/I': 4 } });
 const rate = (from, to, expected) => { const result = findGroundTransportRate(from, to, master.rates); assert.ok(result, `${from} → ${to} should resolve from SBM`); assert.equal(result.rate, expected); assert.equal(result.unit, 'Orang/Kali'); return result; };
 const movement = (from, to) => calculateMovementCosts([{ from, to, fromProvince: 'JAWA TIMUR', toProvince: 'JAWA TIMUR', transportType: 'Ground SBM', flightClass: 'economy', rateUsed: 0 }], team(), [], master.rates)[0];
@@ -33,6 +33,12 @@ assert.equal(movement('Pasuruan', 'Surabaya').rateUsed * movement('Pasuruan', 'S
 assert.equal(movement('Surabaya', 'Sidoarjo').rateUsed * movement('Surabaya', 'Sidoarjo').quantity, 960000);
 assert.equal(rate('Sidoarjo', 'Surabaya', 240000).reverseMatched, true);
 assert.equal(movement('Sidoarjo', 'Surabaya').rateUsed * movement('Sidoarjo', 'Surabaya').quantity, 960000);
+const eastJavaPlaces = placesForProvince('JAWA TIMUR', master.rates);
+assert.ok(eastJavaPlaces.includes('Surabaya') && eastJavaPlaces.includes('Kab. Pasuruan') && eastJavaPlaces.includes('Kab. Sidoarjo'), 'Jawa Timur must expose SBM hub and route destinations');
+const northSulawesiPlaces = placesForProvince('SULAWESI UTARA', master.rates);
+assert.ok(northSulawesiPlaces.includes('Manado') && northSulawesiPlaces.includes('Kota Bitung'), 'Sulawesi Utara must expose SBM hub and route destinations');
+assert.equal(canonicalPlace('Pasuruan', eastJavaPlaces), 'Kab. Pasuruan');
+assert.equal(canonicalPlace('Bitung', northSulawesiPlaces), 'Kota Bitung');
 
 const itinerary = { origin: 'Surabaya', destinations: [
   { id: 'a', province: 'JAWA TIMUR', city: 'Pasuruan', days: 0, nights: 0 },

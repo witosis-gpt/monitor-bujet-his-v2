@@ -2763,6 +2763,9 @@
         "unit": "Orang/PP"
       }
     },
+    "ground_transport_hubs": {
+      "ACEH": ["Banda Aceh"], "SUMATERA UTARA": ["Medan"], "RIAU": ["Pekanbaru"], "KEPULAUAN RIAU": ["Tanjung Pinang"], "JAMBI": ["Jambi"], "SUMATERA BARAT": ["Padang"], "SUMATERA SELATAN": ["Palembang"], "LAMPUNG": ["Bandar Lampung"], "BENGKULU": ["Bengkulu"], "BANGKA BELITUNG": ["Pangkalpinang"], "BANTEN": ["Serang"], "JAWA BARAT": ["Bandung"], "DKI JAKARTA": ["Jakarta"], "JAWA TENGAH": ["Semarang"], "DI YOGYAKARTA": ["Yogyakarta"], "JAWA TIMUR": ["Surabaya"], "BALI": ["Denpasar"], "NUSA TENGGARA BARAT": ["Mataram"], "NUSA TENGGARA TIMUR": ["Kupang"], "KALIMANTAN BARAT": ["Pontianak"], "KALIMANTAN TENGAH": ["Palangkaraya"], "KALIMANTAN SELATAN": ["Banjarmasin"], "KALIMANTAN TIMUR": ["Samarinda"], "SULAWESI UTARA": ["Manado"], "GORONTALO": ["Gorontalo"], "SULAWESI BARAT": ["Mamuju"], "SULAWESI SELATAN": ["Makassar"], "SULAWESI TENGAH": ["Palu"], "SULAWESI TENGGARA": ["Kendari"], "MALUKU UTARA": ["Sofifi"], "PAPUA": ["Jayapura"], "PAPUA BARAT": ["Manokwari"]
+    },
     "ground_transport": [
       {
         "origin": "Banda Aceh",

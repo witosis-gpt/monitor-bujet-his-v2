@@ -44,6 +44,9 @@ for line in flight_text.splitlines():
     flights[f'{origin}|{destination}'] = {'origin': origin, 'destination': destination, 'business': clean_number(business), 'economy': clean_number(economy), 'unit': 'Orang/PP'}
 
 ground_section = block('1. SATUAN BIAYA TRANSPORTASI DARAT DARI IBUKOTA PROVINSI', '2. SATUAN BIAYA TRANSPORTASI DARI DKI JAKARTA')
+ground_hubs = {
+    'ACEH': ['Banda Aceh'], 'SUMATERA UTARA': ['Medan'], 'RIAU': ['Pekanbaru'], 'KEPULAUAN RIAU': ['Tanjung Pinang'], 'JAMBI': ['Jambi'], 'SUMATERA BARAT': ['Padang'], 'SUMATERA SELATAN': ['Palembang'], 'LAMPUNG': ['Bandar Lampung'], 'BENGKULU': ['Bengkulu'], 'BANGKA BELITUNG': ['Pangkalpinang'], 'BANTEN': ['Serang'], 'JAWA BARAT': ['Bandung'], 'DKI JAKARTA': ['Jakarta'], 'JAWA TENGAH': ['Semarang'], 'DI YOGYAKARTA': ['Yogyakarta'], 'JAWA TIMUR': ['Surabaya'], 'BALI': ['Denpasar'], 'NUSA TENGGARA BARAT': ['Mataram'], 'NUSA TENGGARA TIMUR': ['Kupang'], 'KALIMANTAN BARAT': ['Pontianak'], 'KALIMANTAN TENGAH': ['Palangkaraya'], 'KALIMANTAN SELATAN': ['Banjarmasin'], 'KALIMANTAN TIMUR': ['Samarinda'], 'SULAWESI UTARA': ['Manado'], 'GORONTALO': ['Gorontalo'], 'SULAWESI BARAT': ['Mamuju'], 'SULAWESI SELATAN': ['Makassar'], 'SULAWESI TENGAH': ['Palu'], 'SULAWESI TENGGARA': ['Kendari'], 'MALUKU UTARA': ['Sofifi'], 'PAPUA': ['Jayapura'], 'PAPUA BARAT': ['Manokwari'],
+}
 ground = []
 for line in ground_section.splitlines():
     match = re.match(r'\s*\d+\.?\s+(.+?)\s+(Kab\.|Kota)\s+(.+?)\s+Orang/Kali\s+Rp([\d.]+)', line)
@@ -89,7 +92,7 @@ master = {
     'source_url': 'https://jdih.kemenkeu.go.id/api/download/ccce2e9f-11fe-41ee-9da3-c7d42609b484/2025pmkeuangan032.pdf',
     'rates': {
         'daily_allowances': daily, 'accommodation': hotel, 'terminal_transport': terminal,
-        'airline_pp_routes': flights, 'ground_transport': ground, 'jakarta_surrounding_ground_transport': jakarta_ground,
+        'airline_pp_routes': flights, 'ground_transport_hubs': ground_hubs, 'ground_transport': ground, 'jakarta_surrounding_ground_transport': jakarta_ground,
         'meeting_packages': meeting, 'fullboard_daily_allowance': {'rate': 130000, 'unit': 'OH'},
         'meeting_consumption': {'province': 'DKI JAKARTA', 'meal': {'rate':57000,'unit':'Orang/Kegiatan'}, 'snack':{'rate':24000,'unit':'Orang/Kegiatan'}},
         'professional_honorarium': {'Menteri/Pejabat Setingkat/Wamen':{'rate':1700000,'unit':'OJ'}, 'Eselon I/setara':{'rate':1400000,'unit':'OJ'}, 'Eselon II/setara':{'rate':1000000,'unit':'OJ'}, 'Eselon III ke bawah/setara':{'rate':900000,'unit':'OJ'}, 'Moderator':{'rate':700000,'unit':'Orang/Kegiatan'}, 'Pembawa Acara':{'rate':400000,'unit':'Orang/Kegiatan'}},
