@@ -67,10 +67,12 @@
     return [...new Set(routes.flatMap(route => [route.origin, route.destination]).filter(Boolean))].sort((a,b) => a.localeCompare(b, 'id-ID'));
   }
   function canonicalPlace(value, choices) { const matches = choices.filter(item => normalizePlaceName(item) === normalizePlaceName(value)); return matches.length === 1 ? matches[0] : value; }
+  function isJabodetabekGroundRoute(fromCity, toCity, rates) { return (rates.jakarta_surrounding_ground_transport || []).some(route => (normalizePlaceName(route.origin) === normalizePlaceName(fromCity) && normalizePlaceName(route.destination) === normalizePlaceName(toCity)) || (normalizePlaceName(route.origin) === normalizePlaceName(toCity) && normalizePlaceName(route.destination) === normalizePlaceName(fromCity))); }
+  function defaultTransportType(fromCity, toCity, index, lastIndex, rates) { return isJabodetabekGroundRoute(fromCity, toCity, rates) ? 'Ground SBM' : ((index === 0 || index === lastIndex) ? 'Flight' : 'Ground SBM'); }
   function refreshLegs(t) {
     const places = [{ city: t.origin, province: 'DKI JAKARTA' }, ...destinations(t), { city: t.origin, province: 'DKI JAKARTA' }];
     const previous = new Map(); (t.routeLegs || []).forEach(item => { const key = `${item.from}|${item.to}`; previous.set(key, [...(previous.get(key) || []), item]); });
-    t.routeLegs = places.slice(0,-1).map((from,index) => { const to = places[index + 1], key = `${from.city}|${to.city}`, old = previous.get(key)?.shift(); return { id: old?.id || id(), from: from.city, to: to.city, fromProvince: from.province, toProvince: to.province, transportType: old?.transportType || ((index === 0 || index === places.length - 2) ? 'Flight' : 'Ground SBM'), flightClass: old?.flightClass || 'economy', rateUsed: old?.rateUsed || 0, referenceRate: old?.referenceRate || 0, unit: old?.unit || 'Orang/Kali', pricingSource: old?.pricingSource || null, sbmMatched: Boolean(old?.sbmMatched) }; });
+    t.routeLegs = places.slice(0,-1).map((from,index) => { const to = places[index + 1], key = `${from.city}|${to.city}`, old = previous.get(key)?.shift(); return { id: old?.id || id(), from: from.city, to: to.city, fromProvince: from.province, toProvince: to.province, transportType: old?.transportType || defaultTransportType(from.city, to.city, index, places.length - 2, state.master.rates || {}), flightClass: old?.flightClass || 'economy', rateUsed: old?.rateUsed || 0, referenceRate: old?.referenceRate || 0, unit: old?.unit || 'Orang/Kali', pricingSource: old?.pricingSource || null, sbmMatched: Boolean(old?.sbmMatched) }; });
   }
   function calculateStayCosts(stops, team, rates) {
     const components = [];
