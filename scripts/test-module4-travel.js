@@ -23,6 +23,9 @@ const { destinations, findGroundTransportRate, placesForProvince, canonicalPlace
 const team = () => ({ team: { 'Eselon IV/Gol III/II/I': 4 } });
 const rate = (from, to, expected) => { const result = findGroundTransportRate(from, to, master.rates); assert.ok(result, `${from} → ${to} should resolve from SBM`); assert.equal(result.rate, expected); assert.equal(result.unit, 'Orang/Kali'); return result; };
 const movement = (from, to) => calculateMovementCosts([{ from, to, fromProvince: 'JAWA TIMUR', toProvince: 'JAWA TIMUR', transportType: 'Ground SBM', flightClass: 'economy', rateUsed: 0 }], team(), [], master.rates)[0];
+const resolvedLeg = { from: 'Surabaya', to: 'Kab. Pasuruan', fromProvince: 'JAWA TIMUR', toProvince: 'JAWA TIMUR', transportType: 'Ground SBM', flightClass: 'economy', rateUsed: 0 };
+calculateMovementCosts([resolvedLeg], team(), [], master.rates);
+assert.deepEqual({ rateUsed: resolvedLeg.rateUsed, referenceRate: resolvedLeg.referenceRate, unit: resolvedLeg.unit, pricingSource: resolvedLeg.pricingSource, sbmMatched: resolvedLeg.sbmMatched }, { rateUsed: 228000, referenceRate: 228000, unit: 'Orang/Kali', pricingSource: 'SBM 2026', sbmMatched: true });
 
 const bitung = rate('Manado', 'Bitung', 175000);
 assert.equal(bitung.destination, 'Kota Bitung');
