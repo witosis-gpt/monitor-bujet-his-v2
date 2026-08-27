@@ -9,3 +9,4 @@
 .planner-compact-table tbody tr:first-child [data-trip-remove-stop="0"]{display:none}
 /* Shared travel cost summary: normal document flow, compact hierarchy. */
 .planner-cost-summary{position:static;bottom:auto;z-index:auto;margin:12px 0;padding:14px;gap:8px;font-size:12px;box-shadow:none}.planner-cost-summary>strong{font-size:14px}.planner-cost-summary span{gap:18px}.planner-cost-summary span b{font-size:13px}.planner-cost-summary .total{margin-top:2px;padding-top:10px;font-size:15px}.planner-cost-summary .total b{font-size:16px}
+.planner-route-guidance{margin:7px 0 4px;padding:8px 9px;border:1px solid #dce5e9;border-radius:4px;background:#f8fbfc;color:#617784;font-size:12px;line-height:1.5;text-transform:none;letter-spacing:0;font-weight:500}.planner-route-guidance-example{margin:0 0 6px;color:#71838e;font-size:11px;line-height:1.45;text-transform:none;letter-spacing:0;font-weight:500}
