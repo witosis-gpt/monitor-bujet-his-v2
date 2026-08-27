@@ -6126,6 +6126,10 @@
       "rate": 130000,
       "unit": "OH"
     },
+    "in_city_activity_transport": {
+      "rate": 170000,
+      "unit": "Orang/Kali"
+    },
     "meeting_consumption": {
       "province": "DKI JAKARTA",
       "meal": {

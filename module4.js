@@ -18,12 +18,13 @@
   const component = (label, unit, rate = 0, options = {}) => ({ id: id(), label, unit, quantity: options.quantity ?? 1, rateUsed: rate, referenceRate: rate, pricingSource: rate ? 'SBM' : 'MANUAL', active: options.active ?? true, rule: options.rule || 'manual', hint: options.hint || '' });
   function templateFor(code) {
     const rates = state.master.rates || {};
-    const transport = rates.in_city_meeting_transport?.rate || 0;
+    const inCityTransport = rates.in_city_activity_transport || {};
+    const dkiDaily = rates.daily_allowances?.['DKI JAKARTA'] || {};
     const meal = rates.meeting_consumption?.meal?.rate || 0;
     const snack = rates.meeting_consumption?.snack?.rate || 0;
     const honor = rates.professional_honorarium || {};
     if (code === '524111') return { name: 'Perjalanan Dinas Biasa', note: 'Lengkapi parameter perjalanan terlebih dahulu. Komponen dihitung dari referensi SBM 2026 sesuai tujuan dan moda.', components: [] };
-    if (code === '524113') return { name: 'Perjalanan Dinas Dalam Kota', note: 'Transport rapat dalam kota memakai referensi yang tersedia. Uang harian >8 jam hanya aktif jika tarif SBM telah dilengkapi.', components: [component('Transport rapat dalam kota','Orang/Kegiatan',transport,{rule:'cap',quantity:1}),component('Kegiatan > 8 jam — uang harian','Orang/Hari',0,{rule:'cap',active:false})] };
+    if (code === '524113') return { name: 'Perjalanan Dinas Dalam Kota', note: 'Perjalanan dinas dalam kota menggunakan referensi SBM DKI Jakarta. Uang harian >8 jam diaktifkan hanya bila berlaku.', components: [component('Transport kegiatan dalam kabupaten/kota PP', inCityTransport.unit || 'Orang/Kali', inCityTransport.rate || 0, { rule:'cap', quantity:1 }), component('Uang harian dalam kota > 8 jam', `Orang/${dkiDaily.unit || 'OH'}`, dkiDaily.dalam_kota_gt_8_jam || 0, { rule:'cap', active:false })] };
     if (code === '524119') return { name: 'Paket Meeting Luar Kota', note: 'Lengkapi itinerary untuk menghitung perjalanan otomatis. Paket Halfday, Fullday, dan Fullboard bersifat opsional; Fullboard bersamaan dengan penginapan reguler akan diberi peringatan.', components: [
       { ...component('MENYELENGGARAKAN — paket Halfday','Orang/Kegiatan',0,{rule:'cap',active:false}), meetingPackage:true },
       { ...component('MENYELENGGARAKAN — paket Fullday','Orang/Kegiatan',0,{rule:'cap',active:false}), meetingPackage:true },
