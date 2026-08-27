@@ -17,9 +17,9 @@ const context = {
 context.id = () => context.crypto.randomUUID();
 context.globalThis = context;
 vm.createContext(context);
-vm.runInContext(`${source.slice(start, end)}\nglobalThis.travelHooks = { destinations, normalizePlaceName, findGroundTransportRate, placesForProvince, canonicalPlace, isJabodetabekGroundRoute, defaultTransportType, refreshLegs, calculateStayCosts, calculateMovementCosts, recalculateTravelLine };`, context);
+vm.runInContext(`${source.slice(start, end)}\nglobalThis.travelHooks = { destinations, normalizePlaceName, findGroundTransportRate, placesForProvince, canonicalPlace, isJabodetabekGroundRoute, isJakartaRegionalGroundRoute, defaultTransportType, refreshLegs, calculateStayCosts, calculateMovementCosts, recalculateTravelLine };`, context);
 
-const { destinations, findGroundTransportRate, placesForProvince, canonicalPlace, isJabodetabekGroundRoute, defaultTransportType, refreshLegs, calculateStayCosts, calculateMovementCosts, recalculateTravelLine } = context.travelHooks;
+const { destinations, findGroundTransportRate, placesForProvince, canonicalPlace, isJabodetabekGroundRoute, isJakartaRegionalGroundRoute, defaultTransportType, refreshLegs, calculateStayCosts, calculateMovementCosts, recalculateTravelLine } = context.travelHooks;
 const team = () => ({ team: { 'Eselon IV/Gol III/II/I': 4 } });
 const rate = (from, to, expected) => { const result = findGroundTransportRate(from, to, master.rates); assert.ok(result, `${from} → ${to} should resolve from SBM`); assert.equal(result.rate, expected); assert.equal(result.unit, 'Orang/Kali'); return result; };
 const movement = (from, to) => calculateMovementCosts([{ from, to, fromProvince: 'JAWA TIMUR', toProvince: 'JAWA TIMUR', transportType: 'Ground SBM', flightClass: 'economy', rateUsed: 0 }], team(), [], master.rates)[0];
@@ -44,8 +44,10 @@ assert.equal(canonicalPlace('Pasuruan', eastJavaPlaces), 'Kab. Pasuruan');
 assert.equal(canonicalPlace('Bitung', northSulawesiPlaces), 'Kota Bitung');
 assert.equal(isJabodetabekGroundRoute('Jakarta', 'Kab. Bogor', master.rates), true);
 assert.equal(isJabodetabekGroundRoute('Kota Depok', 'Jakarta', master.rates), true);
-assert.equal(defaultTransportType('Jakarta', 'Kota Bekasi', 0, 1, master.rates), 'Ground SBM');
-assert.equal(defaultTransportType('Jakarta', 'Surabaya', 0, 1, master.rates), 'Flight');
+assert.equal(defaultTransportType('Jakarta', 'Kota Bekasi', 'DKI JAKARTA', 'JAWA BARAT', 0, 1, master.rates), 'Ground SBM');
+assert.equal(isJakartaRegionalGroundRoute('Jakarta', 'Kota Cirebon', 'DKI JAKARTA', 'JAWA BARAT'), true);
+assert.equal(isJakartaRegionalGroundRoute('Kota Serang', 'Jakarta', 'BANTEN', 'DKI JAKARTA'), true);
+assert.equal(defaultTransportType('Jakarta', 'Surabaya', 'DKI JAKARTA', 'JAWA TIMUR', 0, 1, master.rates), 'Flight');
 for (const accountCode of ['524111', '524119']) {
   const jabodetabek = { origin: 'Jakarta', destinations: [{ id: `${accountCode}-bogor`, province: 'JAWA BARAT', city: 'Kab. Bogor', days: 0, nights: 0 }], team: {}, routeLegs: [] };
   refreshLegs(jabodetabek);
@@ -53,6 +55,11 @@ for (const accountCode of ['524111', '524119']) {
   const surabaya = { origin: 'Jakarta', destinations: [{ id: `${accountCode}-surabaya`, province: 'JAWA TIMUR', city: 'Surabaya', days: 0, nights: 0 }], team: {}, routeLegs: [] };
   refreshLegs(surabaya);
   assert.deepEqual(Array.from(surabaya.routeLegs, leg => leg.transportType), ['Flight', 'Flight'], `${accountCode} must retain Flight defaults for Jakarta ↔ Surabaya`);
+  for (const [province, city] of [['JAWA BARAT', 'Kota Cirebon'], ['BANTEN', 'Kota Serang']]) {
+    const regional = { origin: 'Jakarta', destinations: [{ id: `${accountCode}-${city}`, province, city, days: 0, nights: 0 }], team: {}, routeLegs: [] };
+    refreshLegs(regional);
+    assert.deepEqual(Array.from(regional.routeLegs, leg => leg.transportType), ['Ground SBM', 'Ground SBM'], `${accountCode} must default Jakarta ↔ ${city} to Ground SBM`);
+  }
 }
 
 const itinerary = { origin: 'Surabaya', destinations: [
