@@ -21,7 +21,7 @@ const context = {
 };
 context.globalThis = context;
 vm.createContext(context);
-vm.runInContext(`${source.slice(start, end)}\nglobalThis.exportHooks = { buildPlannerExportWorkbook };`, context);
+vm.runInContext(`${source.slice(start, end)}\nglobalThis.exportHooks = { buildPlannerExportWorkbook, buildCurrentActivityWorkbook, validateActivityExport };`, context);
 
 const active = (label, quantity, rate, options = {}) => ({ label, unit: options.unit || 'Orang/Kali', quantity, rateUsed: rate, referenceRate: options.referenceRate ?? rate, pricingSource: options.pricingSource || 'SBM 2026', active: options.active ?? true });
 const travel = { origin: 'Jakarta', startDate: '2026-08-01', endDate: '2026-08-03', destinations: [{ city: 'Surabaya' }, { city: 'Kab. Pasuruan' }, { city: 'Surabaya' }], team: { 'Eselon IV/Gol III/II/I': 4 } };
@@ -56,4 +56,14 @@ assert.ok(!nonTravelSheet.flat().includes('RUTE PERJALANAN'), 'non-travel accoun
 const formulas = Object.values(reopened.Sheets['Tes Perjadin']).filter(cell => cell?.f);
 assert.ok(formulas.some(cell => /^E\d+\*F\d+$/.test(cell.f)), 'component amount must remain numeric formula data');
 assert.equal(output.total, activities.reduce((sum, activity) => sum + context.activityTotal(activity), 0));
-console.log(`Module 4 main Excel export checks passed: ${output.activityCount} activities, ${output.sheetCount} sheets, total ${output.total}.`);
+const single = context.exportHooks.buildCurrentActivityWorkbook(activities[0]);
+assert.equal(single.sheetCount, 1, 'per-activity export must contain one detail sheet only');
+assert.equal(single.filename, 'Rencana_Kegiatan_Tes_Perjadin.xlsx');
+const singleBytes = XLSX.write(single.workbook, { type: 'buffer', bookType: 'xlsx', compression: true });
+const reopenedSingle = XLSX.read(singleBytes, { type: 'buffer', cellFormula: true });
+assert.deepEqual(reopenedSingle.SheetNames, ['Tes Perjadin']);
+const singleValues = XLSX.utils.sheet_to_json(reopenedSingle.Sheets['Tes Perjadin'], { header: 1, raw: true }).flat().filter(value => value !== undefined && value !== null).map(String).join(' | ');
+assert.ok(singleValues.includes('RUTE PERJALANAN'), 'per-activity travel export must retain itinerary data');
+assert.ok(!singleValues.includes('Komponen manual tambahan'), 'per-activity export must omit inactive components');
+assert.equal(single.total, context.activityTotal(activities[0]));
+console.log(`Module 4 Excel export checks passed: ${output.activityCount} recap activities, ${output.sheetCount} sheets, and one validated per-activity sheet.`);
