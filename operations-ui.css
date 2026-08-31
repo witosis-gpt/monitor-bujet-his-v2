@@ -172,3 +172,55 @@ table{font-size:12px;table-layout:fixed}th{padding:8px 9px;background:#EDF2F4;fo
 @media(max-width:1280px){main{padding:23px 26px}.kpis{grid-template-columns:repeat(3,minmax(0,1fr));gap:0}.kpi-card:nth-child(3n){border-right:0}.kpi-card:nth-child(n+4){border-top:1px solid var(--color-border)}.planner-drawer{width:min(84vw,920px)}}
 @media(max-width:900px){.sidebar{width:58px}.brand{padding-left:7px}.sidebar-footer{display:none}main{margin-left:58px;width:calc(100% - 58px);padding:20px}.kpi-card{border-right:1px solid var(--color-border)}.planner-drawer{width:min(94vw,760px)}}
 @media(max-width:620px){main{padding:15px}.page-header,.detail-header{align-items:flex-start;padding-bottom:12px}.filter-bar{gap:8px}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.kpi-card:nth-child(2n){border-right:0}.kpi-card:nth-child(n+3){border-top:1px solid var(--color-border)}.account-controls{padding:9px 10px}.account-table-scroll th:nth-child(n){width:auto}.planner-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.planner-kpi:nth-child(2n){border-right:0}.planner-kpi:nth-child(n+3){border-top:1px solid var(--color-border)}.planner-drawer{padding:16px 14px}.planner-drawer-actions{bottom:-16px;margin:0 -14px -16px;padding:10px 14px}}
+
+/* Enterprise government finance language: Fiori-like work surfaces, institutional clarity, precise density. */
+:root{
+  --ui-bg:#F5F7F9;
+  --ui-surface:#FFFFFF;
+  --ui-surface-subtle:#F0F3F5;
+  --ui-border:#D4DAE0;
+  --ui-text:#1F2933;
+  --ui-text-secondary:#5E6A75;
+  --ui-text-muted:#7B8792;
+  --ui-primary:#2F6683;
+  --ui-primary-hover:#255570;
+  --ui-success:#3F6B55;
+  --ui-warning:#9A6700;
+  --ui-danger:#9B4141;
+  --ui-radius-sm:3px;
+  --ui-radius-md:5px;
+  --ui-radius-lg:8px;
+  --color-page:var(--ui-bg);
+  --color-surface:var(--ui-surface);
+  --color-surface-muted:var(--ui-surface-subtle);
+  --color-border:var(--ui-border);
+  --color-text:var(--ui-text);
+  --color-muted:var(--ui-text-secondary);
+  --color-subtle:var(--ui-text-muted);
+  --color-accent:var(--ui-primary);
+  --color-success:var(--ui-success);
+  --color-warning:var(--ui-warning);
+  --color-danger:var(--ui-danger);
+  --radius-sm:var(--ui-radius-sm);
+  --radius-md:var(--ui-radius-md);
+}
+body{background:var(--ui-bg);color:var(--ui-text);font-family:Inter,"Segoe UI",system-ui,sans-serif}
+.sidebar{width:224px;padding:16px 11px 13px;background:#17324A}
+.brand{padding-bottom:17px}.sidebar nav{gap:2px}.nav-item{min-height:40px;padding:9px 10px;font-size:13px}.nav-item.active{background:#244A66;border-left-color:#8EBCD0}.sidebar-footer{padding-top:12px}.logout-button{font-size:11px}
+main{margin-left:224px;width:calc(100% - 224px);padding:24px 34px 38px}
+.page-header{margin:-24px -34px 20px;padding:15px 34px 14px;background:#FFF;border-bottom:1px solid var(--ui-border);align-items:center}.page-header h1{font-size:23px!important}.page-header .eyebrow{display:none}.page-header .subtitle{font-size:12px;letter-spacing:0}.page-header .subtitle::before{content:"Periode aktif · ";color:var(--ui-text-muted)}.page-header .subtitle #activePeriod{color:var(--ui-text-secondary)}
+.detail-header{margin:0 0 18px;padding:0 0 13px;border-color:var(--ui-border)}.detail-header h1{font-size:23px!important}.detail-header .subtitle{font-size:12px}.cloud-status{font-size:10px}.button{border-radius:var(--ui-radius-sm);font-weight:600}.button.primary{background:var(--ui-primary);border-color:var(--ui-primary)}.button.primary:hover{background:var(--ui-primary-hover);border-color:var(--ui-primary-hover)}
+
+.filter-bar{min-height:52px;padding:8px 0;border-color:var(--ui-border);background:transparent}.filter-bar label,.account-controls label,.report-controls label{font-size:11px;font-weight:600;letter-spacing:0}.filter-bar select,.account-controls select,.account-controls input,.report-controls select{min-height:36px;border-color:var(--ui-border)!important}.filter-bar .reset{font-size:11px}
+.panel{border-top-color:var(--ui-border)}.chart-grid>.panel,.insight-grid>.panel,.attention-panel,.report-settings,.report-preview,.accounts-panel,.detail-tree-panel,.planner-activities{border-color:var(--ui-border);border-radius:var(--ui-radius-sm)}
+.kpis{border-color:var(--ui-border)}.kpi-card{min-height:92px;border-color:var(--ui-border)}.kpi-card:first-child{background:#F9FBFC}.kpi-label{font-size:10px;letter-spacing:.035em}.kpi-value{font-size:18px;font-weight:650}.kpi-card:first-child .kpi-value{font-size:22px}.kpi-card small{font-size:10px}.kpi-potential,.planner-kpi-emphasis{border-left-color:var(--ui-primary)!important}
+
+table{font-size:12.5px}th{padding:9px;background:var(--ui-surface-subtle);font-size:11px;font-weight:600;letter-spacing:.02em;color:#48545E}td{min-height:44px;padding:10px 9px;color:#364550;border-top-color:#E1E6EA}tbody tr:hover td{background:#F5F9FB}.account-subtotal-row td{background:#F1F5F7!important;border-top-color:#B9C5CD;font-weight:650}.account-table-scroll tfoot th{background:#E7EDF1;border-top-color:#7F909B}.percent-pill{border-radius:3px;color:var(--ui-primary)}
+.section-heading h2{font-weight:650}.section-note{color:var(--ui-text-muted)}.account-controls{background:#F8FAFB;border-bottom-color:var(--ui-border)}.table-footer{background:#FFF}.pagination button{border-radius:3px}
+
+.planner-toolbar{min-height:48px;padding:8px 0;border-color:var(--ui-border)}.planner-toolbar label{font-size:11px;letter-spacing:0}.planner-toolbar select{min-height:36px}.planner-kpis{border-color:var(--ui-border)}.planner-kpi{min-height:76px;border-color:var(--ui-border)}.planner-kpi strong{font-size:16px}.planner-activity-card{min-height:0;padding:12px 14px}.planner-status{border-radius:3px}.planner-status.confirmed{background:#EDF6F0;color:var(--ui-success)}.planner-status.draft{background:#EEF1F3;color:var(--ui-text-secondary)}.planner-extension{border-color:var(--ui-border);border-radius:var(--ui-radius-sm)}
+.planner-drawer{width:min(74vw,960px);border-left-color:#B7C5CE}.planner-drawer form{gap:12px}.planner-drawer label,.planner-drawer fieldset{font-size:11px;font-weight:600;letter-spacing:0}.planner-drawer fieldset{border-color:var(--ui-border)}.planner-line-heading{border-top-color:var(--ui-border)}.planner-line{border-top-color:var(--ui-border)}.planner-component,.planner-component.manual-entry{border-bottom-color:#DFE5E9}.planner-component-fields label{font-size:9px!important}.planner-compact-table th{font-size:10px}.planner-compact-table td{padding:7px 6px}.planner-route-guidance{background:#F4F7F8;color:var(--ui-text-secondary)}.planner-cost-summary{border-color:#AEBEC8;background:#F8FAFB}.planner-cost-summary .total{border-top-color:#AEBEC8}.planner-drawer-actions{border-top-color:var(--ui-border)}
+
+@media(max-width:1280px){main{padding:22px 26px}.page-header{margin:-22px -26px 18px;padding-left:26px;padding-right:26px}.planner-drawer{width:min(86vw,920px)}}
+@media(max-width:900px){.sidebar{width:58px}.sidebar+.main,main{margin-left:58px;width:calc(100% - 58px)}.page-header{margin-left:-20px;margin-right:-20px;padding-left:20px;padding-right:20px}.planner-drawer{width:min(94vw,760px)}}
+@media(max-width:620px){main{margin-left:0;width:100%;padding:15px}.page-header{margin:-15px -15px 16px;padding:13px 15px;align-items:flex-start}.page-header .header-actions{padding-top:4px}.page-header .subtitle::before{content:""}.filter-bar{min-height:0}.planner-drawer{width:100%}}
