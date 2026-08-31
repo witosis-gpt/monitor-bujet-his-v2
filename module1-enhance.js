@@ -85,7 +85,7 @@
     ];
 
     container.innerHTML = cards.map(card => `
-      <article class="kpi-card ${card.className}">
+      <article class="kpi-card ${card.className}${card.label === 'Sisa Anggaran SP2D' ? ' kpi-primary' : ''}">
         <span class="kpi-label">${card.label}</span>
         <div class="module1-kpi-main">
           <strong class="kpi-value">${card.value}</strong>
