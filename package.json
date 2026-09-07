@@ -5,7 +5,11 @@
   "scripts": {
     "dev": "node serve.js",
     "test:pptx": "node scripts/validate-pptx-package.js",
-    "test:travel": "node scripts/test-module4-travel.js"
+    "test:travel": "node scripts/test-module4-travel.js",
+    "test:cloud-recovery": "node scripts/test-cloud-recovery.js",
+    "test:planner-cloud": "node scripts/test-module4-cloud.js",
+    "test:module4-524113": "node scripts/test-module4-524113.js",
+    "test:module4-excel": "node scripts/test-module4-excel-export.js"
   },
   "dependencies": {
     "xlsx": "^0.18.5"

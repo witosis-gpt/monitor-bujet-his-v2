@@ -24,10 +24,10 @@ function record(ds,type,filename='test.xlsx'){
   return {source_type:type,year:ds.period.year,month:ds.period.month,filename,imported_at:'2026-09-07T09:12:07.592Z',snapshot_data:ds};
 }
 function node(){
-  return {hidden:false,disabled:false,dataset:{},textContent:'',innerHTML:'',value:'',className:'',children:[],listeners:{},appendChild(child){this.children.push(child);},insertAdjacentElement(){},addEventListener(type,fn){this.listeners[type]=fn;},cloneNode(){const next=node();next.disabled=this.disabled;next.textContent=this.textContent;return next;},replaceWith(next){this.replacement=next;},remove(){this.removed=true;}};
+  return {hidden:false,disabled:false,dataset:{},textContent:'',innerHTML:'',value:'',className:'',children:[],listeners:{},appendChild(child){this.children.push(child);},insertAdjacentElement(){},setAttribute(name,value){this[name]=value;},addEventListener(type,fn){this.listeners[type]=fn;},cloneNode(){const next=node();next.disabled=this.disabled;next.textContent=this.textContent;next.dataset={...this.dataset};return next;},replaceWith(next){this.replacement=next;},remove(){this.removed=true;}};
 }
 function recoveryHarness(cloud){
-  const localStorage=storage();const nodes=new Map();const $=selector=>{if(!nodes.has(selector))nodes.set(selector,node());return nodes.get(selector).replacement||nodes.get(selector);};
+  const localStorage=storage();const nodes=new Map();const seeded=new Set(['#sourceInfo','#activePeriod','#monthSelect','#applySaktiData','#cloudStatus','#uploadStatus','#authScreen','#loginError']);const $=selector=>{if(!nodes.has(selector)&&!seeded.has(selector))return null;if(!nodes.has(selector))nodes.set(selector,node());return nodes.get(selector).replacement||nodes.get(selector);};
   const state={activeSnapshot:null,refreshes:0,closed:0,toasts:[],pending:null,cloud,saveError:null,saved:null};
   const api={configured:true,isAuthenticated:()=>true,restoreSession:async()=>session(),loadSnapshots:async()=>state.cloud,saveSnapshot:async(ds,filename,type)=>{if(state.saveError)throw state.saveError;const saved=record(ds,type,filename);state.saved=saved;const key=`${ds.period.year}-${String(ds.period.month).padStart(2,'0')}`;state.cloud[key]||={sp2d:null,accrual:null};state.cloud[key][type]={dataset:ds,filename,savedAt:saved.imported_at,sourceType:type};return saved;},status:()=>{},healthCheck:async()=>({ok:true})};
   const context={window:{SaktiCloud:api,confirm:()=>true,addEventListener:()=>{}},document:{querySelector:$,createElement:node},localStorage,console,AbortSignal,JSON,Date,Math,Number,Object,String,Error,Promise,Map,Set};
@@ -76,6 +76,8 @@ async function run(){
     const august=dataset(8,500),september=dataset(9,650);
     const cloud={'2026-08':{sp2d:{dataset:august,filename:'aug.xlsx',savedAt:'2026-08-25'},accrual:null},'2026-09':{sp2d:null,accrual:{dataset:september,filename:'sep.xlsx',savedAt:'2026-09-07'}}};
     const h=recoveryHarness(cloud);
+    assert.doesNotMatch(read('app.js'), /setTimeout\(\(\) => \{ startCloudSnapshots\(\); document\.querySelector\('#applySaktiData'\)/, 'legacy delayed cloud upload handler must remain removed');
+    assert.equal(Object.keys(h.$('#applySaktiData').listeners).filter(type => type === 'click').length, 1, 'exactly one cloud upload handler must be installed');
     await h.context.window.HisRecovery.refreshCloud();
     assert.equal(h.state.activeSnapshot.period.month,8,'Official SP2D must remain August');
     assert.equal(h.state.activeSnapshot.accrualSnapshot.period.month,9,'September accrual must remain available');

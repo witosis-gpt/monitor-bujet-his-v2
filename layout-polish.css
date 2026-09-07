@@ -1,13 +1,15 @@
 /* Responsive proportion fixes for dashboard header and sidebar footer */
 
 /* Keep the dashboard title visually balanced on medium/large screens. */
+.page-header{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,620px);align-items:start}
 .page-header > div:first-child{min-width:420px;max-width:560px;flex:0 1 560px}
 .page-header h1{font-size:42px;line-height:1.08;letter-spacing:-1px;max-width:560px}
 .page-header .subtitle{font-size:16px;line-height:1.45;max-width:520px}
 
 /* Let the action area breathe without forcing the title into 3 narrow lines. */
-.header-actions{align-items:flex-end;justify-content:flex-end;flex-wrap:wrap;max-width:760px}
+.header-actions{align-items:flex-end;justify-content:flex-end;flex-wrap:wrap;max-width:620px}
 .header-actions .cloud-status{align-self:center;white-space:nowrap}
+.header-actions .cloud-retry{padding:6px 9px;font-size:11px;color:var(--blue)}
 
 /* Make logout a real button-sized action instead of tiny plain text. */
 .logout-button{margin-top:8px;width:100%;min-height:40px;padding:9px 12px;border:1px solid #4a667a;border-radius:6px;background:rgba(255,255,255,.06);color:#fff;font:600 13px 'DM Sans',Arial,sans-serif;text-align:left;cursor:pointer;transition:background .15s,border-color .15s}
@@ -22,16 +24,16 @@
 /* Tablet landscape: retain readable title and balanced action buttons. */
 @media(max-width:1250px) and (min-width:901px){
   main{padding-left:36px;padding-right:36px}
-  .page-header{gap:22px}
+  .page-header{gap:22px;grid-template-columns:minmax(0,1fr) minmax(0,560px)}
   .page-header > div:first-child{min-width:360px;max-width:470px;flex-basis:470px}
   .page-header h1{font-size:38px;max-width:470px}
-  .header-actions{max-width:620px;gap:8px}
+  .header-actions{max-width:560px;gap:8px}
   .header-actions .button{padding:10px 13px}
 }
 
 /* Compact tablet mode: stack header cleanly rather than crushing the title. */
 @media(max-width:1050px){
-  .page-header{flex-direction:column;align-items:stretch}
+  .page-header{display:flex;flex-direction:column;align-items:stretch}
   .page-header > div:first-child{min-width:0;max-width:none;flex:auto}
   .page-header h1{max-width:none;font-size:38px}
   .header-actions{max-width:none;justify-content:flex-start}
@@ -50,3 +52,16 @@
   .header-actions .snapshot-source select{width:100%}
   .header-actions .button{width:100%}
 }
+
+/* Keep account descriptions readable without allowing them to collide with numeric columns. */
+.account-table-scroll{overflow-x:auto}
+.account-table-scroll table{min-width:1250px;table-layout:fixed}
+.account-table-scroll th:nth-child(1),.account-table-scroll td:nth-child(1){width:110px}
+.account-table-scroll th:nth-child(2),.account-table-scroll td:nth-child(2){width:220px}
+.account-table-scroll th:nth-child(3),.account-table-scroll td:nth-child(3){width:190px}
+.account-table-scroll th:nth-child(4),.account-table-scroll td:nth-child(4){width:250px}
+.account-table-scroll th:nth-child(n+5),.account-table-scroll td:nth-child(n+5){width:120px;text-align:right;white-space:nowrap}
+.account-table-scroll th:nth-child(8),.account-table-scroll td:nth-child(8){width:100px}
+.account-table-scroll td:nth-child(2),.account-table-scroll td:nth-child(3),.account-table-scroll td:nth-child(4){white-space:normal;overflow-wrap:anywhere;line-height:1.35}
+.account-table-scroll th:first-child,.account-table-scroll td:first-child{padding-left:0}
+.account-table-scroll .percent-pill{display:inline-block}

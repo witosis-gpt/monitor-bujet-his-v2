@@ -139,7 +139,7 @@
   };
   function installRecoveryAction(){
     if($('#hisRecoveryAction'))return;
-    const button=document.createElement('button');button.id='hisRecoveryAction';button.type='button';button.className='button secondary';button.textContent='Periksa koneksi / Muat ulang cloud';
+    const button=document.createElement('button');button.id='hisRecoveryAction';button.type='button';button.className='button secondary cloud-retry';button.title='Periksa koneksi dan muat ulang data cloud';button.setAttribute('aria-label','Periksa koneksi dan muat ulang data cloud');button.textContent='Coba lagi';
     button.addEventListener('click',async()=>{button.disabled=true;try{const health=await window.SaktiCloud.healthCheck();if(!health.ok)throw new Error(health.message||`Layanan Auth HTTP ${health.status}`);if(window.SaktiCloud.isAuthenticated())await refreshCloud();else await bootAuthentication();showToast('Koneksi berhasil diperiksa.');}catch(error){lastCloudError=error.message;showToast(error.message);}finally{button.disabled=false;}});
     $('#cloudStatus')?.insertAdjacentElement('afterend',button);
   }

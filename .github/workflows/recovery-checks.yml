@@ -23,5 +23,11 @@ jobs:
           node --check module4.js
       - name: Cloud recovery tests
         run: node scripts/test-cloud-recovery.js
+      - name: Planner cloud tests
+        run: node scripts/test-module4-cloud.js
+      - name: Module 4 account regression tests
+        run: node scripts/test-module4-524113.js
       - name: Travel regression tests
         run: npm run test:travel
+      - name: Module 4 Excel export tests
+        run: node scripts/test-module4-excel-export.js
