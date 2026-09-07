@@ -65,3 +65,15 @@
 .account-table-scroll td:nth-child(2),.account-table-scroll td:nth-child(3),.account-table-scroll td:nth-child(4){white-space:normal;overflow-wrap:anywhere;line-height:1.35}
 .account-table-scroll th:first-child,.account-table-scroll td:first-child{padding-left:0}
 .account-table-scroll .percent-pill{display:inline-block}
+
+/* Hierarchy ledger: keep the description column independent from its financial columns. */
+.detail-tree-table{width:100%;min-width:1470px;table-layout:fixed}
+.detail-tree-table th:first-child,.detail-tree-table td:first-child{width:660px;text-align:left}
+.detail-tree-table th:nth-child(n+2),.detail-tree-table td:nth-child(n+2){width:145px;text-align:right;white-space:nowrap}
+.detail-tree-table th:nth-child(7),.detail-tree-table td:nth-child(7){width:85px}
+.detail-tree-table td{height:auto;vertical-align:top}
+.detail-tree-table td:first-child{white-space:normal;overflow:visible}
+.detail-tree-table .tree-label{width:100%;min-width:0;align-items:flex-start;flex-wrap:wrap}
+.detail-tree-table .tree-label strong{min-width:0;flex:1 1 220px;white-space:normal;overflow-wrap:anywhere;line-height:1.35}
+.detail-tree-table .tree-label .tree-code{flex:0 0 68px;min-width:0;white-space:normal;overflow-wrap:anywhere;line-height:1.35}
+.detail-tree-table .tree-label em{flex:0 0 auto;white-space:nowrap}
