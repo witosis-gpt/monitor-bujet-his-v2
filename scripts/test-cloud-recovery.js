@@ -11,7 +11,7 @@ const response = (status,body) => ({ok:status>=200&&status<300,status,json:async
 const session = (expiry=Date.now()/1000+3600) => ({access_token:'test-access',refresh_token:'test-refresh',expires_at:expiry,user:{id:'test-user'}});
 function clientHarness(initialSession,fetchImpl){
   const localStorage=storage(initialSession?{hisSupabaseSession:JSON.stringify(initialSession)}:{});
-  const context={window:{SUPABASE_CONFIG:{url:'https://example.supabase.co',anonKey:'public-test-key'}},localStorage,fetch:fetchImpl,AbortSignal,console};
+  const context={window:{SUPABASE_CONFIG:{url:'https://example.supabase.co',anonKey:'public-test-key'}},document:{querySelector:()=>null},localStorage,fetch:fetchImpl,AbortSignal,console};
   context.window.window=context.window;context.globalThis=context;
   vm.createContext(context);vm.runInContext(read('supabase-client.js'),context);
   return {client:context.window.SaktiCloud,localStorage};
@@ -83,7 +83,8 @@ async function run(){
     assert.equal(h.state.activeSnapshot.pairedRows[0].potential,650);
     assert.match(h.$('#activePeriod').textContent,/SP2D Agustus 2026/);
     assert.equal(h.$('#monthSelect').value,'2026-09');
-    assert.match(h.$('#saktiRecoveryNote').textContent,/bukan realisasi SP2D periode/);
+    const note=h.$('#sourceInfo').children.find(child=>child.id==='saktiRecoveryNote');
+    assert.match(note.textContent,/bukan realisasi SP2D periode/);
     const stale={'2026-07':{sp2d:{dataset:dataset(7,300)},accrual:null}};
     h.localStorage.setItem('saktiSnapshots',JSON.stringify({...cloud,...stale}));
     await h.context.window.HisRecovery.refreshCloud();
