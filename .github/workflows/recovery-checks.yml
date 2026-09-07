@@ -1,0 +1,27 @@
+name: Recovery and regression checks
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Syntax checks
+        run: |
+          node --check supabase-client.js
+          node --check cloud-save-fix.js
+          node --check module4-data.js
+          node --check app.js
+          node --check module4.js
+      - name: Cloud recovery tests
+        run: node scripts/test-cloud-recovery.js
+      - name: Travel regression tests
+        run: npm run test:travel
