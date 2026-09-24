@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const root = __dirname;
-const types = { '.css': 'text/css', '.html': 'text/html', '.js': 'application/javascript' };
+const types = { '.css': 'text/css', '.html': 'text/html', '.js': 'application/javascript', '.svg': 'image/svg+xml' };
 
 http.createServer((request, response) => {
   const pathname = request.url.split('?')[0];
