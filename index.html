@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard Keuangan Deputi HIS</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg?v=2" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles.css?v=2" />
     <link rel="stylesheet" href="layout-polish.css?v=1" />
     <link rel="stylesheet" href="module4.css?v=1" />
     <link rel="stylesheet" href="operations-ui.css?v=5" />
@@ -50,7 +50,7 @@
         <section id="detailView" class="detail-view" hidden><header class="detail-header"><div><p class="eyebrow">MODULE 2</p><h1>Detail Anggaran</h1><p id="detailBreadcrumb" class="subtitle">Detail Anggaran</p></div><div class="detail-actions"><button class="button secondary" id="expandAllButton" type="button">Buka Semua</button><button class="button secondary" id="collapseAllButton" type="button">Tutup Semua</button></div></header><section class="filter-bar detail-filter-bar" aria-label="Filter detail anggaran"><label>Tahun<select id="detailYearSelect"></select></label><label>Periode<select id="detailPeriodSelect"></select></label><label class="directorate-filter">Direktorat<select id="detailDirectorateSelect"></select></label><label class="detail-search">Cari hierarki<input id="detailSearch" type="search" placeholder="Kode atau uraian Direktorat, RO, Komponen, Subkomponen, Akun" /></label></section><section id="detailSummary" class="detail-summary" aria-label="Ringkasan detail anggaran"></section><section class="panel detail-tree-panel"><div class="section-heading"><div><p class="eyebrow">HIRARKI SAKTI</p><h2>Direktorat sampai Akun</h2></div><span id="detailTreeCount" class="section-note"></span></div><div class="detail-tree-scroll"><table class="detail-tree-table"><thead><tr><th>Uraian Hierarki</th><th>Pagu</th><th>SP2D</th><th>Akrual</th><th>Potensi</th><th>Sisa</th><th>% SP2D</th></tr></thead><tbody id="detailTreeRows"></tbody></table></div></section></section>
         <section id="reportView" class="report-view" hidden>
           <header class="detail-header"><div><p class="eyebrow">MODULE 3</p><h1>Laporan &amp; PowerPoint</h1><p class="subtitle">Buat laporan anggaran editable dari data SAKTI periode aktif.</p></div></header>
-          <section class="panel report-settings"><div class="section-heading"><div><p class="eyebrow">PENGATURAN LAPORAN</p><h2>PowerPoint Tabel Keuangan</h2></div></div><div class="report-controls"><label>Tahun<select id="reportYearSelect"></select></label><label>Periode<select id="reportPeriodSelect"></select></label><label>Ruang lingkup<select id="reportScopeSelect"></select></label></div><div class="report-options"><label><input id="reportIncludeAccounts" type="checkbox" /> Sertakan rincian akun</label><label><input id="reportIncludeAccountRemaining" type="checkbox" /> Sertakan sisa anggaran per akun</label><label><input id="reportIncludeVisual" type="checkbox" /> Sertakan slide ringkasan visual</label></div></section>
+          <section class="panel report-settings"><div class="section-heading"><div><p class="eyebrow">PENGATURAN LAPORAN</p><h2>PowerPoint Tabel Keuangan</h2></div></div><div class="report-controls"><label>Tahun<select id="reportYearSelect"></select></label><label>Periode<select id="reportPeriodSelect"></select></label><label>Ruang lingkup<select id="reportScopeSelect"></select></label><label>Akun<select id="reportAccountSelect"><option value="all">Semua Akun</option></select></label></div><div class="report-options"><label><input id="reportIncludeAccounts" type="checkbox" /> Sertakan rincian akun</label><label><input id="reportIncludeAccountRemaining" type="checkbox" /> Sertakan sisa anggaran per akun</label><label><input id="reportIncludeVisual" type="checkbox" /> Sertakan slide ringkasan visual</label></div></section>
           <section class="panel report-preview"><p class="eyebrow">PRATINJAU</p><div id="reportPreview"></div><div class="report-actions"><button class="button primary" id="reportGenerateButton" type="button">Generate PowerPoint</button><button class="button secondary report-test-button" id="reportTestButton" type="button">Test PPT Sederhana</button><span id="reportStatus" role="status"></span></div><div id="reportResult" class="report-result" hidden></div></section>
         </section>
         <section id="plannerView" class="planner-view" hidden>
@@ -70,7 +70,7 @@
     <script src="vendor/xlsx.full.min.js"></script>
     <script src="vendor/jszip.min.js?v=1"></script>
     <script src="vendor/pptxgen.bundle.js?v=1"></script>
-    <script src="app.js"></script>
+    <script src="app.js?v=2"></script>
     <script src="financial-metrics.js?v=1"></script>
     <script src="cloud-save-fix.js?v=1"></script>
     <script src="budget-logic-fix.js?v=1"></script>
